@@ -1,57 +1,101 @@
-# Baphalane
+## 📘 Baphalane Website – README
 
-**Baphalane** is a web-based platform built for the **Baphalane Traditional Council** to digitize and streamline interactions between the council and the community. It aims to create a modern, accessible online presence for traditional governance, empowering the community through technology.
+### 🔰 Overview
 
----
-
-## 🌍 Project Purpose
-
-The platform will serve as a central hub where **community members** can:
-
-- 📝 **Complete digital forms** for requests, registrations, and other services
-- 📄 **View important information**, announcements, and updates from the council
-- 📚 **Access documents** related to land, cultural events, or meetings
-- ⚙️ **Automate processes** within the traditional office to improve efficiency and accessibility
+**Baphalane** is a modern web application designed to serve the **Baphalane Traditional Council**. It allows community members to:
+- Submit and complete digital forms.
+- Access official information.
+- View public media and documents.
+- Automate traditional office interactions for easier community access.
 
 ---
 
-## 🔧 Tech Stack (Planned)
+### 🧱 Tech Stack Overview
 
-| Layer        | Technology           |
-|--------------|----------------------|
-| **Frontend** | HTML, CSS, JavaScript (hosted on Vercel) |
-| **Backend**  | Supabase (PostgreSQL + Auth + File Storage) |
-| **Version Control** | Git & GitHub |
-| **Domain**   | Custom domain pointing to the Vercel frontend |
-
----
-
-## 🚀 Goals
-
-- Bring transparency and ease-of-use to traditional council processes
-- Offer secure, confidential form submissions
-- Digitally store and serve cultural records and office documents
-- Reduce in-person congestion and improve service delivery through automation
+| Layer         | Technology        | Purpose |
+|---------------|-------------------|---------|
+| **Frontend**  | Next.js (React + Node.js) | Dynamic user interface and routing |
+|               | Tailwind CSS      | Styling and responsiveness |
+|               | JavaScript / TypeScript | Logic, API calls, and type safety |
+| **Backend**   | Supabase          | Authentication, database (PostgreSQL), and file storage |
+| **Hosting**   | Vercel            | Hosting and automatic deployment of the frontend |
+| **Domain**    | Freenom / Namecheap / GoDaddy | Custom domain name (e.g. `baphalane.org`) |
+| **Version Control** | Git + GitHub | Code collaboration and backup |
 
 ---
 
-## 🛠️ Features (Planned)
+### 🧭 Project Architecture
 
-- ✅ Secure form submission (e.g., land applications, ID confirmation)
-- ✅ Admin panel for managing incoming requests and document uploads
-- ✅ Public page for notices and announcements
-- ✅ Private login for internal staff
-- ✅ Mobile-friendly UI
+This follows a **modular, client-server architecture** with a **separation of concerns** between the frontend and backend.
+
+```
+┌──────────────────────────────┐             ┌─────────────────────────────────┐
+│   Browser  │──────────────────────────────│    Vercel (Next.js)    │
+└──────────────────────────────┘    HTTP(S)    └──────────────────────────────┘
+       ▲                            │
+       │                            ▼
+       │                    ┌──────────────────────────────┐
+       │                    │ Supabase       │
+       │                    │ (Auth, DB, API │
+       │                    │  & Storage)    │
+       ▼                    └──────────────────────────────┘
+```
+
+### 🥉 Folder Structure (Simplified)
+
+```
+/baphalane
+│
+├── public/                  # Static files like images
+├── pages/                   # Routes (e.g. index.js, forms.js)
+├── components/              # UI components (Header, Footer, Form, etc.)
+├── styles/                 # Tailwind & custom CSS
+├── utils/                  # Helper functions (e.g. Supabase client)
+├── .env.local              # Environment variables (API keys)
+└── README.md               # Project documentation
+```
 
 ---
 
-## 🤝 Community Impact
+### 🔌 Component Communication
 
-The Baphalane project hopes to bridge the gap between **traditional leadership** and **modern infrastructure** by:
-- Encouraging digital literacy
-- Making services accessible from anywhere
-- Building digital trust with transparency and communication
+| From | To | Method |
+|------|----|--------|
+| **Next.js (frontend)** | Supabase (backend) | RESTful calls or Supabase JS client |
+| **Next.js** | Vercel | Git-based automatic deployments |
+| **User** | Next.js UI | Interaction through form submissions, page routing |
+| **Supabase** | Database + File Storage | Inserts/queries media, documents, and user input |
 
 ---
 
-## 📁 Project Structure
+### 🧱 Architectural Pattern
+
+We are using the **JAMstack architecture**:
+- **JavaScript**: All frontend logic (React + Next.js).
+- **APIs**: Supabase is used as the backend-as-a-service via client APIs.
+- **Markup**: Pre-rendered HTML using Next.js (supports both SSR and static generation).
+
+#### Benefits:
+- ✅ Scalable  
+- ✅ Secure (no traditional server to attack)  
+- ✅ Blazing fast (Vercel’s edge network)  
+- ✅ Easy to maintain with modern tooling  
+
+---
+
+### 🔐 Security Considerations
+
+- Form data is sent securely over HTTPS.
+- Supabase handles secure authentication and authorization.
+- Environment variables (`.env.local`) store API credentials safely.
+- Only authenticated users can submit or view sensitive information.
+
+---
+
+### 🚀 Deployment Workflow
+
+1. Push code to GitHub.
+2. Vercel auto-deploys based on GitHub branch.
+3. Vercel URL (e.g. `https://baphalane.vercel.app`) becomes active.
+4. Custom domain (e.g. `baphalane.org`) points to Vercel deployment.
+
