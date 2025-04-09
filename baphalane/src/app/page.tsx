@@ -1,3 +1,8 @@
+/**Created vercel account
+ * Conneceted with baphalane repo
+ * Now testing if deployment to github automatically deploys on vercel
+*/
+
 import Image from "next/image";
 
 export default function Home() {
