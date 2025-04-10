@@ -12,48 +12,60 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-blue-700">Baphalane Community</h1>
-          <nav className="hidden md:flex gap-6 text-gray-700">
-            <Link href="#about" className="hover:text-blue-600">About</Link>
-            <Link href="#services" className="hover:text-blue-600">Services</Link>
-            <Link href="#news" className="hover:text-blue-600">News</Link>
-            <Link href="#events" className="hover:text-blue-600">Events</Link>
-            <Link href="#contact" className="hover:text-blue-600">Contact</Link>
-          </nav>
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 px-4 py-2 space-y-2">
-            <Link href="#about" className="block">About</Link>
-            <Link href="#services" className="block">Services</Link>
-            <Link href="#news" className="block">News</Link>
-            <Link href="#events" className="block">Events</Link>
-            <Link href="#contact" className="block">Contact</Link>
+      <div
+        className="relative bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')`
+        }}
+      > 
+        <div className="">
+          {/* Header */}
+          <header className="bg-transparent shadow-md sticky top-0 z-50">
+            <div className="container mx-auto px-4 py-4 flex items-left justify-between">
+              <h1 className="text-2xl font-bold text-black">Baphalane Community</h1>
+              <nav className="hidden md:flex gap-6 text-black">
+                <Link href="#about" className="hover:text-blue-200">About</Link>
+                <Link href="#services" className="hover:text-blue-200">Services</Link>
+                <Link href="#news" className="hover:text-blue-200">News</Link>
+                <Link href="#events" className="hover:text-blue-200">Events</Link>
+                <Link href="#contact" className="hover:text-blue-200">Contact</Link>
+              </nav>
+              <button className="md:hidden text-blue" onClick={() => setMenuOpen(!menuOpen)}>
+                {menuOpen ? <X /> : <Menu />}
+              </button>
+            </div>
+            {menuOpen && (
+              <div className="md:hidden bg-white bg-opacity-50 px-4 py-2 space-y-2 text-black ">
+                <Link href="#about" className="block">About</Link>
+                <Link href="#services" className="block">Services</Link>
+                <Link href="#news" className="block">News</Link>
+                <Link href="#events" className="block">Events</Link>
+                <Link href="#contact" className="block">Contact</Link>
+              </div>
+            )}
+          </header>
+
+          {/* Hero Section */}
+          <section className="h-[60vh] flex items-center justify-start text-black px-2">
+            <div className=" rounded-xl">
+              <h2 className="text-4xl md:text-3xl font-bold mb-4 text-left">Welcome to the Baphalane Community</h2>
+              <p className="text-lg md:text-xl text-left">Empowering our people. Enriching our future.</p>
+            </div>
+          </section>
+
+
           </div>
-        )}
-      </header>
+      </div>
 
-      {/* Hero Section */}
-      <section className="relative bg-cover bg-center bg-[url('/hero.jpg')] h-[70vh] flex items-center justify-center text-white">
-        <div className="bg-black bg-opacity-50 p-6 rounded-xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Welcome to the Baphalane Community</h2>
-          <p className="text-lg md:text-xl">Empowering our people. Enriching our future.</p>
-        </div>
-      </section>
+          {/* About Section */}
+          <section id="about" className="container mx-auto py-16 px-4 text-center text-blue-700">
+            <h3 className="text-3xl font-semibold mb-6">About Us</h3>
+            <p className="max-w-3xl mx-auto">
+              The Baphalane community is committed to fostering growth, unity, and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
+            </p>
+          </section>
+        
 
-      {/* About Section */}
-      <section id="about" className="container mx-auto py-16 px-4 text-center">
-        <h3 className="text-3xl font-semibold mb-6 text-blue-700">About Us</h3>
-        <p className="text-gray-700 max-w-3xl mx-auto">
-          The Baphalane community is committed to fostering growth, unity, and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
-        </p>
-      </section>
 
       {/* Services */}
       <section id="services" className="bg-white py-16 px-4">
