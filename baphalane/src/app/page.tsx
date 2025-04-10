@@ -13,11 +13,9 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       <div
-        className="relative bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')`
-        }}
-      > 
+        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
+      >
+
         <div className="">
           {/* Header */}
           <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}>
@@ -48,9 +46,9 @@ export default function HomePage() {
           {/* Hero Section */}
           <section className="h-[60vh] flex items-center justify-start text-black px-2">
             {/* The text below should only take up 50% of the width */}
-            <div className=" rounded-xl p-8 w-[50%]">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font">Welcome to the Baphalane Community Website</h2>
-              <p className="text-lg md:text-3xl text-left">Empowering our people. <br />Enriching our future.</p>
+            <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font text-white md:text-black ">Welcome to the Baphalane Community Website</h2>
+              <p className="text-lg md:text-3xl text-left text-white md:text-black">Empowering our people. <br />Enriching our future.</p>
             </div>
           </section>
 
@@ -121,7 +119,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="bg-blue-700 py-16 px-4 text-white">
+      <section id="contact" className="bg-gray-600 py-16 px-4 text-white">
         <div className="container mx-auto text-center">
           <h3 className="text-3xl font-semibold mb-4">Contact Us</h3>
           <p className="mb-4">Have questions or need more info? We are here to help.</p>
