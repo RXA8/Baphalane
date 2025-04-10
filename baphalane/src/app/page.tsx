@@ -50,7 +50,7 @@ export default function HomePage() {
             {/* The text below should only take up 50% of the width */}
             <div className=" rounded-xl p-8 w-[50%]">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font">Welcome to the Baphalane Community Website</h2>
-              <p className="text-lg md:text-3xl text-left">Empowering our people. Enriching our future.</p>
+              <p className="text-lg md:text-3xl text-left">Empowering our people. <br />Enriching our future.</p>
             </div>
           </section>
 
@@ -61,7 +61,7 @@ export default function HomePage() {
           {/* About Section */}
           <section id="about" className="container mx-auto py-16 px-4 text-center text-blue-700">
             <h3 className="text-3xl font-semibold mb-6">About Us</h3>
-            <p className="max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-2xl">
               The Baphalane community is committed to fostering growth, unity, and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
             </p>
           </section>
