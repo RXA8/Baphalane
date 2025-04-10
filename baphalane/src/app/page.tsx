@@ -47,9 +47,10 @@ export default function HomePage() {
 
           {/* Hero Section */}
           <section className="h-[60vh] flex items-center justify-start text-black px-2">
-            <div className=" rounded-xl">
-              <h2 className="text-4xl md:text-3xl font-bold mb-4 text-left">Welcome to the Baphalane Community</h2>
-              <p className="text-lg md:text-xl text-left">Empowering our people. Enriching our future.</p>
+            {/* The text below should only take up 50% of the width */}
+            <div className=" rounded-xl p-8 w-[50%]">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font">Welcome to the Baphalane Community Website</h2>
+              <p className="text-lg md:text-3xl text-left">Empowering our people. Enriching our future.</p>
             </div>
           </section>
 
