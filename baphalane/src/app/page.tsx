@@ -20,22 +20,22 @@ export default function HomePage() {
       > 
         <div className="">
           {/* Header */}
-          <header className="bg-transparent shadow-md sticky top-0 z-50">
+          <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}>
             <div className="container mx-auto px-4 py-4 flex items-left justify-between">
-              <h1 className="text-2xl font-bold text-black">Baphalane Community</h1>
-              <nav className="hidden md:flex gap-6 text-black">
+              <h1 className="text-2xl font-bold text-black">Baphalane🐊</h1>
+              <nav className="hidden md:flex gap-7 text-black font-semibold">
                 <Link href="#about" className="hover:text-blue-200">About</Link>
                 <Link href="#services" className="hover:text-blue-200">Services</Link>
                 <Link href="#news" className="hover:text-blue-200">News</Link>
                 <Link href="#events" className="hover:text-blue-200">Events</Link>
-                <Link href="#contact" className="hover:text-blue-200">Contact</Link>
+                <Link href="#contact" className="hover:text-blue-200 ">Contact</Link>
               </nav>
               <button className="md:hidden text-blue" onClick={() => setMenuOpen(!menuOpen)}>
                 {menuOpen ? <X /> : <Menu />}
               </button>
             </div>
             {menuOpen && (
-              <div className="md:hidden bg-white bg-opacity-50 px-4 py-2 space-y-2 text-black ">
+              <div className="md:hidden bg-white bg-opacity-50 px-4 py-2 space-y-4 text-black ">
                 <Link href="#about" className="block">About</Link>
                 <Link href="#services" className="block">Services</Link>
                 <Link href="#news" className="block">News</Link>
