@@ -89,34 +89,64 @@ export default function HomePage() {
       <section id="news" className="bg-gray-100 py-16 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-semibold mb-10 text-center text-blue-700">Latest News</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card>
-              <CardContent className="p-6">
-                <h4 className="font-bold text-lg">Community Clean-Up Drive</h4>
-                <p className="text-sm text-gray-600 mt-2">
-                  Join us this weekend to help keep our neighborhoods clean and safe for everyone.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <h4 className="font-bold text-lg">Youth Empowerment Workshop</h4>
-                <p className="text-sm text-gray-600 mt-2">
-                  Register for our upcoming workshop focusing on skill development and job readiness.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "New Clinic Opens in Community",
+                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
+              },
+              {
+                title: "Education Grant Applications Now Open",
+                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
+              },
+              {
+                title: "Water Supply Upgrades Underway",
+                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
+              },
+            ].map((news, index) => (
+              <div
+                key={index}
+                className="relative rounded-xl overflow-hidden shadow-lg h-64 bg-cover bg-center"
+                style={{ backgroundImage: `url(${news.image})` }}
+              >
+                <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4">
+                  <h4 className="text-lg font-bold">{news.title}</h4>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+
       {/* Events */}
       <section id="events" className="bg-white py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-6 text-blue-700">Upcoming Events</h3>
-          <p className="text-gray-700">Stay up-to-date with community events, gatherings, and important dates.</p>
+        <div className="container mx-auto">
+          <h3 className="text-3xl font-semibold mb-10 text-center text-blue-700">Upcoming Events</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card>
+              <CardContent className="p-">
+                <h4 className="font-bold text-lg">Community Clean-Up Day</h4>
+                <p className="text-gray-600">Join us for a day dedicated to cleaning our streets and parks. Volunteers welcome!</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <h4 className="font-bold text-lg">Youth Soccer Tournament</h4>
+                <p className="text-gray-600">Come support our local youth teams as they compete in a fun, friendly tournament.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-">
+                <h4 className="font-bold text-lg">Community Clean-Up Day</h4>
+                <p className="text-gray-600">Join us for a day dedicated to cleaning our streets and parks. Volunteers welcome!</p>
+              </CardContent>
+            </Card>
+            
+          </div>
         </div>
       </section>
+
 
       {/* Contact */}
       <section id="contact" className="bg-gray-600 py-16 px-4 text-white">
