@@ -5,9 +5,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Mail, Menu, X } from "lucide-react";
-import Link from "next/link"; 
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react"; 
+import { useRef } from "react";
+
+
+const services = [
+  "Housing",
+  "Health & Wellness",
+  "Youth Programs",
+  "Education",
+  "Entrepreneurship",
+  "Community Safety",
+];
 
 export default function HomePage() {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -67,20 +81,54 @@ export default function HomePage() {
 
 
       {/* Services */}
+      
       <section id="services" className="bg-white py-16 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-semibold mb-10 text-center text-blue-700">Our Services</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {['Housing', 'Health & Wellness', 'Youth Programs'].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-2 text-blue-600">{service}</h4>
-                  <p className="text-gray-600 text-sm">
-                    Learn more about our {service.toLowerCase()} initiatives and how they benefit the community.
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+
+          <div className="relative">
+            {/* Scroll Buttons */}
+            <button
+  onClick={() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  }}
+  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+>
+  <ChevronLeft className="text-blue-600" />
+</button>
+
+            <button
+              onClick={() => {
+                if (scrollRef.current) {
+                  scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+                }
+              }}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
+            >
+              <ChevronRight className="text-blue-600" />
+            </button>
+
+
+            {/* Carousel */}
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto gap-6 scroll-smooth no-scrollbar px-10"
+            >
+              {services.map((service, index) => (
+                <div key={index} className="min-w-[280px] max-w-[300px] flex-shrink-0">
+                  <Card className="hover:shadow-lg transition-shadow h-full">
+                    <CardContent className="p-6">
+                      <h4 className="text-xl font-bold mb-2 text-blue-600">{service}</h4>
+                      <p className="text-gray-600 text-sm">
+                        Learn more about our {service.toLowerCase()} initiatives and how they benefit the community.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
