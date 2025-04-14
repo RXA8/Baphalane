@@ -211,21 +211,21 @@ export default function HomePage() {
           </div>
 
           {/* Suggestion Box */}
-          <div className="max-w-2xl mx-auto bg-white text-black rounded-xl shadow-md p-6 text-left">
-            <h4 className="text-xl font-semibold mb-4 text-blue-700">Send Us a Suggestion</h4>
-            <form className="space-y-4">
+          <div className="max-w-sm mx-auto bg-white text-black rounded-lg shadow-md p-4 text-left">
+            <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
+            <form className="space-y-3">
               <Input
                 type="text"
-                placeholder="Your Name (optional)"
-                className="w-full"
+                placeholder="Name (optional)"
+                className="w-full h-8 text-sm"
               />
               <Input
                 type="email"
-                placeholder="Your Email (optional)"
-                className="w-full"
+                placeholder="Email (optional)"
+                className="w-full h-8 text-sm"
               />
               <select
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700"
+                className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
               >
                 <option value="">Select a category</option>
                 <option value="health">Health</option>
@@ -235,15 +235,15 @@ export default function HomePage() {
               </select>
               <textarea
                 placeholder="Your suggestion..."
-                rows={4}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700"
+                rows={3}
+                className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
                 required
               />
               <Button
                 type="submit"
-                className="bg-blue-700 text-white hover:bg-blue-800 w-full"
+                className="bg-blue-700 text-white hover:bg-blue-800 w-full text-sm py-2"
               >
-                Submit Suggestion
+                Submit
               </Button>
             </form>
           </div>
