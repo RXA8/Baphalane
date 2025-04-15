@@ -1,5 +1,6 @@
 "use client";
-// import { supabase } from "../../lib/supabase";
+import { supabase } from "../../lib/supabase";
+
 
 
 
@@ -30,6 +31,44 @@ export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [category, setCategory] = useState("");
+  const [suggestion, setSuggestion] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSuggestionSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(false);
+    setError(false);
+  
+    try {
+      const { error } = await supabase.from("community_suggestions").insert([
+        {
+          name: name || null,
+          email: email || null,
+          suggestion,
+          category: category || null,
+        },
+      ]);
+  
+      if (error) {
+        console.error("Supabase insert error:", error);
+        setError(true);
+      } else {
+        setSuccess(true);
+        setName("");
+        setEmail("");
+        setCategory("");
+        setSuggestion("");
+      }
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      setError(true);
+    }
+  };
+  
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
@@ -236,43 +275,59 @@ export default function HomePage() {
           </div>
 
 
-            {/* Suggestion Box */}
-            <div className="md:w-1/2 max-w-md mx-auto md:mx-0 bg-white text-black rounded-lg shadow-md p-4 w-full">
-              <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
-              <form className="space-y-3">
-                <Input
-                  type="text"
-                  placeholder="Name (optional)"
-                  className="w-full h-8 text-sm"
-                />
-                <Input
-                  type="email"
-                  placeholder="Email (optional)"
-                  className="w-full h-8 text-sm"
-                />
-                <select
-                  className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
-                >
-                  <option value="">Select a category</option>
-                  <option value="health">Health</option>
-                  <option value="housing">Housing</option>
-                  <option value="events">Events</option>
-                  <option value="other">Other</option>
-                </select>
-                <textarea
-                  placeholder="Your suggestion..."
-                  rows={3}
-                  className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
-                  required
-                />
-                <Button
-                  type="submit"
-                  className="bg-blue-700 text-white hover:bg-blue-800 w-full text-sm py-2"
-                >
-                  Submit
-                </Button>
-              </form>
-            </div>
+        {/* Suggestion Box */}
+        <div className="md:w-1/2 max-w-md mx-auto md:mx-0 bg-white text-black rounded-lg shadow-md p-4 w-full">
+          <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
+          <form className="space-y-3" onSubmit={handleSuggestionSubmit}>
+            <Input
+              type="text"
+              placeholder="Name (optional)"
+              className="w-full h-8 text-sm"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <Input
+              type="email"
+              placeholder="Email (optional)"
+              className="w-full h-8 text-sm"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <select
+              className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="">Select a category</option>
+              <option value="health">Health</option>
+              <option value="housing">Housing</option>
+              <option value="events">Events</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea
+              placeholder="Your suggestion..."
+              rows={3}
+              className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
+              value={suggestion}
+              onChange={(e) => setSuggestion(e.target.value)}
+              required
+            />
+            <Button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 w-full text-sm py-2"
+            >
+              Submit
+            </Button>
+
+            {success && (
+              <p className="text-green-600 text-sm text-center">Thank you for your suggestion!</p>
+            )}
+            {error && (
+              <p className="text-red-600 text-sm text-center">Oops, something went wrong. Try again.</p>
+            )}
+          </form>
+        </div>
+
 
           </div>
         </div>
