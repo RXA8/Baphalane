@@ -1,10 +1,15 @@
 "use client";
+// import { supabase } from "../../lib/supabase";
+
+
+
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Mail, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react"; 
 import { useRef } from "react";
@@ -19,6 +24,8 @@ const services = [
   "Community Safety",
 ];
 
+
+
 export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,7 +34,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       <div
-        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
+        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//back.jpg')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
       >
 
         <div className="">
@@ -58,7 +65,7 @@ export default function HomePage() {
           </header>
 
           {/* Hero Section */}
-          <section className="h-[60vh] flex items-center justify-start  px-2">
+          <section className="h-[55vh] flex items-center justify-start  px-2">
             {/* The text below should only take up 50% of the width */}
             <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Baphalane Community Website</h2>
@@ -198,54 +205,75 @@ export default function HomePage() {
 
       {/* Contact */}
       <section id="contact" className="bg-gray-600 py-16 px-4 text-white">
-        <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-4">Contact Us</h3>
-          <p className="mb-4">Have questions or need more info? We are here to help.</p>
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row md:justify-center md:items-start gap-1">
 
-          {/* Email Subscription */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
-            <Input placeholder="Your email address" className="w-full md:w-auto text-black" />
-            <Button variant="secondary" className="bg-white text-blue-700 hover:bg-gray-200">
-              <Mail className="mr-2" size={16} /> Subscribe
-            </Button>
+            {/* Contact Info + Subscribe */}
+          <div className="md:w-1/2 text-center md:text-left">
+            <h3 className="text-3xl font-semibold mb-4">Contact Us</h3>
+            <p className="mb-6">Have questions or need more info? We are here to help.</p>
+
+            {/* Dummy Info */}
+            <div className="mb-6 space-y-2 text-sm text-gray-200">
+              <p><strong>Address:</strong> Ga Ramokoka, Ramokokastad, 0388, South Africa, Moses Kotane, South Africa, 0388</p>
+              <p><strong>Email:</strong> admnin@baphalane.org</p>
+              <p><strong>Office:</strong> +27 83 952 2872</p>
+            </div>
+
+            {/* Social Media */}
+            <div className="mb-6 flex gap-4 justify-center md:justify-start">
+              <a href="https://www.facebook.com/p/Bua-Motlase-100077121870361/" className="flex items-center gap-1 hover:underline">
+                <FaFacebook className="text-white" /> Facebook
+              </a>
+              <a href="#" className="flex items-center gap-1 hover:underline">
+                <FaInstagram className="text-white" /> Instagram
+              </a>
+              <a href="#" className="flex items-center gap-1 hover:underline">
+                <FaTwitter className="text-white" /> Twitter
+              </a>
+            </div>
+
           </div>
 
-          {/* Suggestion Box */}
-          <div className="max-w-sm mx-auto bg-white text-black rounded-lg shadow-md p-4 text-left">
-            <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
-            <form className="space-y-3">
-              <Input
-                type="text"
-                placeholder="Name (optional)"
-                className="w-full h-8 text-sm"
-              />
-              <Input
-                type="email"
-                placeholder="Email (optional)"
-                className="w-full h-8 text-sm"
-              />
-              <select
-                className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
-              >
-                <option value="">Select a category</option>
-                <option value="health">Health</option>
-                <option value="housing">Housing</option>
-                <option value="events">Events</option>
-                <option value="other">Other</option>
-              </select>
-              <textarea
-                placeholder="Your suggestion..."
-                rows={3}
-                className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
-                required
-              />
-              <Button
-                type="submit"
-                className="bg-blue-700 text-white hover:bg-blue-800 w-full text-sm py-2"
-              >
-                Submit
-              </Button>
-            </form>
+
+            {/* Suggestion Box */}
+            <div className="md:w-1/2 max-w-md mx-auto md:mx-0 bg-white text-black rounded-lg shadow-md p-4 w-full">
+              <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
+              <form className="space-y-3">
+                <Input
+                  type="text"
+                  placeholder="Name (optional)"
+                  className="w-full h-8 text-sm"
+                />
+                <Input
+                  type="email"
+                  placeholder="Email (optional)"
+                  className="w-full h-8 text-sm"
+                />
+                <select
+                  className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
+                >
+                  <option value="">Select a category</option>
+                  <option value="health">Health</option>
+                  <option value="housing">Housing</option>
+                  <option value="events">Events</option>
+                  <option value="other">Other</option>
+                </select>
+                <textarea
+                  placeholder="Your suggestion..."
+                  rows={3}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700"
+                  required
+                />
+                <Button
+                  type="submit"
+                  className="bg-blue-700 text-white hover:bg-blue-800 w-full text-sm py-2"
+                >
+                  Submit
+                </Button>
+              </form>
+            </div>
+
           </div>
         </div>
       </section>
