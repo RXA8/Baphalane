@@ -73,7 +73,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       <div
-        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//back.jpg')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
+        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
       >
 
         <div className="">
@@ -104,7 +104,7 @@ export default function HomePage() {
           </header>
 
           {/* Hero Section */}
-          <section className="h-[55vh] flex items-center justify-start  px-2">
+          <section className="h-[60vh] flex items-center justify-start  px-2">
             {/* The text below should only take up 50% of the width */}
             <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Baphalane Community Website</h2>
@@ -257,24 +257,33 @@ export default function HomePage() {
               <p><strong>Address:</strong> Ga Ramokoka, Ramokokastad, 0388, South Africa, Moses Kotane, South Africa, 0388</p>
               <p><strong>Email:</strong> admnin@baphalane.org</p>
               <p><strong>Office:</strong> +27 83 952 2872</p>
+              <p><strong>PO Box:</strong> P.O Box 200 Ramokokastad 0195</p>
+
             </div>
 
             {/* Social Media */}
-            <div className="mb-6 flex gap-4 justify-center md:justify-start">
-              <a href="https://www.facebook.com/p/Bua-Motlase-100077121870361/" className="flex items-center gap-1 hover:underline">
-                <FaFacebook className="text-white" /> Facebook
-              </a>
-              <a href="#" className="flex items-center gap-1 hover:underline">
-                <FaInstagram className="text-white" /> Instagram
-              </a>
-              <a href="#" className="flex items-center gap-1 hover:underline">
-                <FaTwitter className="text-white" /> Twitter
-              </a>
+            <div className="mt-auto pt-15">
+              <div className="flex gap-4 justify-center md:justify-start">
+                <a href="https://www.facebook.com/p/Bua-Motlase-100077121870361/" className="flex items-center gap-1 hover:underline">
+                  <FaFacebook className="text-white" /> Facebook
+                </a>
+                <a href="#" className="flex items-center gap-1 hover:underline">
+                  <FaInstagram className="text-white" /> Instagram
+                </a>
+                <a href="#" className="flex items-center gap-1 hover:underline">
+                  <FaTwitter className="text-white" /> Twitter
+                </a>
+              </div>
             </div>
 
           </div>
 
+        {/* Vertical Divider */}
+        <div className="hidden md:flex self-stretch">
+          <div className="w-px bg-gray-400 mr-13 ml-0" />
+        </div>
 
+       
         {/* Suggestion Box */}
         <div className="md:w-1/2 max-w-md mx-auto md:mx-0 bg-white text-black rounded-lg shadow-md p-4 w-full">
           <h4 className="text-lg font-semibold mb-3 text-blue-700">Send Us a Suggestion</h4>
