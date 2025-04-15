@@ -81,7 +81,7 @@ export default function HomePage() {
           <section id="about" className="container mx-auto py-16 px-4 text-center ">
             <h3 className="text-3xl font-semibold mb-6 text-green-700">About Us</h3>
             <p className="max-w-3xl mx-auto text-2xl text-gray-700">
-              The Baphalane community is committed to fostering growth, unity, and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
+              The Baphalane community is committed to fostering growth, unity, sustainability and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
             </p>
           </section>
         
