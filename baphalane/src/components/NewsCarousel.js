@@ -13,7 +13,7 @@ export default function NewsCarousel() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await fetch('api/news_api'); // call your API route
+        const res = await fetch('/api/news_api'); // fixed path
         const data = await res.json();
         setArticles(data.articles);
         console.log('Fetched articles:', data.articles);
@@ -28,11 +28,16 @@ export default function NewsCarousel() {
   return (
     <Swiper
       modules={[Autoplay, Pagination]}
-      spaceBetween={30}
+      spaceBetween={20}
       slidesPerView={1}
       loop
       autoplay={{ delay: 4000 }}
       pagination={{ clickable: true }}
+      breakpoints={{
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }, // 3 cards on large screens
+      }}
     >
       {articles.map((article, index) => (
         <SwiperSlide key={index}>
