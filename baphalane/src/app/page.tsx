@@ -1,8 +1,7 @@
 "use client";
 import { supabase } from "../../lib/supabase";
 
-
-
+import NewsCarousel from '../components/NewsCarousel'
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -183,32 +182,7 @@ export default function HomePage() {
       <section id="news" className="bg-gray-100 py-16 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Latest News</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "New Clinic Opens in Community",
-                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
-              },
-              {
-                title: "Education Grant Applications Now Open",
-                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
-              },
-              {
-                title: "Water Supply Upgrades Underway",
-                image: "https://images.unsplash.com/photo-1588072432836-e10032774350",
-              },
-            ].map((news, index) => (
-              <div
-                key={index}
-                className="relative rounded-xl overflow-hidden shadow-lg h-64 bg-cover bg-center"
-                style={{ backgroundImage: `url(${news.image})` }}
-              >
-                <div className="absolute bottom-0 w-full bg-gray-500 bg-opacity-60 text-white p-4">
-                  <h4 className="text-lg font-bold">{news.title}</h4>
-                </div>
-              </div>
-            ))}
-          </div>
+          <NewsCarousel />
         </div>
       </section>
 
