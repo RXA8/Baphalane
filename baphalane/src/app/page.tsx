@@ -70,7 +70,7 @@ export default function HomePage() {
   
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100">
+    <div className="min-h-screen flex flex-col bg-gray-300">
       <div
         className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-freestockpro-321542.jpg')]"
       >
@@ -123,11 +123,16 @@ export default function HomePage() {
             </p>
           </section>
         
-
+      {/* News */}
+      <section id="news" className=" bg-white py-16 px-4">
+        <div className="container mx-auto">
+          <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Latest News</h3>
+          <NewsCarousel />
+        </div>
+      </section>
 
       {/* Services */}
-      
-      <section id="services" className="bg-white py-16 px-4">
+      <section id="services" className="bg-gray-300 py-16 px-4">
         <div className="container mx-auto">
           <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Our Services</h3>
 
@@ -178,13 +183,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* News */}
-      <section id="news" className="bg-gray-100 py-16 px-4">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Latest News</h3>
-          <NewsCarousel />
-        </div>
-      </section>
+      
 
 
       {/* Events */}
