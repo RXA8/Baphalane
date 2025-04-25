@@ -4,7 +4,7 @@ import { supabase } from "../../lib/supabase";
 import NewsCarousel from '../components/NewsCarousel'
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-
+import { MapPin, Ruler, Users, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -116,23 +116,44 @@ export default function HomePage() {
       </div>
 
       <section id="about" className="container mx-auto ">
-        <div className="flex flex-col md:flex-row items-stretch gap-8">
+        <div className="flex flex-col md:flex-row items-stretch gap-4">
           
           {/* Left: Text Content */}
-          <div className="md:w-1/2 flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-700">About Us</h3>
-            <p className="text-lg text-gray-800">
-              The Baphalane community is committed to fostering growth, unity, sustainability and development for all its members.
-              We strive to provide transparent services and engage our people in shaping a better future.
+          <div className="md:w-1/2 flex flex-col items-center text-center">
+            <h3 className="text-3xl font-semibold mb-4 text-gray-700">About Us</h3>
+            <p className="text-gray-800 text-lg mb-6">
+              Welcome to the Baphalane Community website! We are dedicated to serving the people of Ramokokastad and surrounding areas.
+              Located in the North West Province of South Africa, Ramokokastad is a culturally rich village with a strong community spirit.
+              Our mission is to uplift residents through initiatives focused on housing, health, education, and youth empowerment.
             </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 w-full">
+              <div className="flex items-center gap-3 justify-center">
+                <MapPin className="w-6 h-6 text-blue-600" />
+                <span><strong>Latitude:</strong> -25.157° S</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Ruler className="w-6 h-6 text-green-600" />
+                <span><strong>Area:</strong> ~34 km²</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Users className="w-6 h-6 text-purple-600" />
+                <span><strong>Population:</strong> ±12,000 (approx.)</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Globe className="w-6 h-6 text-orange-600" />
+                <span><strong>Province:</strong> North West</span>
+              </div>
+            </div>
           </div>
+
 
           {/* Right: Map */}
           <div className="md:w-[100%] h-[100%] md:h-[400px] " >
             <div className="w-full h-full min-h-[300px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.280679277886!2d27.3543193!3d-25.0153625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea0fc5e2db47165%3A0x9b4105dd24f417fd!2sRamokokastad%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1713870238597!5m2!1sen!2sza"
-                className="w-full h-full border-7 border-grey-2500 "
+                className="w-full h-full border-5 border-grey-2500 "
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
