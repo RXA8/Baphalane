@@ -106,7 +106,7 @@ export default function HomePage() {
           <section className="h-[60vh] flex items-center justify-start  px-2">
             {/* The text below should only take up 50% of the width */}
             <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Baphalane Community Website</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Ramokokastad Website</h2>
               <p className="text-lg md:text-3xl text-left text-white md:text-black">Empowering our people. <br />Enriching our future.</p>
             </div>
           </section>
@@ -115,26 +115,47 @@ export default function HomePage() {
           </div>
       </div>
 
-          {/* About Section */}
-          <section id="about" className="container mx-auto py-16 px-4 text-center ">
-            <h3 className="text-3xl font-semibold mb-6 text-green-700">About Us</h3>
-            <p className="max-w-3xl mx-auto text-2xl text-gray-700">
-              The Baphalane community is committed to fostering growth, unity, sustainability and development for all its members. We strive to provide transparent services and engage our people in shaping a better future.
+      <section id="about" className="container mx-auto ">
+        <div className="flex flex-col md:flex-row items-stretch gap-8">
+          
+          {/* Left: Text Content */}
+          <div className="md:w-1/2 flex flex-col justify-center">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-700">About Us</h3>
+            <p className="text-lg text-gray-800">
+              The Baphalane community is committed to fostering growth, unity, sustainability and development for all its members.
+              We strive to provide transparent services and engage our people in shaping a better future.
             </p>
-          </section>
+          </div>
+
+          {/* Right: Map */}
+          <div className="md:w-[100%] h-[100%] md:h-[400px] " >
+            <div className="w-full h-full min-h-[300px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.280679277886!2d27.3543193!3d-25.0153625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea0fc5e2db47165%3A0x9b4105dd24f417fd!2sRamokokastad%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1713870238597!5m2!1sen!2sza"
+                className="w-full h-full border-7 border-grey-2500 "
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
         
       {/* News */}
-      <section id="news" className=" bg-white py-16 px-4">
+      <section id="news" className=" bg-gray-100 py-5 px-4">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Latest News</h3>
+          <h3 className="text-3xl font-semibold mb-5 text-center text-gray-800">Latest News</h3>
           <NewsCarousel />
         </div>
       </section>
 
       {/* Services */}
-      <section id="services" className="bg-gray-300 py-16 px-4">
+      <section id="services" className="bg-gray-300 py-5 ">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Our Services</h3>
+          <h3 className="text-3xl font-semibold mb-10 text-center text-gray-800">Our Services</h3>
 
           <div className="relative">
             {/* Scroll Buttons */}
@@ -146,7 +167,7 @@ export default function HomePage() {
             }}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
           >
-          <ChevronLeft className="text-blue-600" />
+          <ChevronLeft className="text-gray-600" />
           </button>   
 
             <button
@@ -157,7 +178,7 @@ export default function HomePage() {
               }}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10"
             >
-              <ChevronRight className="text-blue-600" />
+              <ChevronRight className="text-gray-600" />
             </button>
 
 
@@ -187,9 +208,9 @@ export default function HomePage() {
 
 
       {/* Events */}
-      <section id="events" className="bg-white py-16 px-4">
+      <section id="events" className="bg-gray-200 py-8">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-10 text-center text-green-700">Upcoming Events</h3>
+          <h3 className="text-3xl font-semibold mb-10 text-center text-gray-800">Upcoming Events</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Card>
               <CardContent className="p-">
@@ -228,7 +249,7 @@ export default function HomePage() {
             {/* Dummy Info */}
             <div className="mb-6 space-y-2 text-sm text-gray-200">
               <p><strong>Address:</strong> Ga Ramokoka, Ramokokastad, 0388, South Africa, Moses Kotane, South Africa, 0388</p>
-              <p><strong>Email:</strong> admnin@baphalane.org</p>
+              <p><strong>Email:</strong> admin@baphalane.org</p>
               <p><strong>Office:</strong> +27 83 952 2872</p>
               <p><strong>PO Box:</strong> P.O Box 200 Ramokokastad 0195</p>
 
