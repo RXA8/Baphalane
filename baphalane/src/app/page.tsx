@@ -152,12 +152,14 @@ export default function HomePage() {
           <div className="md:w-[100%] h-[100%] md:h-[400px] " >
             <div className="w-full h-full min-h-[300px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.280679277886!2d27.3543193!3d-25.0153625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea0fc5e2db47165%3A0x9b4105dd24f417fd!2sRamokokastad%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1713870238597!5m2!1sen!2sza"
-                className="w-full h-full border-5 border-grey-2500 "
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza"
+                className="w-full h-full border-5 border-grey-2500 terrain-15 zoom-100 "
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+
+              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             </div>
           </div>
 
