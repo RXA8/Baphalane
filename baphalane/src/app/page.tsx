@@ -27,6 +27,8 @@ const services = [
 
 
 export default function HomePage() {
+  const [subDropdownOpen, setSubDropdownOpen] = useState(false);
+
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -108,21 +110,33 @@ export default function HomePage() {
 
             {/* Mobile Dropdown */}
             {menuOpen && (
-              <div className="md:hidden bg-white bg-opacity-50 px-4 py-2 space-y-4 text-black">
-                <Link href="#about" className="block">About</Link>
-                <Link href="#services" className="block">Services</Link>
-                <Link href="#news" className="block">News</Link>
-                <Link href="#events" className="block">Events</Link>
-                <Link href="#contact" className="block">Contact</Link>
-                <div className="pt-2 border-t border-gray-300">
-                  <span className="block font-semibold text-gray-700">Sub-Villages</span>
-                  <Link href="#phadi" className="block pl-4 text-sm">Phadi</Link>
-                  <Link href="#mmorogong" className="block pl-4 text-sm">Mmorogong</Link>
-                  <Link href="/bojating" className="block pl-4 text-sm">Bjating</Link>
-                  <Link href="#phalane" className="block pl-4 text-sm">Phalane</Link>
-                </div>
+            <div className="md:hidden bg-white px-4 py-2 space-y-2 text-black">
+              <Link href="#about" className="block">About</Link>
+              <Link href="#services" className="block">Services</Link>
+              <Link href="#news" className="block">News</Link>
+              <Link href="#events" className="block">Events</Link>
+              <Link href="#contact" className="block">Contact</Link>
+
+              {/* Mobile Sub-Villages Dropdown */}
+              <div>
+                <button
+                  onClick={() => setSubDropdownOpen(!subDropdownOpen)}
+                  className="block w-full text-left font-semibold text-black py-2 hover:bg-green-100"
+                >
+                  Sub-Villages
+                </button>
+                {subDropdownOpen && (
+                  <div className="ml-0 space-y-1">
+                    <Link href="/phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
+                    <Link href="/mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
+                    <Link href="/bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
+                    <Link href="/phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
+          )}
+
           </header>
 
 
