@@ -95,7 +95,7 @@ export default function HomePage() {
                   <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-20">
                     <Link href="#phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
                     <Link href="#mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
-                    <Link href="#bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
+                    <Link href="/bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
                     <Link href="#phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function HomePage() {
                   <span className="block font-semibold text-gray-700">Sub-Villages</span>
                   <Link href="#phadi" className="block pl-4 text-sm">Phadi</Link>
                   <Link href="#mmorogong" className="block pl-4 text-sm">Mmorogong</Link>
-                  <Link href="#bojating" className="block pl-4 text-sm">Bojating</Link>
+                  <Link href="/bojating" className="block pl-4 text-sm">Bjating</Link>
                   <Link href="#phalane" className="block pl-4 text-sm">Phalane</Link>
                 </div>
               </div>
