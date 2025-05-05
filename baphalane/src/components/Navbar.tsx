@@ -14,7 +14,9 @@ export default function Navbar() {
       style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-green-900">Baphalane🐊</h1>
+      <Link href="/" className="text-2xl font-bold text-green-900 hover:text-green-700">
+        Baphalane🐊
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-7 text-black font-semibold items-center">
