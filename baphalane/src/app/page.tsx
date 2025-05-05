@@ -1,4 +1,7 @@
 "use client";
+
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { supabase } from "../../lib/supabase";
 
 import NewsCarousel from '../components/NewsCarousel'
@@ -9,8 +12,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react"; 
 import { useRef } from "react";
 
@@ -27,11 +28,9 @@ const services = [
 
 
 export default function HomePage() {
-  const [subDropdownOpen, setSubDropdownOpen] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const [menuOpen, setMenuOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [category, setCategory] = useState("");
@@ -78,66 +77,7 @@ export default function HomePage() {
       >
 
         <div className="">
-          {/* Header */}
-          <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}>
-            <div className="container mx-auto px-4 py-4 flex items-left justify-between">
-              <h1 className="text-2xl font-bold text-green-900">Baphalane🐊</h1>
-              <nav className="hidden md:flex gap-7 text-black font-semibold items-center">
-                <Link href="#about" className="hover:text-green-700">About</Link>
-                <Link href="#services" className="hover:text-green-700">Services</Link>
-                <Link href="#news" className="hover:text-green-700">News</Link>
-                <Link href="#events" className="hover:text-green-700">Events</Link>
-                <Link href="#contact" className="hover:text-green-700">Contact</Link>
-
-                {/* Hover-based Dropdown */}
-                <div className="relative group">
-                  <button className="hover:text-green-700 focus:outline-none">
-                    Sub-Villages
-                  </button>
-                  <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-20">
-                    <Link href="#phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
-                    <Link href="#mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
-                    <Link href="/bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
-                    <Link href="#phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
-                  </div>
-                </div>
-              </nav>
-
-              <button className="md:hidden text-blue" onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? <X /> : <Menu />}
-              </button>
-            </div>
-
-            {/* Mobile Dropdown */}
-            {menuOpen && (
-            <div className="md:hidden bg-white px-4 py-2 space-y-2 text-black">
-              <Link href="#about" className="block">About</Link>
-              <Link href="#services" className="block">Services</Link>
-              <Link href="#news" className="block">News</Link>
-              <Link href="#events" className="block">Events</Link>
-              <Link href="#contact" className="block">Contact</Link>
-
-              {/* Mobile Sub-Villages Dropdown */}
-              <div>
-                <button
-                  onClick={() => setSubDropdownOpen(!subDropdownOpen)}
-                  className="block w-full text-left font-semibold text-black py-2 hover:bg-green-100"
-                >
-                  Sub-Villages
-                </button>
-                {subDropdownOpen && (
-                  <div className="ml-0 space-y-1">
-                    <Link href="/phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
-                    <Link href="/mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
-                    <Link href="/bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
-                    <Link href="/phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-
-          </header>
+          <Navbar />
 
 
           {/* Hero Section */}
@@ -399,9 +339,7 @@ export default function HomePage() {
 
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 text-center">
-        <p>&copy; {new Date().getFullYear()} Baphalane Community. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

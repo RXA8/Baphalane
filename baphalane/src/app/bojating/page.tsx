@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
+import Navbar from '../../components/Navbar';
+import Footer  from '../../components/Footer';
 export default function Bojating() {
   return (
     <>
@@ -8,6 +9,9 @@ export default function Bojating() {
         <title>Bojating | Baphalane Community</title>
         <meta name="description" content="Information about the Bojating sub-village in Ramokokastad." />
       </Head>
+
+      <Navbar />
+
 
       <main className="min-h-screen px-6 py-10 bg-gray-50 text-gray-800">
         <div className="max-w-4xl mx-auto">
@@ -36,6 +40,8 @@ export default function Bojating() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
