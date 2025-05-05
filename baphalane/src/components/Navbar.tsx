@@ -30,10 +30,10 @@ export default function Navbar() {
               Sub-Villages
             </button>
             <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-20">
-              <Link href="#phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
-              <Link href="#mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
+              <Link href="/phadi" className="block px-4 py-2 hover:bg-green-100">Phadi</Link>
+              <Link href="/mmorogong" className="block px-4 py-2 hover:bg-green-100">Mmorogong</Link>
               <Link href="/bojating" className="block px-4 py-2 hover:bg-green-100">Bojating</Link>
-              <Link href="#phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
+              <Link href="/phalane" className="block px-4 py-2 hover:bg-green-100">Phalane</Link>
             </div>
           </div>
         </nav>
@@ -63,10 +63,10 @@ export default function Navbar() {
         </button>
         {subDropdownOpen && (
             <div className="pl-4 mt-1 space-y-1">
-            <Link href="#phadi" className="block">Phadi</Link>
-            <Link href="#mmorogong" className="block">Mmorogong</Link>
+            <Link href="/phadi" className="block">Phadi</Link>
+            <Link href="/mmorogong" className="block">Mmorogong</Link>
             <Link href="/bojating" className="block">Bojating</Link>
-            <Link href="#phalane" className="block">Phalane</Link>
+            <Link href="/phalane" className="block">Phalane</Link>
             </div>
         )}
         </div>
