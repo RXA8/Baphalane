@@ -128,7 +128,7 @@ export default function HomePage() {
 
           {/* Right: Map */}
           <div className="md:w-[100%] h-[100%] md:h-[400px] " >
-            <div className="w-full h-full min-h-[300px]">
+            <div className="w-full h-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza"
                 className="w-full h-full border-5 border-grey-2500 terrain-15 zoom-100 "
@@ -247,17 +247,27 @@ export default function HomePage() {
             <h3 className="text-3xl font-semibold mb-4">Contact Us</h3>
             <p className="mb-6">Have questions or need more info? We are here to help.</p>
 
-            {/* Dummy Info */}
+            {/* Info */}
             <div className="mb-6 space-y-2 text-sm text-gray-200">
               <p><strong>Address:</strong> Ga Ramokoka, Ramokokastad, 0388, South Africa, Moses Kotane, South Africa, 0388</p>
-              <p><strong>Email:</strong> admin@baphalane.org</p>
-              <p><strong>Office:</strong> +27 83 952 2872</p>
+              <p>
+                <strong>Email:</strong>{' '}
+                <a href="mailto:admin@baphalane.org" className="underline text-blue-200 hover:text-white">
+                  admin@baphalane.org
+                </a>
+              </p>
+              <p>
+                <strong>Office:</strong>{' '}
+                <a href="tel:+27839522872" className="underline text-blue-200 hover:text-white">
+                  +27 83 952 2872
+                </a>
+              </p>
               <p><strong>PO Box:</strong> P.O Box 200 Ramokokastad 0195</p>
-
             </div>
 
+
             {/* Social Media */}
-            <div className="mt-auto pt-15">
+            <div className="mt-auto">
               <div className="flex gap-4 justify-center md:justify-start">
                 <a href="https://www.facebook.com/p/Bua-Motlase-100077121870361/" className="flex items-center gap-1 hover:underline">
                   <FaFacebook className="text-white" /> Facebook
@@ -273,9 +283,10 @@ export default function HomePage() {
 
           </div>
 
-        {/* Vertical Divider */}
-        <div className="hidden md:flex self-stretch">
-          <div className="w-px bg-gray-400 mr-13 ml-0" />
+        {/* Responsive Divider */}
+        <div className="flex md:flex-col items-center self-stretch w-full md:w-auto md:self-stretch my-4 md:my-0">
+          {/* Actual line */}
+          <div className="bg-gray-400 w-full h-px md:w-px md:h-full md:mr-13" />
         </div>
 
        
