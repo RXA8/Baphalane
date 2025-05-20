@@ -3,6 +3,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { supabase } from "../../lib/supabase";
+import EventsSection from "../components/EventsSection";
 
 import NewsCarousel from '../components/NewsCarousel'
 
@@ -10,12 +11,31 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { MapPin, Ruler, Users, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 
 export default function HomePage() {
 
+  const events = [
+    {
+      title: "Community Clean-Up Day",
+      date: "June 14, 2025",
+      description: "Join us to clean up our parks and streets. Volunteers welcome!",
+      imageUrl: "https://groundup.org.za/media/uploads/images/photographers/Masixole%20Feni/CleanMy%20Space.jpg", // Replace with your image path
+    },
+    {
+      title: "Highschool Soccer Tournament",
+      date: "June 24, 2025",
+      description: "Support local youth in a friendly soccer showdown!",
+      imageUrl: "https://images.caxton.co.za/wp-content/uploads/sites/30/2019/12/50TBSPORTPHILLYDRAW_86937.jpg", // Replace with your image path
+    },
+    {
+      title: "Kwena-Tlase Secondary School Career Day",
+      date: "March 25, 2025",
+      description: "Kwena Tlase Secondary School proudly presents its annual Career Expo! Discover career paths, meet industry professionals, and explore study opportunities. Don’t miss this exciting chance to plan your future!\n\n📅 Date: March 25 2025 \n📍 Venue: School Hall\n🎓 All learners welcome!",
+      imageUrl: "https://ariessolar.globeleq-projects.co.za/wp-content/uploads/sites/6/2023/09/Career-Expo1.jpeg", // Replace with your image path
+    },
+  ];
   
 
   const [name, setName] = useState("");
@@ -142,35 +162,12 @@ export default function HomePage() {
 
       {/* Events */}
       <section id="events" className="bg-gray-200 py-8">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-10 text-center text-gray-800">Upcoming Events</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card>
-              <CardContent className="p-">
-                <h4 className="font-bold text-lg">Community Clean-Up Day</h4>
-                <p className="text-gray-600">Join us for a day dedicated to cleaning our streets and parks. Volunteers welcome!</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <h4 className="font-bold text-lg">Youth Soccer Tournament</h4>
-                <p className="text-gray-600">Come support our local youth teams as they compete in a fun, friendly tournament.</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-">
-                <h4 className="font-bold text-lg">Community Clean-Up Day</h4>
-                <p className="text-gray-600">Join us for a day dedicated to cleaning our streets and parks. Volunteers welcome!</p>
-              </CardContent>
-            </Card>
-            
-          </div>
-        </div>
+        <EventsSection events={events} />
       </section>
 
 
       {/* Contact */}
-      <section id="contact" className="bg-gray-600 py-16 px-4 text-white">
+      <section id="contact" className="bg-gray-600 py-4 px-4 text-white">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:justify-center md:items-start gap-1">
 
