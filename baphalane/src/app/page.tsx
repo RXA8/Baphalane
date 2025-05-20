@@ -249,7 +249,7 @@ export default function HomePage() {
 
             {/* Info */}
             <div className="mb-6 space-y-2 text-sm text-gray-200">
-              <p><strong>Address:</strong> Ga Ramokoka, Ramokokastad, 0388, South Africa, Moses Kotane, South Africa, 0388</p>
+              <p><strong>Address:</strong> Ramokokastad, Moses Kotane, South Africa, 0388</p>
               <p>
                 <strong>Email:</strong>{' '}
                 <a href="mailto:admin@baphalane.org" className="underline text-blue-200 hover:text-white">
