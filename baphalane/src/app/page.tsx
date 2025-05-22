@@ -30,7 +30,7 @@ export default function HomePage() {
       imageUrl: "https://images.caxton.co.za/wp-content/uploads/sites/30/2019/12/50TBSPORTPHILLYDRAW_86937.jpg", // Replace with your image path
     },
     {
-      title: "Kwena-Tlase Secondary School Career Day",
+      title: "Kwena-Tlase Secondary School Career Day ",
       date: "March 25, 2025",
       description: "Kwena Tlase Secondary School proudly presents its annual Career Expo! Discover career paths, meet industry professionals, and explore study opportunities. Don’t miss this exciting chance to plan your future!\n\n📅 Date: March 25 2025 \n📍 Venue: School Hall\n🎓 All learners welcome!",
       imageUrl: "https://ariessolar.globeleq-projects.co.za/wp-content/uploads/sites/6/2023/09/Career-Expo1.jpeg", // Replace with your image path
