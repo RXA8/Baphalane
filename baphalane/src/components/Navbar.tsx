@@ -15,7 +15,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
       <Link href="/" className="text-2xl font-bold text-green-900 hover:text-green-700">
-        Baphalane🐊
+        Baphalane
         </Link>
 
         {/* Desktop Navigation */}
