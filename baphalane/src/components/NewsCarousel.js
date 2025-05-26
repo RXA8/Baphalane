@@ -1,4 +1,3 @@
-// components/NewsCarousel.js
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -9,24 +8,37 @@ import 'swiper/css/pagination';
 
 export default function NewsCarousel() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [swiperKey, setSwiperKey] = useState(0); // For re-render
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await fetch('/api/news_api'); // fixed path
+        const res = await fetch('/api/news_api');
         const data = await res.json();
         setArticles(data.articles);
-        console.log('Fetched articles:', data.articles);
+        setSwiperKey((prev) => prev + 1);
       } catch (err) {
         console.error('Failed to fetch news:', err);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchNews();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   return (
     <Swiper
+      key={swiperKey}
       modules={[Autoplay, Pagination]}
       spaceBetween={20}
       slidesPerView={1}
@@ -36,7 +48,7 @@ export default function NewsCarousel() {
       breakpoints={{
         640: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }, // 3 cards on large screens
+        1024: { slidesPerView: 3 },
       }}
     >
       {articles.map((article, index) => (
