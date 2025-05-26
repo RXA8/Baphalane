@@ -35,7 +35,7 @@ type Event = {
                   </div>
   
                   {/* Back Side */}
-                    <div className="absolute inset-0 rounded-xl border bg-white shadow-lg px-4 py-6 text-gray-700 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
+                    <div className="absolute inset-0 rounded-xl border bg-gray-500 shadow-lg px-4 py-6 text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center">
                         <h4 className="text-base font-semibold mb-2 text-center">
                             {event.title}
                         </h4>

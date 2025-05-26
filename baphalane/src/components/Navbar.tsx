@@ -24,7 +24,8 @@ export default function Navbar() {
           <Link href="#services" className="hover:text-green-700">Services</Link>
           <Link href="#news" className="hover:text-green-700">News</Link>*/}
           <Link href="" className="hover:text-green-700">Council</Link> 
-          <Link href="#contact" className="hover:text-green-700">Contact</Link>
+          <Link href="" className="hover:text-green-700">Media</Link>
+          
 
           {/* Hover-based Dropdown */}
           <div className="relative group">
@@ -38,6 +39,8 @@ export default function Navbar() {
               <Link href="/phalane" className="block px-1.5 py-2 hover:bg-green-100">Phalane</Link>
             </div>
           </div>
+
+          <Link href="#contact" className="hover:text-green-700">Contact</Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -53,7 +56,7 @@ export default function Navbar() {
         <Link href="#services" className="block">Services</Link>
         <Link href="#news" className="block">News</Link>*/}
         <Link href="#events" className="block">Council</Link> 
-        <Link href="#contact" className="block">Contact</Link>
+        <Link href="" className="block">Media</Link>
 
         {/* Toggleable Mobile Dropdown */}
         <div>
@@ -72,6 +75,7 @@ export default function Navbar() {
             </div>
         )}
         </div>
+        <Link href="#contact" className="block">Contact</Link>
     </div>
     )}
 
