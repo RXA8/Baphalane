@@ -20,10 +20,10 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-7 text-black font-semibold items-center">
-          <Link href="#about" className="hover:text-green-700">About</Link>
+          {/* <Link href="#about" className="hover:text-green-700">About</Link>
           <Link href="#services" className="hover:text-green-700">Services</Link>
           <Link href="#news" className="hover:text-green-700">News</Link>
-          <Link href="#events" className="hover:text-green-700">Events</Link>
+          <Link href="#events" className="hover:text-green-700">Events</Link> */}
           <Link href="#contact" className="hover:text-green-700">Contact</Link>
 
           {/* Hover-based Dropdown */}
@@ -49,10 +49,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
   <div className="md:hidden bg-white px-4 py-2 space-y-2 text-black">
-        <Link href="#about" className="block">About</Link>
+        {/* <Link href="#about" className="block">About</Link>
         <Link href="#services" className="block">Services</Link>
         <Link href="#news" className="block">News</Link>
-        <Link href="#events" className="block">Events</Link>
+        <Link href="#events" className="block">Events</Link> */}
         <Link href="#contact" className="block">Contact</Link>
 
         {/* Toggleable Mobile Dropdown */}
