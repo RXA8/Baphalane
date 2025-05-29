@@ -167,7 +167,7 @@ export default function HomePage() {
 
 
       {/* Contact */}
-      <section id="contact" className="bg-gray-600 py-4 px-4 text-white">
+      <section id="contact" className="bg-gray-700 py-4 px-4 text-white">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:justify-center md:items-start gap-1">
 

@@ -23,7 +23,7 @@ export default function Navbar() {
           {/* <Link href="#about" className="hover:text-green-700">About</Link>
           <Link href="#services" className="hover:text-green-700">Services</Link>
           <Link href="#news" className="hover:text-green-700">News</Link>*/}
-          <Link href="" className="hover:text-green-700">Council</Link> 
+          <Link href="/council" className="hover:text-green-700">Council</Link> 
           <Link href="" className="hover:text-green-700">Media</Link>
           
 
@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* <Link href="#about" className="block">About</Link>
         <Link href="#services" className="block">Services</Link>
         <Link href="#news" className="block">News</Link>*/}
-        <Link href="#events" className="block">Council</Link> 
+        <Link href="/council" className="block">Council</Link> 
         <Link href="" className="block">Media</Link>
 
         {/* Toggleable Mobile Dropdown */}
