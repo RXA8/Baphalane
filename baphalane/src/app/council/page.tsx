@@ -14,77 +14,62 @@ const councilMembers: CouncilMember[] = [
   {
     name: 'Jane Doe',
     title: 'Chairperson',
-    imageUrl: 'https:/images.unsplash.com/photo-1529626455594-4ff0802cfb7e/', // example Unsplash image
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png', // example Unsplash image
   },
   {
     name: 'John Smith',
     title: 'Treasurer',
-    imageUrl: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e/',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Emily Johnson',
     title: 'Secretary',
-    imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Jane Doe',
     title: 'Chairperson',
-    imageUrl: 'https:/images.unsplash.com/photo-1529626455594-4ff0802cfb7e/', // example Unsplash image
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png', // example Unsplash image
   },
   {
     name: 'John Smith',
     title: 'Treasurer',
-    imageUrl: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e/',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Emily Johnson',
     title: 'Secretary',
-    imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Jane Doe',
     title: 'Chairperson',
-    imageUrl: 'https:/images.unsplash.com/photo-1529626455594-4ff0802cfb7e/', // example Unsplash image
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png', // example Unsplash image
   },
   {
     name: 'John Smith',
     title: 'Treasurer',
-    imageUrl: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e/',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Emily Johnson',
     title: 'Secretary',
-    imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Jane Doe',
     title: 'Chairperson',
-    imageUrl: 'https:/images.unsplash.com/photo-1529626455594-4ff0802cfb7e/', // example Unsplash image
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png', // example Unsplash image
   },
   {
     name: 'John Smith',
     title: 'Treasurer',
-    imageUrl: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e/',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   {
     name: 'Emily Johnson',
     title: 'Secretary',
-    imageUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde',
-  },
-  {
-    name: 'Jane Doe',
-    title: 'Chairperson',
-    imageUrl: 'https:/images.unsplash.com/photo-1529626455594-4ff0802cfb7e/', // example Unsplash image
-  },
-  {
-    name: 'John Smith',
-    title: 'Treasurer',
-    imageUrl: 'https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-stywo-1261728.jpg',
-  },
-  {
-    name: 'Emily Johnson',
-    title: 'Secretary',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageUrl: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   },
   
   
@@ -97,7 +82,7 @@ export default function CouncilPage() {
     <>
       <Navbar />
 
-      <section id="council" className="bg-gray-100 py-12">
+      <section id="council" className="bg-gray-200 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center text-gray-800 mb-10">
             Meet Our Council
