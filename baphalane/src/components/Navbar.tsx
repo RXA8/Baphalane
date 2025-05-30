@@ -40,7 +40,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="#contact" className="hover:text-green-700">Contact</Link>
+          <Link href="/#contact" className="hover:text-green-700">Contact</Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -75,7 +75,7 @@ export default function Navbar() {
             </div>
         )}
         </div>
-        <Link href="#contact" className="block">Contact</Link>
+        <Link href="/#contact" className="block">Contact</Link>
     </div>
     )}
 
