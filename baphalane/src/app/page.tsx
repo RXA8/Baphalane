@@ -100,11 +100,11 @@ export default function HomePage() {
           </div>
       </div>
 
-      <section id="about" className="container mx-auto ">
-        <div className="flex flex-col md:flex-row items-stretch gap-4">
+      <section id="about" className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           
-          {/* Left: Text Content */}
-          <div className="md:w-1/2 flex flex-col items-center text-center">
+          {/* Column 1: About Us */}
+          <div className="flex flex-col items-center text-center">
             <h3 className="text-3xl font-semibold mb-4 text-gray-700">About Us</h3>
             <p className="text-gray-800 text-lg mb-6">
               Welcome to the Baphalane Community website! We are dedicated to serving the people of Ramokokastad and surrounding areas.
@@ -132,24 +132,25 @@ export default function HomePage() {
             </div>
           </div>
 
-
-          {/* Right: Map */}
-          <div className="md:w-[100%] h-[100%] md:h-[400px] " >
-            <div className="w-full h-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza"
-                className="w-full h-full border-5 border-grey-2500 terrain-15 zoom-100 "
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-
-              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-            </div>
+          {/* Column 2: Map */}
+          <div className="w-full h-[300px] md:h-[400px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d26364.110278601107!2d27.432578687679342!3d-25.15423511830641!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1745575107425!5m2!1sen!2sza"
+              className="w-full h-full rounded-md shadow-md border"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
+          {/* Column 3: Weather (placeholder) */}
+          <div className="flex flex-col items-center justify-center h-full text-center text-gray-700">
+            <h3 className="text-xl font-semibold mb-3">Weather in Ramokokastad</h3>
+            <p className="text-sm">[Weather widget coming soon]</p>
+          </div>
         </div>
       </section>
+
 
         
       {/* News */}
