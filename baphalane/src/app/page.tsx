@@ -12,6 +12,7 @@ import { MapPin, Ruler, Users, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import WeatherWidget from '@/components/WeatherWidget';
 
 
 export default function HomePage() {
@@ -143,10 +144,10 @@ export default function HomePage() {
             ></iframe>
           </div>
 
-          {/* Column 3: Weather (placeholder) */}
-          <div className="flex flex-col items-center justify-center h-full text-center text-gray-700">
-            <h3 className="text-xl font-semibold mb-3">Weather in Ramokokastad</h3>
-            <p className="text-sm">[Weather widget coming soon]</p>
+          {/* Column 3: Weather */}
+          <div className="flex flex-col items-center justify-center  text-center text-gray-700">
+            {/* <h3 className="text-xl font-semibold mb-3">Weather in Ramokokastad</h3> */}
+            <WeatherWidget />
           </div>
         </div>
       </section>
