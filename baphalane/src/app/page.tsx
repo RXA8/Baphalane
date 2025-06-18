@@ -13,6 +13,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import WeatherWidget from '@/components/WeatherWidget';
+import RustenburgWeatherWidget from '@/components/RustenburgWeatherWidget';
 
 
 export default function HomePage() {
@@ -145,13 +146,16 @@ export default function HomePage() {
           </div>
 
           {/* Column 3: Weather */}
-          <div className="flex flex-col items-center justify-center  text-center text-gray-700">
+          <div className="flex flex-col items-center justify-center  text-center text-gray-700 gap-1">
             {/* <h3 className="text-xl font-semibold mb-3">Weather in Ramokokastad</h3> */}
+            {/* This is the weather widget for Ramokokastad */}
             <WeatherWidget />
+
+            {/* This is the weather widget for Rustenburg */}
+            <RustenburgWeatherWidget />
           </div>
         </div>
       </section>
-
 
         
       {/* News */}

@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-const WeatherWidget = () => {
+const RustenburgWeatherWidget = () => {
   const widgetRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -35,17 +35,17 @@ const WeatherWidget = () => {
       <a
         ref={widgetRef}
         className="weatherwidget-io block w-full "
-        href="https://forecast7.com/en/n25d1527d43/ramokokastad/"
-        data-label_1="RAMOKOKASTAD"
+        href="https://forecast7.com/en/n25d6527d26/rustenburg/"
+        data-label_1="RUSTENBURG"
         data-label_2="WEATHER"
         data-icons="Climacons Animated"
         data-days="7"
-        data-theme="mountains"
+        data-theme="blue-mountains"
       >
-        RAMOKOKASTAD WEATHER
+        RUSTENBURG WEATHER
       </a>
     </div>
   );
 };
 
-export default WeatherWidget;
+export default RustenburgWeatherWidget;
