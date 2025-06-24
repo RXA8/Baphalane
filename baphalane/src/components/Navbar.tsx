@@ -25,6 +25,7 @@ export default function Navbar() {
           <Link href="#news" className="hover:text-green-700">News</Link>*/}
           <Link href="/council" className="hover:text-green-700">Council</Link> 
           <Link href="" className="hover:text-green-700">Media</Link>
+          <Link href="/about_us" className="hover:text-green-700">About</Link>
           
 
           {/* Hover-based Dropdown */}
@@ -57,6 +58,7 @@ export default function Navbar() {
         <Link href="#news" className="block">News</Link>*/}
         <Link href="/council" className="block">Council</Link> 
         <Link href="" className="block">Media</Link>
+        <Link href="/about_us" className="block">About</Link>
 
         {/* Toggleable Mobile Dropdown */}
         <div>

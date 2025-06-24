@@ -15,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import WeatherWidget from '@/components/WeatherWidget';
 import RustenburgWeatherWidget from '@/components/RustenburgWeatherWidget';
 
+import Link from "next/link";
+
 
 export default function HomePage() {
 
@@ -109,9 +111,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center">
             <h3 className="text-3xl font-semibold mb-4 text-gray-700">About Us</h3>
             <p className="text-gray-800 text-lg mb-6">
-              Welcome to the Baphalane Community website! We are dedicated to serving the people of Ramokokastad and surrounding areas.
-              Located in the North West Province of South Africa, Ramokokastad is a culturally rich village with a strong community spirit.
-              Our mission is to uplift residents through initiatives focused on housing, health, education, and youth empowerment.
+              Bakwena-ba-Phalane (Baphalane) are a Bakwena tribe of some 120 000 people spread amongst 8 villages, under the leadership of Kgosi JJEM Ramokoka. The Baphalane great place, or capital village is Ramokokastad. Baphalane are an offshoot of the Bakwena of Sechele in Molepolole in Botswana, and are of the same origins as the Bakwena-ba-Mogopa based in Bethanie.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700 w-full">
@@ -132,6 +132,16 @@ export default function HomePage() {
                 <span><strong>Province:</strong> North West</span>
               </div>
             </div>
+
+            {/* See More Link */}
+            <div className="mt-6">
+              <Link
+                href="/about_us"
+                className="text-green-700 hover:underline text-sm font-medium"
+              >
+                See more →
+              </Link>
+            </div>
           </div>
 
           {/* Column 2: Map */}
@@ -146,12 +156,8 @@ export default function HomePage() {
           </div>
 
           {/* Column 3: Weather */}
-          <div className="flex flex-col items-center justify-center  text-center text-gray-700 gap-1">
-            {/* <h3 className="text-xl font-semibold mb-3">Weather in Ramokokastad</h3> */}
-            {/* This is the weather widget for Ramokokastad */}
+          <div className="flex flex-col items-center justify-center text-center text-gray-700 gap-1">
             <WeatherWidget />
-
-            {/* This is the weather widget for Rustenburg */}
             <RustenburgWeatherWidget />
           </div>
         </div>
