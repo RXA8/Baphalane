@@ -7,7 +7,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Background section */}
-      <div className="relative bg-[url('/images/heritage-bg.jpg')] bg-cover bg-center py-16 px-4 md:px-20">
+      <div className="relative bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-sanat-anghan-25736600-6757973.jpg')] bg-cover bg-center py-16 px-4 md:px-20">
         <div className="bg-white bg-opacity-90 backdrop-blur-md rounded-lg shadow-lg p-8 md:p-12 max-w-5xl mx-auto">
           <h1 className="text-4xl font-bold text-center text-green-900 mb-10">About Us</h1>
 
@@ -15,8 +15,6 @@ export default function AboutPage() {
                 Bakwena-ba-Phalane (Baphalane) are a Bakwena tribe of some 120,000 people spread across eight villages, under the leadership of Kgosi JJEM Ramokoka. The Baphalane great place, or capital village, is Ramokokastad. Baphalane are an offshoot of the Bakwena of Sechele in Molepolole, Botswana, and share origins with the Bakwena-ba-Mogopa based in Bethanie.
                 Baphalane are the original inhabitants of areas such as Mogalakwena, Schilpadnest, Kroondal, and the Madikwe Game Reserve. They are also the current owners of the land where Anglo American Platinum’s Tumela operations are located.
             </p>
-
-            
 
           <section className="space-y-8 text-gray-800 text-lg">
             <div>
