@@ -163,6 +163,74 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Promo Video & Competition Registration and Flyer */}
+      <section
+        className="py-16 px-6 md:px-12 lg:px-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//trad%20bg.jpg')",
+        }}
+      >
+        <div className=" grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+          
+          {/* Portrait Video */}
+          <div className="flex justify-center col-span-1">
+            <div className="w-[320px] h-[570px] lg:w-[360px] lg:h-[640px] overflow-hidden rounded-xl shadow-xl border border-gray-200">
+              <video className="w-full h-full object-cover" controls>
+                <source
+                  src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/videos//culture%20competition.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          {/* Registration Form */}
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md w-full h-full flex flex-col">
+            <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              Register for the Traditional Dance & Poetry Competition
+            </h3>
+
+            <form className="flex flex-col flex-grow space-y-4">
+              <Input type="text" placeholder="Full Name" required className="w-full" />
+              <Input type="tel" placeholder="Phone Number" required className="w-full" />
+              <Input type="text" placeholder="Village/Community" className="w-full" />
+              <Input type="text" placeholder="Performance Title" className="w-full" />
+              <Input type="text" placeholder="Performance Description" className="w-full" />
+              <Input type="text" placeholder="Performance Duration (e.g., 3 minutes)" className="w-full" />
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700">
+                <option value="">Select Category</option>
+                <option value="dance">Traditional Dance</option>
+                <option value="poetry">Poetry</option>
+              </select>
+
+              {/* Spacer to push the button down */}
+              <div className="flex-grow" />
+
+              <Button
+                type="submit"
+                className="bg-green-700 text-white hover:bg-green-800 w-full py-2"
+              >
+                Submit Registration
+              </Button>
+            </form>
+          </div>
+
+          {/* Flyer Image (only visible on large screens) */}
+          <div className="hidden lg:flex justify-center col-span-1">
+            <img
+              src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/competition//TraditionalFlyer%20(1).png"
+              alt="Traditional Dance & Poetry Flyer"
+              className="rounded-xl shadow-lg w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+
+
+
         
       {/* News */}
       <section id="news" className=" bg-gray-100 py-5 px-4">
