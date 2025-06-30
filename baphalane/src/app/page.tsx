@@ -20,6 +20,56 @@ import Link from "next/link";
 
 export default function HomePage() {
 
+  const [regCategory, setRegCategory] = useState("");
+  const [regSuccess, setRegSuccess] = useState(false);
+  const [regError, setRegError] = useState(false);
+
+  const [regFullName, setRegFullName] = useState("");
+  const [regPhoneNumber, setRegPhoneNumber] = useState("");
+  const [regVillage, setRegVillage] = useState("");
+  const [regTitle, setRegTitle] = useState("");
+  const [regDescription, setRegDescription] = useState("");
+  const [regDuration, setRegDuration] = useState("");
+
+  const handleRegistrationSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setRegSuccess(false);
+  setRegError(false);
+
+  try {
+    const { error } = await supabase.from("competition_registrations").insert([
+        {
+          full_name: regFullName,
+          phone_number: regPhoneNumber,
+          village: regVillage,
+          performance_title: regTitle,
+          performance_description: regDescription,
+          performance_duration: regDuration,
+          category: regCategory,
+        },
+      ]);
+
+      if (error) {
+        console.error("Supabase insert error:", error);
+        setRegError(true);
+      } else {
+        setRegSuccess(true);
+        setRegFullName("");
+        setRegPhoneNumber("");
+        setRegVillage("");
+        setRegTitle("");
+        setRegDescription("");
+        setRegDuration("");
+        setRegCategory("");
+      }
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      setRegError(true);
+    }
+  };
+
+
+
   const events = [
     {
       title: "Community Clean-Up Day",
@@ -192,29 +242,33 @@ export default function HomePage() {
               Register for the Traditional Dance & Poetry Competition
             </h3>
 
-            <form className="flex flex-col flex-grow space-y-4">
-              <Input type="text" placeholder="Full Name" required className="w-full" />
-              <Input type="tel" placeholder="Phone Number" required className="w-full" />
-              <Input type="text" placeholder="Village/Community" className="w-full" />
-              <Input type="text" placeholder="Performance Title" className="w-full" />
-              <Input type="text" placeholder="Performance Description" className="w-full" />
-              <Input type="text" placeholder="Performance Duration (e.g., 3 minutes)" className="w-full" />
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700">
-                <option value="">Select Category</option>
-                <option value="dance">Traditional Dance</option>
-                <option value="poetry">Poetry</option>
-              </select>
+            <form onSubmit={handleRegistrationSubmit} className="flex flex-col flex-grow space-y-4">
+            <Input type="text" placeholder="Full Name" required className="w-full" value={regFullName} onChange={(e) => setRegFullName(e.target.value)} />
+            <Input type="tel" placeholder="Phone Number" required className="w-full" value={regPhoneNumber} onChange={(e) => setRegPhoneNumber(e.target.value)} />
+            <Input type="text" placeholder="Village/Community" className="w-full" value={regVillage} onChange={(e) => setRegVillage(e.target.value)} />
+            <Input type="text" placeholder="Performance Title" className="w-full" value={regTitle} onChange={(e) => setRegTitle(e.target.value)} />
+            <Input type="text" placeholder="Performance Description" className="w-full" value={regDescription} onChange={(e) => setRegDescription(e.target.value)} />
+            <Input type="text" placeholder="Performance Duration (e.g., 3 minutes)" className="w-full" value={regDuration} onChange={(e) => setRegDuration(e.target.value)} />
+            
+            <select className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700" value={regCategory} onChange={(e) => setRegCategory(e.target.value)}>
+              <option value="">Select Category</option>
+              <option value="dance">Traditional Dance</option>
+              <option value="poetry">Poetry</option>
+            </select>
 
-              {/* Spacer to push the button down */}
-              <div className="flex-grow" />
+            <div className="flex-grow" />
+            <Button type="submit" className="bg-green-700 text-white hover:bg-green-800 w-full py-2">
+              Submit Registration
+            </Button>
 
-              <Button
-                type="submit"
-                className="bg-green-700 text-white hover:bg-green-800 w-full py-2"
-              >
-                Submit Registration
-              </Button>
-            </form>
+            {regSuccess && (
+              <p className="text-green-600 text-sm text-center">Registration submitted successfully!</p>
+            )}
+            {regError && (
+              <p className="text-red-600 text-sm text-center">Something went wrong. Please try again.</p>
+            )}
+          </form>
+
           </div>
 
           {/* Flyer Image (only visible on large screens) */}
