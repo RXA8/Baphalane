@@ -8,8 +8,8 @@ export const supabase = createClient(supabaseUrl, supabaseKey)
 // Log to verify if the client is created successfully
 if (supabase) {
     console.log("Supabase client created successfully")
-    console.log("Supabase URL:", supabaseUrl)
-    console.log("Supabase Key:", supabaseKey)
+    // console.log("Supabase URL:", supabaseUrl)
+    // console.log("Supabase Key:", supabaseKey)
   } else {
     console.error("Failed to create Supabase client")
   }
