@@ -72,16 +72,16 @@ export default function HomePage() {
 
   const events = [
     {
-      title: "Community Clean-Up Day",
-      date: "June 14, 2025",
-      description: "Join us to clean up our parks and streets. Volunteers welcome!",
-      imageUrl: "https://groundup.org.za/media/uploads/images/photographers/Masixole%20Feni/CleanMy%20Space.jpg", // Replace with your image path
+      title: "Introducing SANDF to the community of Bojating.",
+      date: "September 11, 2025",
+      description: "Baphalane Traditional Council meeting with the Bojating community to brief them about SANDF involvement",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this.jpg", // Replace with your image path
     },
     {
-      title: "Highschool Soccer Tournament",
-      date: "June 24, 2025",
-      description: "Support local youth in a friendly soccer showdown!",
-      imageUrl: "https://images.caxton.co.za/wp-content/uploads/sites/30/2019/12/50TBSPORTPHILLYDRAW_86937.jpg", // Replace with your image path
+      title: "Introducing SANDF to the community of Phadi",
+      date: "September 11, 2025",
+      description: "Baphalane Traditional Council meeting with the Phadi community to brief them about SANDF involvement",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this2%20(1).jpg", // Replace with your image path
     },
     {
       title: "Kwena-Tlase Secondary School Career Day ",
@@ -316,13 +316,13 @@ export default function HomePage() {
               <p>
                 <strong>Email:</strong>{' '}
                 <a href="mailto:admin@baphalane.org" className="underline text-blue-200 hover:text-white">
-                  admin@baphalane.org
+                  admin@baphalane.org.za
                 </a>
               </p>
               <p>
                 <strong>Office:</strong>{' '}
-                <a href="tel:+27839522872" className="underline text-blue-200 hover:text-white">
-                  +27 83 952 2872
+                <a href="tel:+27122440006" className="underline text-blue-200 hover:text-white">
+                  +27 12 244 0006
                 </a>
               </p>
               <p><strong>PO Box:</strong> P.O Box 200 Ramokokastad 0195</p>
