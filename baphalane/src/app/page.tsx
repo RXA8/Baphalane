@@ -145,7 +145,7 @@ export default function HomePage() {
           <section className="h-[60vh] flex items-center justify-start  px-2">
             {/* The text below should only take up 50% of the width */}
             <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Ramokokastad Website</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Baphalane Website</h2>
               <p className="text-lg md:text-3xl text-left text-white md:text-black">Empowering our people. <br />Enriching our future.</p>
             </div>
           </section>
@@ -228,7 +228,7 @@ export default function HomePage() {
             <div className="w-[320px] h-[570px] lg:w-[360px] lg:h-[640px] overflow-hidden rounded-xl shadow-xl border border-gray-200">
               <video className="w-full h-full object-cover" controls>
                 <source
-                  src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/videos//culture%20competition.mp4"
+                  src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/videos/Competition%20video.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -274,7 +274,7 @@ export default function HomePage() {
           {/* Flyer Image (only visible on large screens) */}
           <div className="hidden lg:flex justify-center col-span-1">
             <img
-              src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/competition//TraditionalFlyer%20(1).png"
+              src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/competition/btc%20competition%20poster.jpg"
               alt="Traditional Dance & Poetry Flyer"
               className="rounded-xl shadow-lg w-full h-full object-contain"
             />
