@@ -37,7 +37,7 @@ export default function Navbar() {
           <Link href="/council" className="hover:text-green-700">
             Council
           </Link>
-          <Link href="" className="hover:text-green-700">
+          <Link href="/media" className="hover:text-green-700">
             Media
           </Link>
           <Link href="/about_us" className="hover:text-green-700">
