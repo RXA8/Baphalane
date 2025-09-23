@@ -10,7 +10,7 @@ type Event = {
     <section id="events" className="bg-gray-100 py-6">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-semibold mb-12 text-center text-gray-800">
-          Upcoming Events
+          Events
         </h3>
 
         {/* Scrollable wrapper for mobile view */}
