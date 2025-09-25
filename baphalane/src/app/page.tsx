@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { supabase } from "../../lib/supabase";
 import EventsSection from "../components/EventsSection";
-
+import HeroSlideshow from "../components/HeroSlideshow";
 import NewsCarousel from '../components/NewsCarousel'
 
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -133,26 +133,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-300">
-      <div
-        className="relative bg-cover bg-center md:bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//22c8819b-4687-4371-a335-5106efad4480.png')] bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images//pexels-taryn-elliott-3889928.jpg')]"
-      >
-
-        <div className="">
-          <Navbar />
-
-
-          {/* Hero Section */}
-          <section className="h-[60vh] flex items-center justify-start  px-2">
-            {/* The text below should only take up 50% of the width */}
-            <div className=" rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full ">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left font md:text-black text-white ">Welcome to the Baphalane Website</h2>
-              <p className="text-lg md:text-3xl text-left text-white md:text-black">Empowering our people. <br />Enriching our future.</p>
-            </div>
-          </section>
-
-
-          </div>
-      </div>
+      <HeroSlideshow />     {/* replaces the old static hero */}
 
       {/* About, Map & Weather */}
       <section id="about" className="container mx-auto px-4 py-8">
