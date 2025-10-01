@@ -18,17 +18,6 @@ export default function AboutPage() {
 
           <section className="space-y-8 text-gray-800 text-lg">
             <div>
-              <h2 className="text-2xl font-bold text-center text-gray-700 mb-2">Historical Challenges and Leadership Struggles</h2>
-              <p>
-                For over 40 years, the Baphalane community has faced stagnation and internal struggles, leading to their ridicule in political circles and traditional structures. A lack of visionary leadership has caused the community to lag in development. The ruling elite has repeatedly failed to bring positive change, leaving Baphalane in a state of disorganization and economic despair. There is a need for a shift in mindset among the people, encouraging unity and progressive thinking rather than division and destruction of local infrastructure. The community must respect itself to gain the respect of others.
-              </p>
-              <br />
-              <p>
-                The administration of Baphalane has been marred by corruption and mismanagement. In 2019, Advocate Rantsane was appointed by Prof. Mokgoro to oversee the administration, but he failed to present any reports on his progress before passing away. In 2020, Dr. Maako was allegedly appointed without formal documentation, and he too failed to account for his actions. Reports link him to the infamous “Paraffin Case,” where R5 million was embezzled from the Ventersdorp community. These administrators were meant to manage community affairs, but instead, they enabled the looting of public funds, particularly in villages with mining activities like Bapong, Bethanie, and Tlhatlaganyane. To date, North-West Province remains under administration, highlighting continued governance issues. The province has been accused of undermining traditional leadership (bogosi), as administrators have been imposed on revenue-generating villages while others remain untouched.
-              </p>
-            </div>
-
-            <div>
               <h2 className="text-2xl font-bold text-center text-gray-700 mb-2">Unemployment and Skills Development</h2>
               <p>
                 Youth unemployment is one of the biggest concerns in Baphalane, threatening the stability and economic growth of villages. Many young people have been misled and manipulated to serve political agendas, rather than being equipped with skills and opportunities for self-sufficiency. There are multiple youth groups claiming to represent job-seeking individuals, but their fragmentation weakens their effectiveness. Unity is necessary for greater influence, especially in engaging industries such as mining for economic opportunities.
