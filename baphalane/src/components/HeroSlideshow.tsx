@@ -3,13 +3,32 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "./Navbar";
 
-const images = [
-  "/IMG-20250922-WA0030.jpg",
-  "/IMG-20250922-WA0031.jpg",
-  "/IMG-20250923-WA0009.jpg",
-  "/IMG-20250923-WA0017.jpg",
-  "/IMG-20250925-WA0018.jpg"
-
+const slides = [
+  {
+    src: "/IMG-20250922-WA0030.jpg",
+    title: "Welcome to the Baphalane Website",
+    subtitle: "Empowering our people. Enriching our future.",
+  },
+  {
+    src: "/IMG-20250922-WA0031.jpg",
+    title: "Celebrating Our Heritage",
+    subtitle: "Preserving culture, building unity.",
+  },
+  {
+    src: "/IMG-20250923-WA0009.jpg",
+    title: "Strength in Community",
+    subtitle: "Together we grow stronger.",
+  },
+  {
+    src: "/IMG-20250923-WA0017.jpg",
+    title: "Future Generations",
+    subtitle: "Creating opportunities for tomorrow.",
+  },
+  {
+    src: "/IMG-20250925-WA0018.jpg",
+    title: "Baphalane Strong",
+    subtitle: "Rooted in tradition, reaching for the future.",
+  },
 ];
 
 export default function HeroSection() {
@@ -17,48 +36,51 @@ export default function HeroSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000); // Change every 5s
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative h-[80vh] flex flex-col">
-      {/* Slideshow Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {images.map((src, index) => (
+      {/* Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        >
+          {/* Background */}
           <Image
-            key={index}
-            src={src}
+            src={slide.src}
             alt={`Slide ${index}`}
             fill
             priority={index === 0}
-            className={`object-cover transition-opacity duration-1000 ease-in-out ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
+            className="object-cover"
           />
-        ))}
-      </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/40" />
 
-      {/* Navbar (overlays slideshow) */}
-      <div className="relative z-20">
+          {/* Text Content */}
+          <div className="relative z-20 h-full flex items-center justify-start px-6">
+            <div className="rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left text-white drop-shadow-lg">
+                {slide.title}
+              </h2>
+              <p className="text-lg md:text-3xl text-left text-white drop-shadow-md">
+                {slide.subtitle}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      {/* Navbar (always above all slides) */}
+      <div className="absolute top-0 left-0 right-0 z-30">
         <Navbar />
       </div>
-
-      {/* Hero Content */}
-      <section className="relative z-20 h-[60vh] flex items-center justify-start px-6">
-        <div className="rounded-xl p-8 lg:w-1/2 md:w-1/2 w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left text-white drop-shadow-lg">
-            Welcome to the Baphalane Website
-          </h2>
-          <p className="text-lg md:text-3xl text-left text-white drop-shadow-md">
-            Empowering our people. <br /> Enriching our future.
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
