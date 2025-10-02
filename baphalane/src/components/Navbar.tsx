@@ -85,7 +85,7 @@ export default function Navbar() {
           <Link href="/council" className="block">
             Council
           </Link>
-          <Link href="" className="block">
+          <Link href="/media" className="block">
             Media
           </Link>
           <Link href="/about_us" className="block">
