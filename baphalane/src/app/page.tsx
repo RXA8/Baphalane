@@ -313,10 +313,10 @@ export default function HomePage() {
             {/* Social Media */}
             <div className="mt-auto">
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href="https://www.facebook.com/p/Bua-Motlase-100077121870361/" className="flex items-center gap-1 hover:underline">
+                <a href="https://www.facebook.com/people/Baphalane-Traditional-Council/61580703593131/" className="flex items-center gap-1 hover:underline">
                   <FaFacebook className="text-white" /> Facebook
                 </a>
-                <a href="#" className="flex items-center gap-1 hover:underline">
+                <a href="https://www.instagram.com/wearebaphalane/?g=5" className="flex items-center gap-1 hover:underline">
                   <FaInstagram className="text-white" /> Instagram
                 </a>
                 <a href="#" className="flex items-center gap-1 hover:underline">
