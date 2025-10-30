@@ -19,56 +19,6 @@ import Link from "next/link";
 
 export default function HomePage() {
 
-  const [regCategory, setRegCategory] = useState("");
-  const [regSuccess, setRegSuccess] = useState(false);
-  const [regError, setRegError] = useState(false);
-
-  const [regFullName, setRegFullName] = useState("");
-  const [regPhoneNumber, setRegPhoneNumber] = useState("");
-  const [regVillage, setRegVillage] = useState("");
-  const [regTitle, setRegTitle] = useState("");
-  const [regDescription, setRegDescription] = useState("");
-  const [regDuration, setRegDuration] = useState("");
-
-  const handleRegistrationSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setRegSuccess(false);
-  setRegError(false);
-
-  try {
-    const { error } = await supabase.from("competition_registrations").insert([
-        {
-          full_name: regFullName,
-          phone_number: regPhoneNumber,
-          village: regVillage,
-          performance_title: regTitle,
-          performance_description: regDescription,
-          performance_duration: regDuration,
-          category: regCategory,
-        },
-      ]);
-
-      if (error) {
-        console.error("Supabase insert error:", error);
-        setRegError(true);
-      } else {
-        setRegSuccess(true);
-        setRegFullName("");
-        setRegPhoneNumber("");
-        setRegVillage("");
-        setRegTitle("");
-        setRegDescription("");
-        setRegDuration("");
-        setRegCategory("");
-      }
-    } catch (err) {
-      console.error("Unexpected error:", err);
-      setRegError(true);
-    }
-  };
-
-
-
   const events = [
     {
       title: "Introducing SANDF to the community of Bojating.",
