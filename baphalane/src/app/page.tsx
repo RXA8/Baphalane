@@ -6,7 +6,7 @@ import EventsSection from "../components/EventsSection";
 import HeroSlideshow from "../components/HeroSlideshow";
 import NewsCarousel from '../components/NewsCarousel'
 
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { MapPin, Ruler, Users, Globe } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
