@@ -273,9 +273,6 @@ export default function HomePage() {
                 <a href="https://www.instagram.com/wearebaphalane/?g=5" className="flex items-center gap-1 hover:underline">
                   <FaInstagram className="text-white" /> Instagram
                 </a>
-                <a href="#" className="flex items-center gap-1 hover:underline">
-                  <FaTwitter className="text-white" /> Twitter
-                </a>
               </div>
             </div>
 
