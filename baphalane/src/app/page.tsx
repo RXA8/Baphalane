@@ -21,22 +21,22 @@ export default function HomePage() {
 
   const events = [
     {
-      title: "Introducing SANDF to the community of Bojating.",
-      date: "September 11, 2025",
-      description: "Baphalane Traditional Council meeting with the Bojating community to brief them about SANDF involvement",
-      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this.jpg", // Replace with your image path
+      title: "🌱LIMA Small, Medium, and Micro Enterprises meeting.",
+      date: "October 29, 2025",
+      description: "A meeting was held with LIMA for SMME mentoring in terms of training and support that can be provided to our local SMME's within Baphalane community.📈",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/smme%20meeting/IMG-20251029-WA0014.jpg", // Replace with your image path
     },
     {
-      title: "Introducing SANDF to the community of Phadi",
-      date: "September 11, 2025",
-      description: "Baphalane Traditional Council meeting with the Phadi community to brief them about SANDF involvement",
-      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this2%20(1).jpg", // Replace with your image path
+      title: "📖Kwena-Tlase and Ramoroko Secondary School study packages distribution🖊️",
+      date: "October 31, 2025",
+      description: "Kgosi along with Mr Lentsoe Selloe from Zizwe visited Kwena-Tlase Secondary School and Ramoroko Secondary School to distribute study packages to Matric learners and also offer words of encouragement from Kgosi himself. ",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Study%20pack%20event/IMG-20251103-WA0037.jpg", // Replace with your image path
     },
     {
-      title: "Introducing SANDF to the community of Phalane",
-      date: "September 23, 2025",
-      description: "Baphalane Traditional Council meeting with the Phadi community to brief them about SANDF involvement",
-      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this%203.jpg", // Replace with your image path
+      title: "🔵Heritage day competition⚪",
+      date: "October 4, 2025",
+      description: "🎉On the 4th of October 2025, a heritage day event was hosted by the Baphalane Traditional Council. A poetry and dance competition was held and cash prizes were given out. ✨",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Heritage/Heritage%20event.jpg", // Replace with your image path
     },
   ];
   
