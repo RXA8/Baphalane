@@ -10,7 +10,7 @@ const slides = [
     subtitle: "Empowering our people. Enriching our future.",
   },
   {
-    src: "/IMG-20250922-WA0031.jpg",
+    src: "/Screenshot 2025-11-03 113432.png",
     title: "Celebrating Our Heritage",
     subtitle: "Preserving culture, building unity.",
   },
@@ -20,14 +20,14 @@ const slides = [
     subtitle: "Together we grow stronger.",
   },
   {
-    src: "/IMG-20250923-WA0017.jpg",
+    src: "/IMG-20251103-WA0008.jpg",
     title: "Future Generations",
     subtitle: "Creating opportunities for tomorrow.",
   },
   {
-    src: "/IMG-20250925-WA0018.jpg",
-    title: "Baphalane Strong",
-    subtitle: "Rooted in tradition, reaching for the future.",
+    src: "/IMG-20251103-WA0035.jpg",
+    title: "A brighter tomorrow",
+    subtitle: "Investing in youth and education.",
   },
 ];
 
