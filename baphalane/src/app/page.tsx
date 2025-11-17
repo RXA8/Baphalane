@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "../components/Footer";
+import WelcomeMessage from "../components/WelcomeMessage";
 import { supabase } from "../../lib/supabase";
 import EventsSection from "../components/EventsSection";
 import HeroSlideshow from "../components/HeroSlideshow";
@@ -84,8 +85,12 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col bg-gray-300">
       <HeroSlideshow />     {/* replaces the old static hero */}
 
+      <div className="bg-white md:py-2">
+        <WelcomeMessage />
+      </div>
+
       {/* About, Map & Weather */}
-      <section id="about" className="container mx-auto px-4 py-8">
+      <section id="about" className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           
           {/* Column 1: About Us */}
