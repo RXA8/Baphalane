@@ -1,4 +1,4 @@
-// app/media/page.tsx (or pages/media/index.tsx depending on your setup)
+// app/media/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -6,9 +6,8 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-// import Bojating from "../bojating/page";
 
-// ✅ Image collections grouped into arrays
+// 📌 IMAGE COLLECTIONS (edit this anytime)
 const imageCollections: Record<string, string[]> = {
   Phadi: [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250911-WA0003.jpg",
@@ -47,15 +46,33 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0018.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0019.jpg",
   ],
+
+  // ⭐ NEW ALBUM ADDED
+  "Matric Study Pack Day": [
+    // Add your image URLs here
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0003.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0005.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0006.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0008.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0009.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0011.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0012.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0015.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0020.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0026.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0027.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0028.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0035.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/WhatsApp%20Image%202025-10-31%20at%2020.00.26_1764866e.jpg",
+  ],
 };
 
-// ✅ Helper: flatten all arrays into one
+// Flatten all images
 const allImages = Object.values(imageCollections).flat();
 
 export default function Media() {
   const [filter, setFilter] = useState("All");
 
-  // ✅ Decide which images to show
   const imagesToShow =
     filter === "All" ? allImages : imageCollections[filter] || [];
 
@@ -68,22 +85,24 @@ export default function Media() {
           content="Explore images and media from the Baphalane Community."
         />
       </Head>
+
       <Navbar />
 
-      <main className="min-h-screen bg-gray-50 text-gray-800 px-6 py-10">
+      <main className="min-h-screen bg-gray-50 text-gray-800 px-6 py-12">
+
         {/* Heading */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">Media</h1>
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold mb-3">Media</h1>
           <p className="text-lg text-gray-600">
-            Browse through our photo collections
+            Browse through our community photo collections
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        {/* FILTER BUTTONS */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setFilter("All")}
-            className={`px-4 py-2 rounded-lg font-semibold transition ${
+            className={`px-5 py-2 rounded-lg font-semibold transition ${
               filter === "All"
                 ? "bg-green-700 text-white"
                 : "bg-gray-200 hover:bg-gray-300"
@@ -91,11 +110,12 @@ export default function Media() {
           >
             All
           </button>
+
           {Object.keys(imageCollections).map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-lg font-semibold transition ${
+              className={`px-5 py-2 rounded-lg font-semibold transition ${
                 filter === category
                   ? "bg-green-700 text-white"
                   : "bg-gray-200 hover:bg-gray-300"
@@ -106,17 +126,25 @@ export default function Media() {
           ))}
         </div>
 
-        {/* Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* EMPTY STATE */}
+        {imagesToShow.length === 0 && (
+          <p className="text-center text-gray-500 text-lg">
+            No images available for <strong>{filter}</strong> yet.
+          </p>
+        )}
+
+        {/* GALLERY GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
           {imagesToShow.map((src, idx) => (
             <div
               key={idx}
-              className="relative w-full h-64 rounded-xl overflow-hidden shadow-md"
+              className="relative w-full h-64 rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow"
             >
               <Image
                 src={src}
                 alt={`Media ${idx}`}
                 fill
+                loading="lazy"
                 className="object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
