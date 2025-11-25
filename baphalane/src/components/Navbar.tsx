@@ -34,9 +34,6 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-7 text-black font-semibold items-center">
-          <Link href="/council" className="hover:text-green-700">
-            Council
-          </Link>
           <Link href="/media" className="hover:text-green-700">
             Media
           </Link>
@@ -82,9 +79,6 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white px-4 py-2 space-y-2 text-black">
-          <Link href="/council" className="block">
-            Council
-          </Link>
           <Link href="/media" className="block">
             Media
           </Link>
