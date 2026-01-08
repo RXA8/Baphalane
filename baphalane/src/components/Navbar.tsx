@@ -7,7 +7,6 @@ import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [subDropdownOpen, setSubDropdownOpen] = useState(false);
 
   return (
     <header
@@ -43,6 +42,9 @@ export default function Navbar() {
           <Link href="/#contact" className="hover:text-green-700">
             Contact
           </Link>
+          <Link href="/#resources" className="hover:text-green-700">
+            Resources
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -55,30 +57,50 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white px-4 py-2 space-y-2 text-black">
-          <Link href="/media" className="block">
-            Media
-          </Link>
-          <Link href="/about_us" className="block">
-            About
-          </Link>
+      <div
+        className={`
+          md:hidden
+          overflow-hidden
+          bg-white
+          text-black
+          divide-y divide-gray-200
+          rounded-b-xl
+          shadow-md
+          transform transition-all duration-300 ease-in-out
+          ${menuOpen
+            ? "max-h-64 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-2"}
+        `}
+      >
+        <Link
+          href="/media"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          Media
+        </Link>
 
-          {/* Toggleable Mobile Dropdown */}
-          <div>
-            <button
-              className="font-semibold w-full text-left"
-              onClick={() => setSubDropdownOpen(!subDropdownOpen)}
-            >
-              Sub-Villages
-            </button>
-            
-          </div>
-          <Link href="/#contact" className="block">
-            Contact
-          </Link>
-        </div>
-      )}
+        <Link
+          href="/about_us"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          About
+        </Link>
+
+        <Link
+          href="/#contact"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          Contact
+        </Link>
+
+        <Link
+          href="/#resources"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          Resources
+        </Link>
+      </div>
+
     </header>
   );
 }
