@@ -8,22 +8,12 @@ export const supabase = createClient(supabaseUrl, supabaseKey)
 // Log to verify if the client is created successfully
 if (supabase) {
     console.log("Supabase client created successfully")
-    // console.log("Supabase URL:", supabaseUrl)
-    // console.log("Supabase Key:", supabaseKey)
   } else {
     console.error("Failed to create Supabase client")
   }
 
-// console.log('Supabase URL:', supabaseUrl)
-
-// console.log('Supabase Key:', supabaseKey)
-
-//Export the supabase environment variables values to check if they are set correctly   
-
-// export const supabaseUrlValue = supabaseUrl
-// export const supabaseKeyValue = supabaseKey
-
-
+//What does this code do?
+// This code initializes and exports a Supabase client using the provided URL and anonymous key from environment variables. The client can be used to interact with the Supabase backend services such as database, authentication, and storage.
 //When does this code run?
 // This code runs when the module is loaded, which is typically when the server starts.
 
