@@ -13,6 +13,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import WeatherWidget from '@/components/WeatherWidget';
+import { Leaf, Sprout, HandHeart } from "lucide-react";
 import RustenburgWeatherWidget from '@/components/RustenburgWeatherWidget';
 
 import Link from "next/link";
@@ -178,48 +179,76 @@ export default function HomePage() {
 
       {/* Featured Community Document */}
       <section
-        id="featured-document"
-        className="bg-white py-12 px-4"
-      >
-        <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+      id="featured-document"
+      className="bg-white py-12 px-4"
+    >
+      <div className="container mx-auto grid md:grid-cols-[1fr_2fr] gap-8 items-start">
 
-          {/* Text / CTA */}
-          <div>
-            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-              Community Information Book
-            </h3>
+        {/* Text / CTA */}
+        <div className="flex flex-col h-full">
+          <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+            Yearly Report
+          </h3>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              This report for the year 2025 provides comprehensive insights into our community&apos;s development, initiatives, and future plans. It serves as a valuable resource for residents, stakeholders, and anyone interested in the growth and well-being of Baphalane.
-            </p>
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            This report for the year 2025 provides comprehensive insights into
+            our community&apos;s development, initiatives, and future plans.
+            It serves as a valuable resource for residents, stakeholders,
+            and anyone interested in the growth and well-being of Baphalane.
+          </p>
 
-            <Link href="/resources" className="inline-block">
-              <span
-                role="button"
-                className="text-white bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg shadow transition"
-              >
-                View more resources →
-              </span>
-            </Link>
-
-          </div>
-
-          {/* PDF Book Preview */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-black/10 rounded-xl transform group-hover:scale-105 transition"></div>
-
-            <iframe
-              src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/informative%20documents/REPORT%202025%20OR%2026%20Final.pdf"
-              className="relative w-full h-[420px] rounded-xl shadow-lg border bg-white"
-            />
-
-            {/* Book Label */}
-            <span className="absolute top-4 left-4 bg-green-700 text-white text-sm px-3 py-1 rounded-full shadow">
-              2025 Report
+          <Link href="/resources" className="inline-block w-fit">
+            <span
+              role="button"
+              className="text-white bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg shadow transition"
+            >
+              View more resources →
             </span>
+          </Link>
+
+          {/* Sustainability Icons */}
+          <div className="mt-10 flex gap-8 items-center text-green-700">
+            <div className="flex flex-col items-center group">
+              <HandHeart className="w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+              <span className="text-sm mt-2 text-gray-600">
+                Community Care
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center group">
+              <Sprout className="w-10 h-10 group-hover:-translate-y-1 transition-transform duration-300" />
+              <span className="text-sm mt-2 text-gray-600">
+                Sustainable Growth
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center group">
+              <Leaf className="w-10 h-10 animate-pulse" />
+              <span className="text-sm mt-2 text-gray-600">
+                Environmental Care
+              </span>
+            </div>
           </div>
         </div>
+
+        {/* PDF Book Preview */}
+        <div className="relative group">
+          <div className="absolute inset-0 bg-black/10 rounded-xl transform group-hover:scale-105 transition-transform duration-300"></div>
+
+          <iframe
+            src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/informative%20documents/REPORT%202025%20OR%2026%20Final.pdf"
+            className="relative w-full h-[600px] rounded-xl shadow-xl border bg-white"
+          />
+
+          {/* Book Label */}
+          <span className="absolute top-4 left-4 bg-green-700 text-white text-sm px-3 py-1 rounded-full shadow">
+            2025 Report
+          </span>
+        </div>
+
+      </div>
       </section>
+
 
         
       {/* News */}
