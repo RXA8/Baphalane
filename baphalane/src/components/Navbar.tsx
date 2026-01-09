@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/#contact" className="hover:text-green-700">
             Contact
           </Link>
-          <Link href="/#resources" className="hover:text-green-700">
+          <Link href="/resources" className="hover:text-green-700">
             Resources
           </Link>
         </nav>
@@ -94,7 +94,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="/#resources"
+          href="/resources"
           className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
         >
           Resources

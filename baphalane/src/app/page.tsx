@@ -175,6 +175,52 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* Featured Community Document */}
+      <section
+        id="featured-document"
+        className="bg-white py-12 px-4"
+      >
+        <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+          {/* Text / CTA */}
+          <div>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+              Community Information Book
+            </h3>
+
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              This report for the year 2025 provides comprehensive insights into our community&apos;s development, initiatives, and future plans. It serves as a valuable resource for residents, stakeholders, and anyone interested in the growth and well-being of Baphalane.
+            </p>
+
+            <Link href="/resources" className="inline-block">
+              <span
+                role="button"
+                className="text-white bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg shadow transition"
+              >
+                View more resources →
+              </span>
+            </Link>
+
+          </div>
+
+          {/* PDF Book Preview */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-black/10 rounded-xl transform group-hover:scale-105 transition"></div>
+
+            <iframe
+              src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/informative%20documents/REPORT%202025%20OR%2026%20Final.pdf"
+              className="relative w-full h-[420px] rounded-xl shadow-lg border bg-white"
+            />
+
+            {/* Book Label */}
+            <span className="absolute top-4 left-4 bg-green-700 text-white text-sm px-3 py-1 rounded-full shadow">
+              2025 Report
+            </span>
+          </div>
+        </div>
+      </section>
+
         
       {/* News */}
       <section id="news" className=" bg-gray-100 py-5 px-4">
