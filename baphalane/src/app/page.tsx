@@ -112,7 +112,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <Users className="w-6 h-6 text-purple-600" />
-                <span><strong>Population:</strong> ±12,000 (approx.)</span>
+                <span><strong>Population:</strong> ±120,000 (approx.)</span>
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <Globe className="w-6 h-6 text-orange-600" />
@@ -150,32 +150,69 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Congratulatory Message for Class of 2025 */}
       <section
         id="matric-message"
         className="relative flex justify-center items-center overflow-hidden bg-gray-100 h-auto"
       >
-        {/* Blurred background extensions */}
-        <div
-          className="absolute inset-0 flex"
-          aria-hidden="true"
-        >
-          {/* Left blur */}
-          <div className="w-1/2 h-full bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/kgosi%20message.jpg')] bg-left bg-cover blur-2xl scale-110"></div>
-
-          {/* Right blur */}
-          <div className="w-1/2 h-full bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/kgosi%20message.jpg')] bg-right bg-cover blur-2xl scale-110"></div>
+        {/* Blurred background */}
+        <div className="absolute inset-0 flex" aria-hidden="true">
+          <div className="w-1/2 h-full bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Black%20&%20Gold%20Simple%20Congratulations%20Poster.png')] bg-left bg-cover blur-2xl scale-110"></div>
+          <div className="w-1/2 h-full bg-[url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Black%20&%20Gold%20Simple%20Congratulations%20Poster.png')] bg-right bg-cover blur-2xl scale-110"></div>
         </div>
 
-        {/* Center image */}
-        <div className="relative z-10 w-full max-w-4xl">
+        {/* ⭐ Glowing Stars Layer */}
+        <div className="absolute inset-0 pointer-events-none z-[5]">
+          {/* LEFT STAR FIELD */}
+          <div className="absolute left-6 top-0 h-full flex flex-col justify-around">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <span
+                key={`left-star-${i}`}
+                className="block rounded-full bg-yellow-400 animate-pulse"
+                style={{
+                  width: `${Math.random() * 2 + 3}px`,   // 3–5px
+                  height: `${Math.random() * 2 + 3}px`,
+                  boxShadow: `
+                    0 0 18px 6px rgba(255, 215, 0, 0.95),
+                    0 0 30px 10px rgba(255, 215, 0, 0.6)
+                  `,
+                  animationDuration: '3.5s',
+                  animationDelay: `${Math.random() * 4}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          {/* RIGHT STAR FIELD */}
+          <div className="absolute right-6 top-0 h-full flex flex-col justify-around">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <span
+                key={`right-star-${i}`}
+                className="block rounded-full bg-yellow-400 animate-pulse"
+                style={{
+                  width: `${Math.random() * 2 + 3}px`,
+                  height: `${Math.random() * 2 + 3}px`,
+                  boxShadow: `
+                    0 0 18px 6px rgba(255, 215, 0, 0.95),
+                    0 0 30px 10px rgba(255, 215, 0, 0.6)
+                  `,
+                  animationDuration: '3.5s',
+                  animationDelay: `${Math.random() * 4}s`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Center poster */}
+        <div className="relative z-10 w-full max-w-full sm:max-w-4xl px-2 sm:px-0">
           <img
-            src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/kgosi%20message.jpg"
-            alt="Motivational message for Grade 12 learners"
-            className="w-full h-1/2 object-contain mx-auto"
+            src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Black%20&%20Gold%20Simple%20Congratulations%20Poster.png"
+            alt="Congratulations to the Class of 2025"
+            className="w-1/2 h-1/2 object-contain mx-auto"
           />
         </div>
       </section>
-
 
       {/* Featured Community Document */}
       <section
