@@ -102,6 +102,13 @@ export default function Navbar() {
         >
           Resources
         </Link>
+
+        <Link
+          href="/our_history"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          Our History
+        </Link>
       </div>
 
     </header>
