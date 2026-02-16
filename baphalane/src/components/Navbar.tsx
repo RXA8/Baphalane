@@ -45,6 +45,9 @@ export default function Navbar() {
           <Link href="/resources" className="hover:text-green-700">
             Resources
           </Link>
+          <Link href="/our_history" className="hover:text-green-700">
+            Our History
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
