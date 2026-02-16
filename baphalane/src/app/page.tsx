@@ -153,7 +153,7 @@ export default function HomePage() {
       {/* Congratulatory Message for Class of 2025 */}
       <section
         id="matric-message"
-        className="relative flex justify-center items-center overflow-hidden bg-gray-100 h-auto"
+        className="relative flex flex-col lg:flex-row justify-center items-start lg:items-center overflow-hidden bg-gray-100 py-10 lg:py-20 px-4 lg:px-10 gap-8"
       >
         {/* Blurred background */}
         <div className="absolute inset-0 flex" aria-hidden="true">
@@ -170,7 +170,7 @@ export default function HomePage() {
                 key={`left-star-${i}`}
                 className="block rounded-full bg-yellow-400 animate-pulse"
                 style={{
-                  width: `${Math.random() * 2 + 3}px`,   // 3–5px
+                  width: `${Math.random() * 2 + 3}px`,
                   height: `${Math.random() * 2 + 3}px`,
                   boxShadow: `
                     0 0 18px 6px rgba(255, 215, 0, 0.95),
@@ -205,14 +205,32 @@ export default function HomePage() {
         </div>
 
         {/* Center poster */}
-        <div className="relative z-10 w-full max-w-full sm:max-w-4xl px-2 sm:px-0">
+        <div className="relative z-10 w-full lg:w-[500px] flex justify-center">
           <img
             src="https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Black%20&%20Gold%20Simple%20Congratulations%20Poster.png"
             alt="Congratulations to the Class of 2025"
-            className="w-1/2 h-1/2 object-contain mx-auto"
+            className="w-full h-[684px] object-contain rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Facebook Post Embed */}
+        <div className="relative z-10 w-full lg:w-[500px] flex justify-center">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02EAfCDJm3Xh68bULptTQ4iCdMfVEMBX2jkPgGaJRvz6ALTSv5xbcc3EB2xPbJJ8oNl%26id%3D61580703593131&show_text=true&width=500"
+            width="500"
+            height="684"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen={true}
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Facebook Post"
+            className="rounded-lg shadow-lg"
           />
         </div>
       </section>
+
+
 
       {/* Featured Community Document */}
       <section
