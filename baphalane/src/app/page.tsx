@@ -334,7 +334,7 @@ export default function HomePage() {
         <div className="container mx-auto grid md:grid-cols-[1fr_2fr] gap-8 items-start">
 
           {/* Text / CTA */}
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full items-center text-center">
             <h3 className="text-3xl font-semibold text-gray-800 mb-4">
               Yearly Report
             </h3>
@@ -355,38 +355,39 @@ export default function HomePage() {
               </span>
             </Link>
 
-            {/* Sustainability Icons */}
-            <div className="mt-10 flex flex-col gap-6">
+            {/* Sustainability & Feature Icons */}
+            <div className="mt-10 flex flex-col gap-6 items-center justify-center">
 
-              <div className="flex items-center gap-4 text-green-700">
+              <div className="flex items-center gap-4 text-green-700 justify-center">
                 <HandHeart className="w-10 h-10 animate-pulse" />
                 <span className="text-gray-600 font-medium">
                   Community Care
                 </span>
               </div>
 
-              <div className="flex items-center gap-4 text-green-700">
+              <div className="flex items-center gap-4 text-green-700 justify-center">
                 <Building className="w-10 h-10 animate-pulse" />
                 <span className="text-gray-600 font-medium">Infrastructural Development</span>
               </div>
 
-              <div className="flex items-center gap-4 text-green-700">
+              <div className="flex items-center gap-4 text-green-700 justify-center">
                 <Briefcase className="w-10 h-10 animate-pulse" />
                 <span className="text-gray-600 font-medium">SMME Growth</span>
               </div>
 
-              <div className="flex items-center gap-4 text-green-700">
+              <div className="flex items-center gap-4 text-green-700 justify-center">
                 <Users className="w-10 h-10 animate-pulse" />
                 <span className="text-gray-600 font-medium">Job Creation</span>
               </div>
 
-              <div className="flex items-center gap-4 text-green-700">
+              <div className="flex items-center gap-4 text-green-700 justify-center">
                 <Shield className="w-10 h-10 animate-pulse" />
                 <span className="text-gray-600 font-medium">Strengthening Security</span>
               </div>
 
             </div>
           </div>
+
 
           {/* PDF Book Preview */}
           <div className="relative group">
@@ -409,15 +410,27 @@ export default function HomePage() {
 
         
       {/* News */}
-      <section id="news" className=" bg-gray-100 py-5 px-4">
+      <section
+        id="news"
+        className="py-5 px-4"
+        style={{
+          backgroundImage: "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images/pexels-eberhardgross-1157940.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="container mx-auto">
-          <h3 className="text-3xl font-semibold mb-5 text-center text-gray-800">Latest News</h3>
+          <h3 className="text-3xl font-semibold mb-5 text-center text-white">
+            Latest News
+          </h3>
           <NewsCarousel />
         </div>
       </section>
 
+
       {/* Events */}
-      <section id="events" className="bg-gray-200 py-8">
+      <section id="events" className="bg-gray-200 py-0">
         <EventsSection events={events} />
       </section>
 
@@ -434,10 +447,10 @@ export default function HomePage() {
 
             {/* Info */}
             <div className="mb-6 space-y-2 text-sm text-gray-200">
-              <p><strong>Address:</strong> Ramokokastad, Moses Kotane, South Africa, 0388</p>
+              <p><strong>Address:</strong> Ramokokastad, Moses Kotane, South Africa, 0195</p>
               <p>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:admin@baphalane.org" className="underline text-blue-200 hover:text-white">
+                <a href="mailto:admin@baphalane.org.za" className="underline text-blue-200 hover:text-white">
                   admin@baphalane.org.za
                 </a>
               </p>
