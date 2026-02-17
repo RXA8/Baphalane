@@ -178,6 +178,76 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Baphalane Solar Farm Section */}
+      <section
+        id="solar-farm"
+        ref={solarSectionRef}
+        className="relative py-20 px-4 overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/solar%20project%20background/pexels-quang-nguyen-vinh-222549-6876536.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Overlay to darken background for text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+
+          {/* Heading */}
+          <div className="text-center mb-12 text-white">
+            <h2 className="text-4xl font-bold mb-4">
+              Baphalane Solar Farm Project
+            </h2>
+            <p className="text-green-200 font-medium">
+              100MW Solar PV Renewable Energy Initiative
+            </p>
+          </div>
+
+          {/* Split Layout */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+
+            {/* Video LEFT */}
+            <div className="rounded-2xl overflow-hidden shadow-xl bg-black/50 p-3">
+              <iframe
+                ref={iframeRef}
+                src="https://www.youtube.com/embed/AD-F5NULDeQ?start=320&enablejsapi=1&autoplay=1"
+                className="w-full h-[260px] md:h-[420px] rounded-xl"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+
+            {/* Text RIGHT */}
+            <div className="bg-black/50 rounded-2xl shadow-lg p-8 md:p-10 border border-white/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                About the Project
+              </h3>
+
+              <p className="text-white/90 leading-relaxed mb-4">
+                The Baphalane Traditional Council, in partnership with Fairmont Capital,
+                has identified renewable energy as a stable and strategic investment
+                opportunity. The 100MW Solar PV project aims to generate clean energy,
+                create local employment opportunities, and stimulate economic growth.
+              </p>
+
+              <p className="text-white/90 leading-relaxed">
+                The project incorporates Agrivoltaics (APV), combining agriculture with
+                solar infrastructure to maximise land use while supporting farming and
+                community livelihoods. This initiative strengthens environmental
+                sustainability while delivering long-term socio-economic benefits to
+                the community.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
       {/* Congratulatory Message for Class of 2025 */}
       <section
         id="matric-message"
@@ -259,7 +329,6 @@ export default function HomePage() {
       </section>
 
 
-
       {/* Featured Community Document */}
       <section
       id="featured-document"
@@ -331,78 +400,6 @@ export default function HomePage() {
 
       </div>
       </section>
-
-      {/* Baphalane Solar Farm Section */}
-      <section
-        id="solar-farm"
-        ref={solarSectionRef}
-        className="relative py-20 px-4 overflow-hidden"
-        style={{
-          backgroundImage:
-            "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/solar%20project%20background/pexels-quang-nguyen-vinh-222549-6876536.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {/* Overlay to darken background for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-
-          {/* Heading */}
-          <div className="text-center mb-12 text-white">
-            <h2 className="text-4xl font-bold mb-4">
-              Baphalane Solar Farm Project
-            </h2>
-            <p className="text-green-200 font-medium">
-              100MW Solar PV Renewable Energy Initiative
-            </p>
-          </div>
-
-          {/* Split Layout */}
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-
-            {/* Video LEFT */}
-            <div className="rounded-2xl overflow-hidden shadow-xl bg-black/50 p-3">
-              <iframe
-                ref={iframeRef}
-                src="https://www.youtube.com/embed/AD-F5NULDeQ?start=320&mute=1&enablejsapi=1"
-                className="w-full h-[260px] md:h-[420px] rounded-xl"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
-            </div>
-
-            {/* Text RIGHT */}
-            <div className="bg-black/50 rounded-2xl shadow-lg p-8 md:p-10 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">
-                About the Project
-              </h3>
-
-              <p className="text-white/90 leading-relaxed mb-4">
-                The Baphalane Traditional Council, in partnership with Fairmont Capital,
-                has identified renewable energy as a stable and strategic investment
-                opportunity. The 100MW Solar PV project aims to generate clean energy,
-                create local employment opportunities, and stimulate economic growth.
-              </p>
-
-              <p className="text-white/90 leading-relaxed">
-                The project incorporates Agrivoltaics (APV), combining agriculture with
-                solar infrastructure to maximise land use while supporting farming and
-                community livelihoods. This initiative strengthens environmental
-                sustainability while delivering long-term socio-economic benefits to
-                the community.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-
         
       {/* News */}
       <section id="news" className=" bg-gray-100 py-5 px-4">
