@@ -9,7 +9,7 @@ import Image from "next/image";
 
 // 📌 IMAGE COLLECTIONS (edit this anytime)
 const imageCollections: Record<string, string[]> = {
-  Phadi: [
+  "Phadi SANDF meeting": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250911-WA0003.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250911-WA0004.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250911-WA0006.jpg",
@@ -22,7 +22,7 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250911-WA0024.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/phadi/IMG-20250922-WA0019.jpg",
   ],
-  Bojating: [
+  "Bojating SANDF meeting": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/bojating/IMG-20250911-WA0005.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/bojating/IMG-20250911-WA0007.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/bojating/IMG-20250911-WA0018.jpg",
@@ -36,7 +36,7 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/bojating/IMG-20250922-WA0030.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/bojating/IMG-20250922-WA0031.jpg",
   ],
-  Ramokokastad: [
+  "Ramokokastad SANDF meeting": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0010.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0011.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0013.jpg",
@@ -47,9 +47,7 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/ramokokastad/IMG-20250923-WA0019.jpg",
   ],
 
-  // ⭐ NEW ALBUM ADDED
   "Matric Study Pack Day": [
-    // Add your image URLs here
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0003.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0005.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0006.jpg",
@@ -65,6 +63,29 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0035.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/WhatsApp%20Image%202025-10-31%20at%2020.00.26_1764866e.jpg",
   ],
+  
+  "Kgosi Ramokoka Radio Interview": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0003.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0005.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0006.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0007.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0008.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0009.jpg",
+  ],
+
+  "Food parcel handout for holidays": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/20251217-104830.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/20251217-104851.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/20251217-104854.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/20251217-105044.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251217-WA0059.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251217-WA0061.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251217-WA0066.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251217-WA0067.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251218-WA0046.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251219-WA0005.jpg",
+  ],
+
 };
 
 // Flatten all images
