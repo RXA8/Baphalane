@@ -86,13 +86,19 @@ export default function HomePage() {
   const solarSectionRef = useRef<HTMLDivElement | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
+  // Track if autoplay already triggered
+  const hasAutoplayed = useRef(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && iframeRef.current) {
+          if (entry.isIntersecting && iframeRef.current && !hasAutoplayed.current) {
+            // Only set src once
             iframeRef.current.src =
-              "https://www.youtube.com/embed/AD-F5NULDeQ?autoplay=1&mute=1&start=320&enablejsapi=1";
+              "https://www.youtube.com/embed/AD-F5NULDeQ?start=320&enablejsapi=1&autoplay=1";
+
+            hasAutoplayed.current = true; // Mark autoplay as done
           }
         });
       },
@@ -109,6 +115,7 @@ export default function HomePage() {
       }
     };
   }, []);
+
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-300">
@@ -191,29 +198,23 @@ export default function HomePage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Overlay to darken background for text readability */}
+        {/* Overlay for readability */}
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
-
           {/* Heading */}
           <div className="text-center mb-12 text-white">
-            <h2 className="text-4xl font-bold mb-4">
-              Baphalane Solar Farm Project
-            </h2>
-            <p className="text-green-200 font-medium">
-              100MW Solar PV Renewable Energy Initiative
-            </p>
+            <h2 className="text-4xl font-bold mb-4">Baphalane Solar Farm Project</h2>
+            <p className="text-green-200 font-medium">100MW Solar PV Renewable Energy Initiative</p>
           </div>
 
           {/* Split Layout */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
-
             {/* Video LEFT */}
             <div className="rounded-2xl overflow-hidden shadow-xl bg-black/50 p-3">
               <iframe
                 ref={iframeRef}
-                src="https://www.youtube.com/embed/AD-F5NULDeQ?start=320&enablejsapi=1&autoplay=1"
+                src="https://www.youtube.com/embed/AD-F5NULDeQ?start=320&enablejsapi=1"
                 className="w-full h-[260px] md:h-[420px] rounded-xl"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
@@ -222,17 +223,13 @@ export default function HomePage() {
 
             {/* Text RIGHT */}
             <div className="bg-black/50 rounded-2xl shadow-lg p-8 md:p-10 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">
-                About the Project
-              </h3>
-
+              <h3 className="text-2xl font-semibold text-white mb-4">About the Project</h3>
               <p className="text-white/90 leading-relaxed mb-4">
                 The Baphalane Traditional Council, in partnership with Fairmont Capital,
                 has identified renewable energy as a stable and strategic investment
                 opportunity. The 100MW Solar PV project aims to generate clean energy,
                 create local employment opportunities, and stimulate economic growth.
               </p>
-
               <p className="text-white/90 leading-relaxed">
                 The project incorporates Agrivoltaics (APV), combining agriculture with
                 solar infrastructure to maximise land use while supporting farming and
@@ -241,11 +238,10 @@ export default function HomePage() {
                 the community.
               </p>
             </div>
-
           </div>
-
         </div>
       </section>
+
 
 
       {/* Congratulatory Message for Class of 2025 */}
