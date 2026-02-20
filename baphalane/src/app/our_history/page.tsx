@@ -27,12 +27,12 @@ export default function HistoryPage() {
           </div>
 
           {/* Layout with TOC + Content */}
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
             {/* TABLE OF CONTENTS */}
-            <aside className="md:col-span-1">
-              <div className="bg-white/95 rounded-2xl shadow-xl p-6 sticky top-24">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
+            <aside className="md:col-span-1 md:sticky md:top-24 h-fit">
+              <div className="bg-white border rounded-lg p-4 shadow-sm">
+                <h3 className="font-semibold mb-3">
                   Contents
                 </h3>
 
@@ -57,7 +57,7 @@ export default function HistoryPage() {
             </aside>
 
             {/* MAIN CONTENT */}
-            <div className="md:col-span-3 space-y-10">
+            <div className="md:col-span-3 space-y-12">
 
                 {/* Section 1 */}
                 <section
