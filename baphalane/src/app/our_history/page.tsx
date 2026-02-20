@@ -1,20 +1,131 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
+const sections = [
+  { id: "section1", title: "1. District" },
+  { id: "section2", title: "2. Tribe" },
+  { id: "section3", title: "3. Chief" },
+  { id: "section4", title: "4. Language" },
+  { id: "section5", title: "5. Land & Population" },
+]
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function HistoryPage() {
-  return (
-    <div
-      className="min-h-screen bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage:
-          "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images/history%20background.jpg')",
-      }}
-    >
-      <Navbar />
+    const [active, setActive] = useState("section1")
+  const [collapsed, setCollapsed] = useState(true) // starts collapsed
 
-      {/* Overlay */}
-      <div className="bg-black/60 min-h-screen py-16 px-4">
+  const [progress, setProgress] = useState(0)
+
+  // Scroll spy with Intersection Observer
+    useEffect(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            setActive(entry.target.id); // highlight active section
+            }
+        });
+        },
+        { rootMargin: "-40% 0px -50% 0px" }
+    );
+
+    sections.forEach((section) => {
+        const el = document.getElementById(section.id);
+        if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+    }, []);
+
+
+  // Reading progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight
+      const scrollProgress = (window.scrollY / totalHeight) * 100
+      setProgress(scrollProgress)
+
+      if (window.scrollY > 120) setCollapsed(true)
+      else setCollapsed(true)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return (
+    <div className="min-h-screen bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url('https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/background-images/history%20background.jpg')" }}>
+
+        <Navbar />
+
+        {/* Progress bar - fixed on top of page */}
+        <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-[9999]">
+            <div
+                className="h-1 bg-yellow-500 transition-all duration-150 ease-linear"
+                style={{ width: `${progress}%` }}
+            />
+        </div>
+
+        {/* Overlay */}
+        <div className="bg-black/60 min-h-screen py-16 px-4">
         <div className="max-w-6xl mx-auto space-y-10">
+
+            {/* MOBILE TOC SIDE BUTTON */}
+            <div className="md:hidden">
+            {/* Floating button when TOC is collapsed */}
+            <button
+                onClick={() => setCollapsed(false)}
+                className="fixed top-24 right-4 z-[999] bg-yellow-500 text-white p-3 rounded-full shadow-lg transition-transform duration-300"
+                aria-label="Open Table of Contents"
+            >
+                ☰
+            </button>
+
+            {/* Sliding panel */}
+            <div
+                className={`fixed top-0 right-0 h-full w-64 bg-white/90 backdrop-blur z-[998] shadow-lg transform transition-transform duration-300 ${
+                collapsed ? "translate-x-full" : "translate-x-0"
+                }`}
+            >
+                {/* Close button + Heading */}
+                <div className="flex justify-between items-center p-4 border-b border-gray-200">
+                <h2 className="text-lg font-semibold text-gray-800">Contents</h2>
+                <button
+                    onClick={() => setCollapsed(true)}
+                    className="text-gray-700 font-bold text-lg"
+                    aria-label="Close Table of Contents"
+                >
+                    ✕
+                </button>
+                </div>
+
+                {/* TOC content */}
+                <ul className="px-4 py-6 space-y-3 text-sm">
+                {sections.map((s) => (
+                    <li key={s.id}>
+                    <a
+                        href={`#${s.id}`}
+                        className={`block px-2 py-2 rounded transition ${
+                        active === s.id
+                            ? "bg-yellow-100 text-yellow-700 font-semibold"
+                            : "hover:bg-gray-100"
+                        }`}
+                        onClick={() => setCollapsed(true)} // close after selecting
+                    >
+                        {s.title}
+                    </a>
+                    </li>
+                ))}
+                </ul>
+            </div>
+            </div>
+
+
 
           {/* Page Title */}
           <div className="text-center text-white mb-12">
@@ -27,33 +138,38 @@ export default function HistoryPage() {
           </div>
 
           {/* Layout with TOC + Content */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
             {/* TABLE OF CONTENTS */}
             <aside className="md:col-span-1 md:sticky md:top-24 h-fit">
-              <div className="bg-white border rounded-lg p-4 shadow-sm">
-                <h3 className="font-semibold mb-3">
-                  Contents
-                </h3>
 
-                <nav className="flex flex-col space-y-3 text-gray-700">
-                    <a href="#section1" className="hover:text-yellow-700 transition">
-                        1. District
-                    </a>
-                    <a href="#section2" className="hover:text-yellow-700 transition">
-                        2. Name of Tribe
-                    </a>
-                    <a href="#section3" className="hover:text-yellow-700 transition">
-                        3. First Chief
-                    </a>
-                    <a href="#section4" className="hover:text-yellow-700 transition">
-                        4. Language
-                    </a>
-                    <a href="#section5" className="hover:text-yellow-700 transition">
-                        5. Land and Strength of Population
-                    </a>
-                </nav>
-              </div>
+
+
+                
+
+
+
+                {/* DESKTOP */}
+                <div className="hidden md:block bg-white/90 backdrop-blur border rounded-xl p-5 shadow-sm z-[998]">
+                    <h3 className="font-semibold mb-4 text-gray-800">Contents</h3>
+
+                    <ul className="space-y-2 text-sm">
+                    {sections.map((s) => (
+                        <li key={s.id}>
+                        <a
+                            href={`#${s.id}`}
+                            className={`block px-3 py-2 rounded transition ${
+                            active === s.id
+                                ? "bg-yellow-100 text-yellow-700 font-semibold border-l-4 border-yellow-500"
+                                : "hover:bg-gray-100"
+                            }`}
+                        >
+                            {s.title}
+                        </a>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
             </aside>
 
             {/* MAIN CONTENT */}
