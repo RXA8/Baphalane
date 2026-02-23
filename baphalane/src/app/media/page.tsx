@@ -108,11 +108,12 @@ const allImages = Object.values(imageCollections).flat();
 
 export default function Media() {
   const [filter, setFilter] = useState("All");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const imagesToShow =
     filter === "All" ? allImages : imageCollections[filter] || [];
 
-  return (
+    return (
     <>
       <Head>
         <title>Media | Baphalane</title>
@@ -174,7 +175,8 @@ export default function Media() {
           {imagesToShow.map((src, idx) => (
             <div
               key={idx}
-              className="relative w-full h-64 rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow"
+              onClick={() => setSelectedImage(src)}
+              className="relative w-full h-64 rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow cursor-pointer"
             >
               <Image
                 src={src}
@@ -187,6 +189,31 @@ export default function Media() {
           ))}
         </div>
       </main>
+
+      {/* 🔍 LIGHTBOX MODAL */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-6xl w-full h-[80vh]">
+            <Image
+              src={selectedImage}
+              alt="Preview"
+              fill
+              className="object-contain rounded-lg"
+            />
+
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 px-4 py-2 rounded-lg font-semibold shadow"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
