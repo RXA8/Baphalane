@@ -1,5 +1,6 @@
 "use client";
 
+import MediaSlideshow from "@/components/MediaSlideshow";
 import Footer from "../components/Footer";
 import WelcomeMessage from "../components/WelcomeMessage";
 import { supabase } from "../../lib/supabase";
@@ -243,7 +244,7 @@ export default function HomePage() {
         </div>
       </section>
 
-
+      <MediaSlideshow />
 
       {/* Congratulatory Message for Class of 2025 */}
       <section
