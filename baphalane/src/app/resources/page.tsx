@@ -34,6 +34,10 @@ const documents = [
     title: "Annual Report 2025 / 2026",
     url: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/informative%20documents/REPORT%202025%20OR%2026%20Final.pdf",
   },
+  {
+    title: "Kgosi Kobeta Ramokoka Newspaper Extract",
+    url: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/informative%20documents/Kgosi%20Kobeta%20Ramokoka%20Newspaper%20Extract.pdf"
+  }
 ];
 
 export default function Resources() {
