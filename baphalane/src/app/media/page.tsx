@@ -115,12 +115,35 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20Foundation%20speech/IMG-20260223-WA0043.jpg",
   ],
 
-   "Kgosi Ramokoka at Bakwena ba Mogopa water reticulation system launch": [
+  "Kgosi Ramokoka at Bakwena ba Mogopa water reticulation system launch": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0013.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0014.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0015.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0016.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0017.jpg",
+  ],
+
+  "Baphalane clinic world AIDS day event": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0036.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0040.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0046.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0050.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0054.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0057.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0062.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0062.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0069.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0075.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0087.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0091.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0091.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0093.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0095.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0103.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0107.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0109.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0111.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0117.jpg",
   ],
 
 
