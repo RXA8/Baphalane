@@ -8,6 +8,7 @@ const sections = [
   { id: "section3", title: "3. Chief" },
   { id: "section4", title: "4. Language" },
   { id: "section5", title: "5. Land & Population" },
+  { id: "section6", title: "6. History and genealogies of chiefs"}
 ]
 
 import Navbar from "@/components/Navbar";
@@ -228,38 +229,20 @@ export default function HistoryPage() {
                     className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24"
                 >
                     <h2 className="text-2xl font-bold text-yellow-700 mb-6">
-                    3. First Chief
+                    3. First Chief  
                     </h2>
 
                     <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
                     <p>
-                        <span className="font-semibold">Name:</span> Gaotingwe Bethuel Ramokoka
+                        <span className="font-semibold">Name:</span> Pukwe
                     </p>
 
                     <p>
-                        <span className="font-semibold">Regiment:</span> Lentsho
-                    </p>
-
-                    <p>
-                        <span className="font-semibold">Date of Birth:</span> 13th September 1907
-                    </p>
-
-                    <p>
-                        <span className="font-semibold">Appointment:</span> Appointed chief on 25th
-                        August 1927 with civil and criminal jurisdiction.
+                        <span className="font-semibold">Reign begain in:</span> Beginning of the 18th century
                     </p>
 
                     <p>
                         <span className="font-semibold">Residence:</span> Ramakoka&apos;s Location
-                    </p>
-
-                    <p>
-                        <span className="font-semibold">Religious Affiliation:</span> Member of the Hermannsburg Lutheran Mission
-                    </p>
-
-                    <p>
-                        <span className="font-semibold">Education:</span> Attended a local school
-                        and understood Afrikaans and English.
                     </p>
                     </div>
                 </section>
@@ -660,6 +643,84 @@ export default function HistoryPage() {
 
                 </section>
 
+                {/* Section 6 */}
+                <section
+                id="section6"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    6. History and genealogies of chiefs
+                </h2>
+
+                <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    The baPhalane broke off from the baKwena living in Bechuanaland Protectorate
+                    after Chief Malope’s reign. They are of the same stock as the baKwena ba Mogopa
+                    and the baKwena ba Modimosana. The first chief remembered by them is Pukwe,
+                    who probably lived during the first half of the 18th century. He had two sons,
+                    Motshodi and Letlape.
+                    </p>
+
+                    <p>
+                    After Pukwe’s death a serious conflict arose between these two brothers,
+                    leading to the schism through which the present tribe came into being.
+                    The dispute arose over a beast which had only one horn whilst on the other
+                    side of its head there grew a horn-shaped tuft of hair. The beast belonged
+                    to Letlape’s son Mokoke, but the chief and his followers coveted it.
+                    A war broke out and the chief’s younger brother Letlape fled with his
+                    followers and crossed the Odi (Crocodile River). Pursuing them, the Kwena
+                    chief found the river in flood and was unable to cross it.
+                    </p>
+
+                    <p>
+                    Steven attended the Catholic Mission Church and married Anna Pilaeng
+                    according to Christian rites. She was a daughter of the Phalane royal family
+                    and was recognised as great wife by the tribe. They had several children,
+                    including Senkgobeng, Magarethe Mokolwane, Sarafina Makgosi, Gregore Pitso,
+                    Denies Ntsesa, and others, some of whom died in youth. The exact date of
+                    Steven’s death is not known.
+                    </p>
+
+                    <p>
+                    Steven was succeeded by his younger brother VIII Michael Moatshe, who was
+                    born around 1852–54 and whose regiment was Makoba. Informants state that he
+                    was a chief and not acting for his brother’s son Gregore Pitso, who was still
+                    alive. The reason given was that chiefs were nominated by the Catholic Mission.
+                    </p>
+
+                    <p>
+                    Michael married Dorothea by Native custom. She was a member of the tribe and
+                    had children including Benjamin Tsebe Moatshe, Birijida Ramakoe, Tekla Poo,
+                    Remi Molefe, Leopold Pule, Angelina Matlodi, Josephine Segawele, Athanasius
+                    Rramante, and Michael Mfulapi Moatshe. Michael Moatshe died on 2 June 1945.
+                    His eldest son Benjamin died in 1931.
+                    </p>
+
+                    <p>
+                    As Mokoke’s son Mafodi, born towards the end of the 18th century, was not yet
+                    of age when his father died, his uncle Molobi assumed the regency. Mafodi was
+                    taken to the baMokopane. The commander of the army, Kobete, supported Molobi
+                    against the heir. Mafodi grew up among the baMokopane while game was still
+                    abundant. The baPhalane collected and prepared hoofs and bones of game,
+                    especially giraffe, and traded with the baPedi.
+                    </p>
+
+                    <p>
+                    Malekutu, a son of the Pedi chief Thulare, invited other tribes to attack
+                    Molobi and installed Mafodi as chief of the baPhalane. Kobete fled to
+                    Minaleoko. Mafodi was still a young man when he became chief and moved from
+                    Mmapela to the Thokwe (Sand River), where he stayed until his death. The Thokwe being an eastern tributary of the Odi (Crocodile River), this would mean that the baPhalane lived on the eastern banks of the Odi but they claim to have lived on the western banks of the Odi on Buffelshoek or Haakdoorndrift.  
+                    </p>
+
+                    <p>
+                    Mafodi was in his thirties when Mzilikazi established his camp at Mosega.
+                    The Matebele killed a few baPhalane but made no lasting impression.
+                    Between about 1830 and 1840 there was war with the baMmapela (Ndebele), and many people were killed. Soon afterwards when the first Boers had already settled in that part of the country there followed another war with the baKgatla ba ga Kgafela. A man by the name of Ralekgalabole, a moPedi raided Kgatla cattle and on his way home passed the Phalane countryo The baKgatla thought he was at Phalane and attacked the tribe. In these fights the Phalane regiments Mangana, Magasa Mantsho took part. The remainder of the tribe fled to a hill called Modise wa Mogopa which lies north-north-west of the present Ramakoka Location. 
+                    </p>
+
+                </div>
+                </section>
 
             </div>
           </div>
