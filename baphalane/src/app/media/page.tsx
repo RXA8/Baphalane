@@ -100,6 +100,29 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Eskom%20event/IMG-20260223-WA0012.jpg",
   ],
 
+  "Kgosi JEM Ramokoka at YOU FM": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0021.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0028.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0031.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0041.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0042.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20you%20fm/IMG-20260223-WA0045.jpg",
+  ],
+
+  "Kgosi giving a speech for Kgosi KA Ramokoka foundation": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20Foundation%20speech/IMG-20260223-WA0038.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20Foundation%20speech/IMG-20260223-WA0039.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20Foundation%20speech/IMG-20260223-WA0043.jpg",
+  ],
+
+   "Kgosi Ramokoka at Bakwena ba Mogopa water reticulation system launch": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0013.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0014.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0015.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0016.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20water%20and%20sanitation%20event/IMG-20260223-WA0017.jpg",
+  ],
+
 
 };
 
