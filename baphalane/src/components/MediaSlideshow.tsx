@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function MediaSlideshow() {
+    const router = useRouter();
+
   const images: string[] = [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/472620237_1197900345027420_8230794675843353623_n.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0000.jpg",
@@ -64,7 +66,7 @@ export default function MediaSlideshow() {
 
   return (
     <section className="bg-white py-14 px-4">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto w-[90%]">
 
         <div className="text-center mb-8">
           <h3 className="text-3xl font-semibold text-gray-800">
@@ -85,11 +87,11 @@ export default function MediaSlideshow() {
 
           {/* Slides */}
           {images.map((img, index) => (
-            <div
+            <div 
               key={index}
               className={`absolute inset-0 transition-opacity duration-[1600ms] ease-in-out ${
                 index === currentIndex ? "opacity-100 z-10" : "opacity-0"
-              }`}
+              }`} 
             >
               {/* Blur background */}
               <div
@@ -101,11 +103,17 @@ export default function MediaSlideshow() {
                 }}
               />
 
+              
+
               {/* Gradients */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/70" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)]" />
 
               {/* Main image */}
+              <div
+                onClick={() => router.push("/media")}
+                className="relative w-full h-[520px] overflow-hidden rounded-3xl cursor-pointer group"
+               >
               <img
                 src={img}
                 alt="Gallery preview"
@@ -113,6 +121,7 @@ export default function MediaSlideshow() {
                   index === currentIndex ? "animate-kenburns-pan" : ""
                 }`}
               />
+              </div>
             </div>
           ))}
 
@@ -123,13 +132,6 @@ export default function MediaSlideshow() {
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute w-1/3 h-full bg-white/10 blur-2xl animate-lightSweep"></div>
           </div>
-
-          {/* CTA */}
-          <Link href="/media" className="absolute inset-0 flex items-center justify-center z-20">
-            <span className="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg text-lg font-medium group-hover:bg-green-800 transition">
-              Open Gallery →
-            </span>
-          </Link>
 
           {/* Arrows */}
           <button
@@ -145,17 +147,13 @@ export default function MediaSlideshow() {
             ›
           </button>
 
-          {/* Dots */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-            {images.map((_, index) => (
-              <span
-                key={index}
-                className={`h-2 w-2 rounded-full ${
-                  index === currentIndex ? "bg-white" : "bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
+            {/* Progress Indicator */}
+            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/20 overflow-hidden z-20">
+            <div
+                key={currentIndex} // restart animation each slide
+                className="h-full bg-white animate-slide-progress"
+            />
+            </div>
         </div>
       </div>
 
@@ -177,6 +175,19 @@ export default function MediaSlideshow() {
 
         .animate-lightSweep {
           animation: lightSweep 8s linear infinite;
+        }
+
+        @keyframes slideProgress {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
+        }
+        }
+
+        .animate-slide-progress {
+        animation: slideProgress 6s linear forwards; /* match slide interval */
         }
       `}</style>
     </section>
