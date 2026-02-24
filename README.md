@@ -96,6 +96,6 @@ We are using the **JAMstack architecture**:
 
 1. Push code to GitHub.
 2. Vercel auto-deploys based on GitHub branch.
-3. Vercel URL (e.g. `https://baphalane.vercel.app`) becomes active.
-4. Custom domain (e.g. `baphalane.org`) points to Vercel deployment.
+3. Vercel URL (`https://baphalane.vercel.app`) becomes active.
+4. Custom domain (`www.baphalane.org.za`) points to Vercel deployment.
 
