@@ -66,7 +66,7 @@ export default function MediaSlideshow() {
 
   return (
     <section className="bg-white py-14 px-4">
-      <div className="container mx-auto w-[90%]">
+      <div className="container mx-auto w-[100%]">
 
         <div className="text-center mb-8">
           <h3 className="text-3xl font-semibold text-gray-800">
@@ -112,7 +112,7 @@ export default function MediaSlideshow() {
               {/* Main image */}
               <div
                 onClick={() => router.push("/media")}
-                className="relative w-full h-[520px] overflow-hidden rounded-3xl cursor-pointer group"
+                className="absolute inset-0 overflow-hidden cursor-pointer"
                >
               <img
                 src={img}
