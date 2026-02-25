@@ -21,6 +21,7 @@ import { HandHeart, Building, Briefcase, Shield } from "lucide-react";
 import RustenburgWeatherWidget from '@/components/RustenburgWeatherWidget';
 
 import Link from "next/link";
+import RadioInterviewSection from "@/components/RadioInterviewSection";
 
 
 export default function HomePage() {
@@ -245,6 +246,8 @@ export default function HomePage() {
       </section>
 
       <MediaSlideshow />
+
+      <RadioInterviewSection/>
 
       {/* Congratulatory Message for Class of 2025 */}
       <section
