@@ -1659,15 +1659,15 @@ export default function HistoryPage() {
                         <tr><td className="border px-3 py-2">Donkeys</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">436</td></tr>
                         <tr><td className="border px-3 py-2">Sheep and lambs</td><td className="border px-3 py-2">145</td><td className="border px-3 py-2">292</td></tr>
                         <tr><td className="border px-3 py-2">Goats and kids</td><td className="border px-3 py-2">1,026</td><td className="border px-3 py-2">1,957</td></tr>
-                        <tr className="bg-gray-200">
+                        <tr className="">
                             <td className="border px-3 py-2">C.U. (cattle units, total)</td><td className="border px-3 py-2">2,604</td><td className="border px-3 py-2">3,369</td>
                         </tr>
 
-                        <tr className="bg-gray-200">
+                        <tr className="">
                             <td className="border px-3 py-2">Pigs</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">669</td>
                         </tr>
 
-                        <tr className="bg-gray-200">
+                        <tr className="">
                             <td className="border px-3 py-2">Poultry</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">2,386</td>
                         </tr>
                         </tbody>
