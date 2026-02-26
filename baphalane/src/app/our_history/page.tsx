@@ -15,6 +15,9 @@ const sections = [
   { id: "section10", title: "10. Beliefs and Sacred Practices"},
   { id: "section11", title: "11. Churches and Schools"},
   { id: "section12", title: "12. Mode of Settlement"},
+  { id: "section13", title: "13. Material Culture"},
+  { id: "section14", title: "14. Tribal Marks and Dress"},
+  { id: "section15", title: "15. Cattle and Pastoralism"},
 ]
 
 import Navbar from "@/components/Navbar";
@@ -1495,6 +1498,188 @@ export default function HistoryPage() {
                     <p>
                     Cattle kraals were usually situated on the outskirts
                     of the village.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 13 */}
+                <section
+                id="section13"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    13. Material Culture
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    Besides everyday European household utensils and simple furniture, locally made Tswana utensils were still found in most homesteads.
+                    </p>
+
+                    <p>
+                    These included:
+                    </p>
+
+                    <ul className="list-disc pl-6 space-y-2">
+                    <li>Pots, some of which were bought from other tribes</li>
+                    <li>Numerous mortars (<em>kika</em>) and pestles</li>
+                    <li>Sitting, sleeping, and eating mats (<em>legogo</em>, <em>moseme</em>)</li>
+                    <li>Beer-strainers</li>
+                    <li>Baskets (<em>tlatlana</em>) and winnowing baskets (<em>leselo</em>)</li>
+                    <li>Wooden spoons (<em>mafyana</em>)</li>
+                    </ul>
+
+                    <p>
+                    Wooden dishes (<em>mogopo</em>) were no longer in use, and grass granaries (<em>sesigo</em>) had also fallen out of practice.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 14 */}
+                <section
+                id="section14"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    14. Tribal Marks and Dress
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    Tribal marks were no longer visible among the people. Almost all members of the tribe wore European clothes, shoes, hats, and caps.
+                    </p>
+
+                    <p>
+                    The only items of traditional attire that remained were:
+                    </p>
+
+                    <ul className="list-disc pl-6 space-y-2">
+                    <li>Sandals, worn by elderly men</li>
+                    <li>Baby slings (<em>thari</em>) made from goat-skin</li>
+                    <li>A few small karosses and fur caps</li>
+                    </ul>
+
+                </div>
+                </section>
+
+                {/* Section 15 */}
+                <section
+                id="section15"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    15. Cattle and Pastoralism
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    The baPhalane kept cattle that were a cross between Afrikaner and Native types. Families who did not own cattle were occasionally lent a few animals, a practice known as <em>go fisa</em>.
+                    </p>
+
+                    <p>
+                    According to the agricultural census of 1949, the number of cattle, sheep, and goats owned by the tribe was as follows:
+                    </p>
+
+                    <table className="w-full table-auto border border-gray-200 text-left">
+                    <thead>
+                        <tr className="bg-gray-100">
+                        <th className="border px-3 py-2">Farm</th>
+                        <th className="border px-3 py-2">Cattle</th>
+                        <th className="border px-3 py-2">Sheep</th>
+                        <th className="border px-3 py-2">Goats</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td className="border px-3 py-2">Ramakokaskraal</td>
+                        <td className="border px-3 py-2">800</td>
+                        <td className="border px-3 py-2">—</td>
+                        <td className="border px-3 py-2">150</td>
+                        </tr>
+                        <tr>
+                        <td className="border px-3 py-2">Geluk</td>
+                        <td className="border px-3 py-2">500</td>
+                        <td className="border px-3 py-2">—</td>
+                        <td className="border px-3 py-2">70</td>
+                        </tr>
+                        <tr>
+                        <td className="border px-3 py-2">Elandsfontein</td>
+                        <td className="border px-3 py-2">200</td>
+                        <td className="border px-3 py-2">40</td>
+                        <td className="border px-3 py-2">75</td>
+                        </tr>
+                        <tr>
+                        <td className="border px-3 py-2">Schilpadnest</td>
+                        <td className="border px-3 py-2">400</td>
+                        <td className="border px-3 py-2">—</td>
+                        <td className="border px-3 py-2">600</td>
+                        </tr>
+                        <tr>
+                        <td className="border px-3 py-2">Haakdoornbult (Private)</td>
+                        <td className="border px-3 py-2">300</td>
+                        <td className="border px-3 py-2">75</td>
+                        <td className="border px-3 py-2">96</td>
+                        </tr>
+                        <tr>
+                        <td className="border px-3 py-2">Rhenosterspruit</td>
+                        <td className="border px-3 py-2">170</td>
+                        <td className="border px-3 py-2">30</td>
+                        <td className="border px-3 py-2">35</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <p>
+                    In the 1950 agricultural census, additional livestock items were enumerated, but only totals were shown for the above-mentioned farms. These included cows, calves, bulls, oxen, total cattle, mules, horses, donkeys, sheep, goats, pigs, and poultry. On the tribal land, there were 84 cattle units (C.U.) per square mile, which exceeded the recommended density of 8 morgen per cattle unit.
+                    </p>
+
+                    {/* Livestock Table */}
+                    <div className="overflow-x-auto my-4">
+                    <table className="w-full table-auto border border-gray-200 text-left">
+                        <thead>
+                        <tr className="bg-gray-100">
+                            <th className="border px-3 py-2">Livestock Type</th>
+                            <th className="border px-3 py-2">1949</th>
+                            <th className="border px-3 py-2">1950</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td className="border px-3 py-2">Cows (over one year old)</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">1,352</td></tr>
+                        <tr><td className="border px-3 py-2">Calves (under one year)</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">488</td></tr>
+                        <tr><td className="border px-3 py-2">Bulls (over one year)</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">28</td></tr>
+                        <tr><td className="border px-3 py-2">Oxen</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">1,090</td></tr>
+                        <tr><td className="border px-3 py-2">Total cattle</td><td className="border px-3 py-2">2,370</td><td className="border px-3 py-2">2,958</td></tr>
+                        <tr><td className="border px-3 py-2">Mules</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">7</td></tr>
+                        <tr><td className="border px-3 py-2">Horses</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">6</td></tr>
+                        <tr><td className="border px-3 py-2">Donkeys</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">436</td></tr>
+                        <tr><td className="border px-3 py-2">Sheep and lambs</td><td className="border px-3 py-2">145</td><td className="border px-3 py-2">292</td></tr>
+                        <tr><td className="border px-3 py-2">Goats and kids</td><td className="border px-3 py-2">1,026</td><td className="border px-3 py-2">1,957</td></tr>
+                        <tr className="bg-gray-200">
+                            <td className="border px-3 py-2">C.U. (cattle units, total)</td><td className="border px-3 py-2">2,604</td><td className="border px-3 py-2">3,369</td>
+                        </tr>
+
+                        <tr className="bg-gray-200">
+                            <td className="border px-3 py-2">Pigs</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">669</td>
+                        </tr>
+
+                        <tr className="bg-gray-200">
+                            <td className="border px-3 py-2">Poultry</td><td className="border px-3 py-2">—</td><td className="border px-3 py-2">2,386</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p>
+                    It was difficult to calculate cattle units per 100 population because livestock from different tribes were not separated on Trust farms. On the tribal land itself, the tribe had 84 C.U. per 100 persons.
+                    </p>
+
+                    <p>
+                    The major cattle diseases recorded were black quarter, anthrax (rare), a liver disease affecting calves called <em>sebete</em>, and <em>bile</em> (<em>sabotlokwe</em>). A disease called <em>tlhakwana</em>, affecting goats, could not be identified, while another internal disease called <em>ntsotwane</em> occurred only occasionally.
                     </p>
 
                 </div>
