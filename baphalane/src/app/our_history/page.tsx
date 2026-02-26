@@ -8,7 +8,10 @@ const sections = [
   { id: "section3", title: "3. Chief" },
   { id: "section4", title: "4. Language" },
   { id: "section5", title: "5. Land & Population" },
-  { id: "section6", title: "6. History and genealogies of chiefs"}
+  { id: "section6", title: "6. History and genealogies of chiefs"},
+  { id: "section7", title: "7. Regiments (Mephato)"},
+  { id: "section8", title: "8. Political Organization"},
+  { id: "section9", title: "9. Social Organization"}
 ]
 
 import Navbar from "@/components/Navbar";
@@ -238,11 +241,7 @@ export default function HistoryPage() {
                     </p>
 
                     <p>
-                        <span className="font-semibold">Reign begain in:</span> Beginning of the 18th century
-                    </p>
-
-                    <p>
-                        <span className="font-semibold">Residence:</span> Ramakoka&apos;s Location
+                        <span className="font-semibold">Reign began in:</span> Beginning of the 18th century
                     </p>
                     </div>
                 </section>
@@ -720,8 +719,619 @@ export default function HistoryPage() {
                     </p>
 
                 </div>
+
+                {/* Continuation — Succession after Mafodi */}
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg mt-10">
+
+                <h3 className="text-xl font-semibold text-yellow-700">
+                    V. Moatshe Ramokoka (d. 1897)
+                </h3>
+
+                <p>
+                    Mafodi was succeeded by his son <strong>V Moatshe Ramokoka</strong>, who was
+                    already married at the time of his succession. Moatshe moved to Phalane,
+                    the present land of the tribe. The regiments Matladi and Maditshe took part
+                    in the Sekukuni War in 1879. Moatshe was an old man when he died in 1897.
+                </p>
+
+                <h4 className="font-semibold mt-4">Wives and Issue</h4>
+
+                <ul className="space-y-4">
+
+                    <li>
+                    <strong>1. Mmakgase</strong> (Molwana clan)
+                    <ul className="list-disc ml-6">
+                        <li>Rammopo (m)</li>
+                        <li>Nakedi (f)</li>
+                        <li>Mpediane (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>2. Mmamatlhodi</strong> (Kgatla ba Mmakau)
+                    <ul className="list-disc ml-6">
+                        <li>Mmankgathi (f)</li>
+                        <li>Halefyane (f)</li>
+                        <li>Subjane (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>3. Mmamokoke</strong> (Great Wife; chief’s family)
+                    <ul className="list-disc ml-6">
+                        <li>Mokoke (m)</li>
+                        <li>Maiphepi (f)</li>
+                        <li>Mpeo (f)</li>
+                        <li>Nkgoni (f)</li>
+                        <li>Mafodi (m), headman at Schilpadnest</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>4. Mmamolobi</strong> (Kobuvula clan)
+                    <ul className="list-disc ml-6">
+                        <li>Mmantwa (f)</li>
+                        <li>Dikeledi (f)</li>
+                        <li>Tulmotse (m)</li>
+                        <li>Rrantsho (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>5. Mmaradifele</strong> (Masisi clan)
+                    <ul className="list-disc ml-6">
+                        <li>Motato (f)</li>
+                        <li>Letlape (m)</li>
+                        <li>Ntshiwang (f)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>6. Mmamokalake</strong> (younger sister of Mmamolobi)
+                    <ul className="list-disc ml-6">
+                        <li>Ketlhoilwe (f)</li>
+                        <li>Sekedi (f)</li>
+                        <li>Hokalake (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>7. Mmasebeso</strong> (Holotsana clan; tribe unknown)
+                    <ul className="list-disc ml-6">
+                        <li>Mokae (f)</li>
+                        <li>Maopngrafara (m)</li>
+                        <li>Kau (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>8. Thabalaka</strong> (Letlape clan)
+                    <ul className="list-disc ml-6">
+                        <li>Mma bo go si</li>
+                        <li>Kobete (m)</li>
+                        <li>Scbegi (m)</li>
+                        <li>Segeti (f)</li>
+                        <li>Molebatsi (f)</li>
+                        <li>Mabedika (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>9. Mapilane</strong> (daughter of a Kgatla chief)
+                    <ul className="list-disc ml-6">
+                        <li>Pilane (m)</li>
+                        <li>Molobane (f)</li>
+                        <li>Ramagatisa (m)</li>
+                        <li>Mmantshotsotso (f)</li>
+                        <li>Mosidi (f)</li>
+                        <li>Matlakala (f)</li>
+                    </ul>
+                    </li>
+
+                </ul>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                    VI. Mokoke (c. 1835–1891)
+                </h3>
+
+                <p>
+                    VI Mokoke, probably born between 1835 and 1840, became a headman under his
+                    father and in tribal tradition ranks as a chief. He left with part of the
+                    tribe for Kroonendal, settling north of the present European village.
+                    Later he became ill and returned to Phalane, where he died between 1889 and
+                    1891, some years before his father.
+                </p>
+
+                <p>
+                    Around 1870–75 many baPhalane left their chief due to ill treatment.
+                    Some (baPhalane ba Sesobe) settled at Vleeschfontein in the Marico
+                    district. Around 1900 their headman was Stephen Moatshe.
+                </p>
+
+                <h4 className="font-semibold mt-4">Wives and Issue</h4>
+
+                <ul className="space-y-4">
+
+                    <li>
+                    <strong>1. Mma-Johannes</strong> (Great Wife; Moatshe clan)
+                    <ul className="list-disc ml-6">
+                        <li>Johannes (m)</li>
+                        <li>Maria (f)</li>
+                        <li>Podile (m)</li>
+                        <li>Nthopeng (f)</li>
+                        <li>Sebolao (m)</li>
+                        <li>Sara (f)</li>
+                        <li>Moepeng (f)</li>
+                        <li>Dorothea (f)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>2. Seeletso</strong> (baFokeng royal family)
+                    <ul className="list-disc ml-6">
+                        <li>Ricoto Bethuel (m)</li>
+                        <li>Mokgatle Salatiel (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>3. Bogadi</strong> (Logadiba tribe, Mathibestad)
+                    <ul className="list-disc ml-6">
+                        <li>Mokae (f)</li>
+                        <li>Ramokoka Egmont (m)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>4. Mmamoatshe</strong> (Modisane clan)
+                    <ul className="list-disc ml-6">
+                        <li>Modilati (f)</li>
+                        <li>Mmantsho (f)</li>
+                        <li>Mmamonyaka (f)</li>
+                        <li>Mabifi (f)</li>
+                    </ul>
+                    </li>
+
+                    <li>
+                    <strong>5. Dorothea</strong> (Mothokwa clan)
+                    <ul className="list-disc ml-6">
+                        <li>Karolina (f)</li>
+                        <li>Unnamed child (m), died in youth</li>
+                    </ul>
+                    </li>
+
+                </ul>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                    VII. Johannes Maponyane (b. c. 1860–1870)
+                </h3>
+
+                <p>
+                    VII Johannes Maponyane, born between 1860 and 1870, succeeded his
+                    grandfather Moatshe in 1897 but appears to have ruled only briefly.
+                    He married Masekere of the Matsaba clan according to Christian rites.
+                    He had no sons.
+                </p>
+
+                <h4 className="font-semibold mt-4">Issue</h4>
+                <ul className="list-disc ml-6">
+                <li>Moepeng (f)</li>
+                <li>Ditlhwaneng (f)</li>
+                <li>Mafiyapere (f)</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                VIII. Bethuel Rakoto (d. 1906)
+                </h3>
+
+                <p>
+                VIII Bethuel Rakoto succeeded his brother Johannes. He was married
+                according to Christian rites to Mmaponyane, a daughter of the royal
+                family of the tribe.
+                </p>
+
+                <h4 className="font-semibold mt-4">Issue</h4>
+                <ul className="list-disc ml-6">
+                <li>Letlape (m)</li>
+                <li>Unnamed son (died in youth)</li>
+                <li>Bethuel Gaotingwe (m)</li>
+                <li>Mmakrotho (f)</li>
+                <li>Mafodi (m), still alive at time of record</li>
+                </ul>
+
+                <p className="mt-4">
+                Bethuel died in 1906.
+                </p>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                IX. Salatiel Mokgatle (1878–1922)
+                </h3>
+
+                <p>
+                IX Salatiel Mokgatle succeeded as regent for the present chief.
+                He was born in 1878.
+                </p>
+
+                <h4 className="font-semibold mt-4">Wives and Issue</h4>
+
+                <ul className="space-y-4">
+
+                <li>
+                    <strong>1. Seganele</strong> (daughter of a baFokeng chief)
+                    <ul className="list-disc ml-6">
+                    <li>Mokoke (m)</li>
+                    <li>Mafodi Rrammalana (m)</li>
+                    <li>Dikeledi (m)</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>2. Mmakgapa</strong> (Legobje clan; married after death of first wife)
+                    <ul className="list-disc ml-6">
+                    <li>Mmapoo (f)</li>
+                    <li>Mmamosudisi (f)</li>
+                    </ul>
+                </li>
+
+                </ul>
+
+                <p className="mt-4">
+                Salatiel died in 1922.
+                </p>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                X. Egmont Ramokoka (b. 1882 – d. 1946)
+                </h3>
+
+                <p>
+                X Egmont Ramokoka, younger brother of Johannes, Bethuel, and Salatiel,
+                was born in 1882. He became acting chief from 1922 to 1927.
+                </p>
+
+                <p>
+                He married Damaria Makaau, a member of the Moatshe clan of the tribe.
+                </p>
+
+                <h4 className="font-semibold mt-4">Issue</h4>
+                <ul className="list-disc ml-6">
+                <li>Mmasogo (f)</li>
+                <li>Mmadikomang (f)</li>
+                <li>Ramphelane (m)</li>
+                </ul>
+
+                <p className="mt-4">
+                He died in 1946.
+                </p>
+
+                <h3 className="text-xl font-semibold text-yellow-700 mt-10">
+                XI. Bethuel Gaotingwe (assumed chieftainship 1927)
+                </h3>
+
+                <p>
+                XI Bethuel Gaotingwe became chief in 1927 upon reaching majority.
+                He was not yet married at the time of this record.
+                </p>
+
+                <p>
+                In 1934 he encountered difficulties, and during his absence
+                Hoffen Ramalane Ramokoka acted on his behalf.
+                </p>
+
+                </div>
+
                 </section>
 
+                {/* Section 7 */}
+                <section
+                id="section7"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    7. Regiments (Mephato)
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    The baPhalane, like other Tswana-speaking communities, organised their
+                    society into age regiments (mephato). These were not standing armies in
+                    the European sense, but generational groups formed through initiation
+                    (bogwera). Each regiment was given a name and placed under a leader.
+                    Regiments functioned as units of mobilisation for defence, hunting,
+                    labour projects, and ceremonial duties.
+                    </p>
+
+                    <p>
+                    Over time, especially under the influence of Christianity and mission
+                    activity, traditional initiation lodges declined. Later regiments became
+                    largely symbolic and were sometimes organised around Church confirmation
+                    rather than traditional initiation. The lists below reflect both the
+                    earlier traditional regiments and the later confirmation regiments.
+                    </p>
+
+                    {/* Early Traditional Regiments */}
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Early Traditional Regiments
+                    </h3>
+
+                    <ul className="list-disc ml-6 space-y-2">
+                    <li>Mathamaga I — initiated at Mathebeleng during the reign of Mokoke</li>
+                    <li>Moreleba I — initiated at Mathebeleng under Chief Mokoke</li>
+                    <li>Madingwana I — initiated at Mathebeleng under Chief Mokoke</li>
+                    <li>Matlhwana I — initiated at Mathebeleng</li>
+                    <li>Tfangana — initiated at Mathebeleng c. 1828</li>
+                    <li>Magasa I — associated with Mokoke II</li>
+                    <li>Mantsho I — associated with Letlape</li>
+                    <li>Matladi I — formed during the reign of Mafodi</li>
+                    <li>Maditshe — formed at Phalane</li>
+                    <li>Mangana — formed at Phalane</li>
+                    <li>Matlakana — women’s regiment</li>
+                    </ul>
+
+                    <p>
+                    Some of these regiments are recorded as having taken part in regional
+                    conflicts, including campaigns in the late 19th century such as the
+                    Sekukuni War (1879–80). Their organisation reflects the political and
+                    military structures of the tribe during the pre-colonial and early
+                    colonial periods.
+                    </p>
+
+                    {/* Later Confirmation Regiments */}
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Later “Confirmation Regiments”
+                    </h3>
+
+                    <p>
+                    It is said that under the influence of Christianity, the holding of
+                    traditional initiation lodges fell into disuse at an early date. The
+                    following regiments are described as Church “confirmation regiments,”
+                    whose leaders were sometimes appointed later. These retained the naming
+                    structure of the traditional mephato but no longer functioned as military
+                    age-sets.
+                    </p>
+
+                    <ul className="list-disc ml-6 space-y-2">
+                    <li>Marutla</li>
+                    <li>Mabusa</li>
+                    <li>Mathamaga II</li>
+                    <li>Mareleba II</li>
+                    <li>Madingwana II</li>
+                    <li>Matlhwana II</li>
+                    <li>Mangana II</li>
+                    <li>Magasa II</li>
+                    <li>Mantsho II</li>
+                    <li>Matladi II</li>
+                    <li>Mapetlwane</li>
+                    <li>Matshela</li>
+                    <li>Magama</li>
+                    <li>Mantwa</li>
+                    </ul>
+
+                    <p>
+                    Named leaders associated with these later regiments include Egmont
+                    Ramokoka, Facius Tshubisi (before 1898), Mpaku, Rabotilo, Selle,
+                    Gaotingwe Bethuel, Ramakhutle, Mafodi, Letlapa, Ramponyeng, and others.
+                    </p>
+
+                    <p>
+                    The shift from traditional initiation regiments to church-based
+                    confirmation cohorts illustrates a significant transformation in
+                    baPhalane social organisation. While the generational naming system
+                    endured, its ritual and military functions gradually gave way to
+                    Christian institutional structures.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 8 */}
+                <section
+                id="section8"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    8. Political Organization
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    The political organisation of the baPhalane reflects a hereditary
+                    chieftainship supported by ranked clans (dikgoro), advisory councils,
+                    and customary assemblies. Authority is structured through lineage,
+                    clan hierarchy, and consultation.
+                    </p>
+
+                    {/* Clan Structure */}
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Clan Structure (Dikgoro)
+                    </h3>
+
+                    <p>
+                    The tribe is composed of the following clans, listed in order of rank:
+                    </p>
+
+                    <div className="overflow-x-auto">
+                    <table className="min-w-full border border-gray-200 text-left text-base">
+                        <thead className="bg-yellow-50">
+                        <tr>
+                            <th className="px-4 py-2 border">Rank</th>
+                            <th className="px-4 py-2 border">Clan (Kgoro)</th>
+                            <th className="px-4 py-2 border">Head of Clan (Kgosana in 1953)</th>
+                            <th className="px-4 py-2 border">Totem</th>
+                        </tr>
+                        </thead>
+                        <tbody className="bg-white">
+                        <tr>
+                            <td className="px-4 py-2 border">1</td>
+                            <td className="px-4 py-2 border">Wa Moshate (royal house)</td>
+                            <td className="px-4 py-2 border">Chief</td>
+                            <td className="px-4 py-2 border">Kwena (crocodile)</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">2</td>
+                            <td className="px-4 py-2 border">Mokoka</td>
+                            <td className="px-4 py-2 border">Raditladi</td>
+                            <td className="px-4 py-2 border">Kwena</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">3</td>
+                            <td className="px-4 py-2 border">Botsi</td>
+                            <td className="px-4 py-2 border">Sesenye Paul</td>
+                            <td className="px-4 py-2 border">Kwena</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">4</td>
+                            <td className="px-4 py-2 border">Moatshe</td>
+                            <td className="px-4 py-2 border">Mmamothobi Petrus</td>
+                            <td className="px-4 py-2 border">Kwena</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">5</td>
+                            <td className="px-4 py-2 border">Masisi</td>
+                            <td className="px-4 py-2 border">Rabutana Michael</td>
+                            <td className="px-4 py-2 border">—</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">6</td>
+                            <td className="px-4 py-2 border">Mfulwane</td>
+                            <td className="px-4 py-2 border">Mpheretlhane Lazarus</td>
+                            <td className="px-4 py-2 border">Phiri (hyena)</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-2 border">7</td>
+                            <td className="px-4 py-2 border">Mpodi</td>
+                            <td className="px-4 py-2 border">Ramotsho Nason</td>
+                            <td className="px-4 py-2 border">Tlou (elephant)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p>
+                    Some members of the Mokoka clan are recorded as residing at Tweelaagte
+                    and Schilpadnest.
+                    </p>
+
+                    {/* Chieftainship */}
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Chieftainship and Council
+                    </h3>
+
+                    <p>
+                    The chieftainship is hereditary. The deputy of the chief and next in rank
+                    was Nketsing Sadrak Ramokoka.
+                    </p>
+
+                    <p>
+                    The custom of holding a private or secret chief’s council
+                    (<em>khuduthamaga</em>) was still observed. This council consists of the
+                    chief’s close relatives together with selected headmen (dikgosana).
+                    It appoints a personal servant (<em>ntona</em>) for the chief. In former
+                    times this man was expected to belong to the same regiment as the chief
+                    and, if possible, to be the son of the previous ntona.
+                    </p>
+
+                    <p>
+                    The broader council administering law and public affairs was composed of
+                    the headmen (dikgosana). After matters have been discussed by this
+                    council, the tribe may be summoned to a general assembly
+                    (<em>pitso</em>) in which all tribesmen may express their views.
+                    There was no tribal secretary.
+                    </p>
+
+                    {/* Tribute and Land */}
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Tribute and Land Administration
+                    </h3>
+
+                    <p>
+                    No tribute is received from the branch of the tribe formerly residing
+                    in the Marico district. Tribute was, however, received from sections of
+                    the tribe living in the Pilanesberg and Rustenburg districts.
+                    </p>
+
+                    <p>
+                    It was customary for workers returning from prolonged employment in town
+                    to “greet” the chief with a monetary gift (traditionally 10 shillings).
+                    </p>
+
+                    <p>
+                    Fields are allocated by a land committee composed of three men.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 9 */}
+                <section
+                id="section9"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    9. Social Organization
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    Marriage among the baPhalane was regulated through
+                    customary law, with bridewealth (bogadi) remaining a central
+                    institution among both Christians and non-Christians.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Bridewealth (Bogadi)
+                    </h3>
+
+                    <p>
+                    Bogadi is still given in the form of cattle. As a rule, the
+                    full amount must be transferred before the marriage is finalised.
+                    The average amount was four to five head of cattle.
+                    </p>
+
+                    <p>
+                    The bridegroom’s father offers a number of cattle, and his
+                    mother’s brother (<em>malome</em>) may contribute one animal.
+                    Correspondingly, the bride’s mother’s brother receives one animal
+                    from the bogadi.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Marriage Patterns
+                    </h3>
+
+                    <p>
+                    Cross-cousin marriage remains preferential.
+                    If a marriage remains without issue, this no longer entitled
+                    the husband to claim a substitute wife (<em>seantlo</em>),
+                    indicating a shift from earlier custom.
+                    </p>
+
+                    <p>
+                    It was, however, customary for a man to support his brother’s
+                    widow (<em>motlholagadi</em>) and her children.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Social Concerns and Regulation
+                    </h3>
+
+                    <p>
+                    A general complaint was recorded regarding the increase
+                    in illegitimate births. If the father of such a child was a
+                    member of the tribe, he is fined one cow by the chief.
+                    </p>
+
+                    <p>
+                    Polygamy was reported to no longer occur.
+                    </p>
+
+                </div>
+                </section>
+
+                
             </div>
           </div>
 
