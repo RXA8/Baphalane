@@ -11,7 +11,10 @@ const sections = [
   { id: "section6", title: "6. History and genealogies of chiefs"},
   { id: "section7", title: "7. Regiments (Mephato)"},
   { id: "section8", title: "8. Political Organization"},
-  { id: "section9", title: "9. Social Organization"}
+  { id: "section9", title: "9. Social Organization"},
+  { id: "section10", title: "10. Beliefs and Sacred Practices"},
+  { id: "section11", title: "11. Churches and Schools"},
+  { id: "section12", title: "12. Mode of Settlement"},
 ]
 
 import Navbar from "@/components/Navbar";
@@ -1331,7 +1334,177 @@ export default function HistoryPage() {
                 </div>
                 </section>
 
+                {/* Section 10 */}
+                <section
+                id="section10"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    10. Beliefs and Sacred Practices
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    The grave of the old chief Moatshe is located near or on the
+                    mountain Ramoloreng. Because of this association, the mountain
+                    is regarded as a sacred place.
+                    </p>
+
+                    <p>
+                    Prayers for rain are conducted there, indicating the continued
+                    importance of ancestral authority and sacred geography in the
+                    spiritual life of the tribe.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Sacred Sites
+                    </h3>
+
+                    <p>
+                    While the mountain Ramoloreng is considered sacred, sacred trees
+                    are apparently not recognised in the same way within this
+                    community.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Witchcraft and Divination
+                    </h3>
+
+                    <p>
+                    There remains a widespread fear of witchcraft. Many people
+                    consult diviners when misfortune, illness, or unexplained events
+                    occur.
+                    </p>
+
+                    <p>
+                    Some of these diviners appeared to travel widely throughout the
+                    Tswana areas and into the towns.
+                    </p>
+
+                    <p>
+                    Although complaints are made that many of them possess little
+                    genuine knowledge, belief in the efficacy of certain traditional
+                    medicines was strong.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 11 */}
+                <section
+                id="section11"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    11. Churches and Schools
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <h3 className="text-xl font-semibold text-yellow-700">
+                    Churches
+                    </h3>
+
+                    <p>
+                    The large majority of the tribe, estimated at approximately
+                    ninety percent, were said to have been Christians.
+                    Most were members of the Hermannsburg Lutheran Mission.
+                    </p>
+
+                    <p>
+                    The Mission maintained a church building and a resident
+                    African minister at Phalane.
+                    The African Methodist Episcopal Church and the Pentecostal
+                    Holiness Church each had a small number of members and
+                    a Native minister.
+                    </p>
+
+                    <p>
+                    Phalane also functioned as an outstation of the
+                    Methodist Church of South Africa.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Schools
+                    </h3>
+
+                    <p>
+                    There was one government-aided school offering classes up to
+                    Standard VI, with a staff of five teachers serving approximately
+                    370 children. An additional sixth teacher was paid by the tribe.
+                    </p>
+
+                    <p>
+                    Other schools operated at Tweelaagte, where three teachers
+                    instructed approximately 170 children, and at Nooitgedacht,
+                    where five teachers offered classes up to Standard VI.
+                    </p>
+
+                    <p>
+                    It was estimated that about three quarters of the children
+                    of school-going age actually attended school.
+                    No youth organisation was reported at the time.
+                    </p>
+
+                </div>
+                </section>
                 
+                {/* Section 12 */}
+                <section
+                id="section12"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    12. Mode of Settlement
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    At the time of recording, the tribe was distributed across
+                    several settlements:
+                    </p>
+
+                    <ul className="list-disc pl-6 space-y-2">
+                    <li>Phalane on Ramakokaskraal</li>
+                    <li>Bojating on Elandsfontein</li>
+                    <li>Mmamodimokwana on Schilpadnest</li>
+                    <li>Module on Vogelstruisnek</li>
+                    <li>Ratumuga on Tweelaagte</li>
+                    <li>Tlhatlaganyane on Ruighoek</li>
+                    <li>Kwa Padi on Haakdoornbult</li>
+                    <li>Makgopaneng on Rhenosterspruit</li>
+                    <li>Rankelenyane on Nooitgedacht</li>
+                    </ul>
+
+                    <p>
+                    Maile wa Phalane was the Phalane settlement located on
+                    Roodekraalspruit.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Village Layout and Architecture
+                    </h3>
+
+                    <p>
+                    The individual homesteads lay fairly close together,
+                    forming compact village groupings.
+                    </p>
+
+                    <p>
+                    Rectangular huts predominated. As a rule, roofs were thatched,
+                    although corrugated iron roofing was occasionally observed.
+                    </p>
+
+                    <p>
+                    Cattle kraals were usually situated on the outskirts
+                    of the village.
+                    </p>
+
+                </div>
+                </section>
+
             </div>
           </div>
 
