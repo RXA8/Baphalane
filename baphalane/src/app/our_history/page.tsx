@@ -18,6 +18,7 @@ const sections = [
   { id: "section13", title: "13. Material Culture"},
   { id: "section14", title: "14. Tribal Marks and Dress"},
   { id: "section15", title: "15. Cattle and Pastoralism"},
+  { id: "section16", title: "16. Agriculture"},
 ]
 
 import Navbar from "@/components/Navbar";
@@ -1585,54 +1586,57 @@ export default function HistoryPage() {
                     According to the agricultural census of 1949, the number of cattle, sheep, and goats owned by the tribe was as follows:
                     </p>
 
-                    <table className="w-full table-auto border border-gray-200 text-left">
-                    <thead>
+                    {/* Responsive Table Wrapper */}
+                    <div className="w-full overflow-x-auto my-4">
+                    <table className="min-w-[600px] w-full border border-gray-200 text-left text-sm">
+                        <thead>
                         <tr className="bg-gray-100">
-                        <th className="border px-3 py-2">Farm</th>
-                        <th className="border px-3 py-2">Cattle</th>
-                        <th className="border px-3 py-2">Sheep</th>
-                        <th className="border px-3 py-2">Goats</th>
+                            <th className="border px-3 py-2 whitespace-nowrap">Farm</th>
+                            <th className="border px-3 py-2 whitespace-nowrap">Cattle</th>
+                            <th className="border px-3 py-2 whitespace-nowrap">Sheep</th>
+                            <th className="border px-3 py-2 whitespace-nowrap">Goats</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
-                        <td className="border px-3 py-2">Ramakokaskraal</td>
-                        <td className="border px-3 py-2">800</td>
-                        <td className="border px-3 py-2">—</td>
-                        <td className="border px-3 py-2">150</td>
-                        </tr>
-                        <tr>
-                        <td className="border px-3 py-2">Geluk</td>
-                        <td className="border px-3 py-2">500</td>
-                        <td className="border px-3 py-2">—</td>
-                        <td className="border px-3 py-2">70</td>
+                            <td className="border px-3 py-2 whitespace-nowrap">Ramakokaskraal</td>
+                            <td className="border px-3 py-2">800</td>
+                            <td className="border px-3 py-2">—</td>
+                            <td className="border px-3 py-2">150</td>
                         </tr>
                         <tr>
-                        <td className="border px-3 py-2">Elandsfontein</td>
-                        <td className="border px-3 py-2">200</td>
-                        <td className="border px-3 py-2">40</td>
-                        <td className="border px-3 py-2">75</td>
+                            <td className="border px-3 py-2 whitespace-nowrap">Geluk</td>
+                            <td className="border px-3 py-2">500</td>
+                            <td className="border px-3 py-2">—</td>
+                            <td className="border px-3 py-2">70</td>
                         </tr>
                         <tr>
-                        <td className="border px-3 py-2">Schilpadnest</td>
-                        <td className="border px-3 py-2">400</td>
-                        <td className="border px-3 py-2">—</td>
-                        <td className="border px-3 py-2">600</td>
+                            <td className="border px-3 py-2 whitespace-nowrap">Elandsfontein</td>
+                            <td className="border px-3 py-2">200</td>
+                            <td className="border px-3 py-2">40</td>
+                            <td className="border px-3 py-2">75</td>
                         </tr>
                         <tr>
-                        <td className="border px-3 py-2">Haakdoornbult (Private)</td>
-                        <td className="border px-3 py-2">300</td>
-                        <td className="border px-3 py-2">75</td>
-                        <td className="border px-3 py-2">96</td>
+                            <td className="border px-3 py-2 whitespace-nowrap">Schilpadnest</td>
+                            <td className="border px-3 py-2">400</td>
+                            <td className="border px-3 py-2">—</td>
+                            <td className="border px-3 py-2">600</td>
                         </tr>
                         <tr>
-                        <td className="border px-3 py-2">Rhenosterspruit</td>
-                        <td className="border px-3 py-2">170</td>
-                        <td className="border px-3 py-2">30</td>
-                        <td className="border px-3 py-2">35</td>
+                            <td className="border px-3 py-2 whitespace-nowrap">Haakdoornbult (Private)</td>
+                            <td className="border px-3 py-2">300</td>
+                            <td className="border px-3 py-2">75</td>
+                            <td className="border px-3 py-2">96</td>
                         </tr>
-                    </tbody>
+                        <tr>
+                            <td className="border px-3 py-2 whitespace-nowrap">Rhenosterspruit</td>
+                            <td className="border px-3 py-2">170</td>
+                            <td className="border px-3 py-2">30</td>
+                            <td className="border px-3 py-2">35</td>
+                        </tr>
+                        </tbody>
                     </table>
+                    </div>
 
                     <p>
                     In the 1950 agricultural census, additional livestock items were enumerated, but only totals were shown for the above-mentioned farms. These included cows, calves, bulls, oxen, total cattle, mules, horses, donkeys, sheep, goats, pigs, and poultry. On the tribal land, there were 84 cattle units (C.U.) per square mile, which exceeded the recommended density of 8 morgen per cattle unit.
@@ -1681,6 +1685,122 @@ export default function HistoryPage() {
                     <p>
                     The major cattle diseases recorded were black quarter, anthrax (rare), a liver disease affecting calves called <em>sebete</em>, and <em>bile</em> (<em>sabotlokwe</em>). A disease called <em>tlhakwana</em>, affecting goats, could not be identified, while another internal disease called <em>ntsotwane</em> occurred only occasionally.
                     </p>
+
+                </div>
+                </section>
+
+                {/* Section 16 */}
+                <section
+                id="section16"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    16. Agriculture
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <h3 className="text-xl font-semibold text-yellow-700">
+                    Land Tenure and Fields
+                    </h3>
+
+                    <p>
+                    The lands were clearly demarcated. A young man received his first field from his father and was allocated additional land upon marriage. Many men cultivated two or three fields situated in different parts of the tribal area.
+                    </p>
+
+                    <p>
+                    The soil appeared fertile, and nearly all valleys within the tribal territory were ploughed.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Main Crops
+                    </h3>
+
+                    <p>
+                    The principal crops cultivated were maize (<em>mmopo</em>), sorghum or kaffircorn (<em>mabele</em>), and beans (<em>dinawa</em>).
+                    </p>
+
+                    <h4 className="font-semibold mt-4">Maize Varieties</h4>
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Hickory King (white maize)</li>
+                    <li>Red-ootlali maize with white seeds</li>
+                    <li>Botman (widely grown)</li>
+                    <li>Small quantities of yellow maize</li>
+                    </ul>
+
+                    <h4 className="font-semibold mt-4">Sorghum Varieties</h4>
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Mokgatla wa kubu</li>
+                    <li>Mantsakane (preferred when rains came late)</li>
+                    <li>Segaolane</li>
+                    <li>Sekamfokane (rarely grown)</li>
+                    <li>Mabele a masweu (favoured variety)</li>
+                    <li>Mohibitswane</li>
+                    <li>Mapepe</li>
+                    <li>Mosetlha (a favourite, related to mantsakane)</li>
+                    <li>Mamafosa</li>
+                    <li>Nilane (grown less frequently)</li>
+                    </ul>
+
+                    <p>
+                    The varieties lethejane and lebelebele (kokolwane) were not grown.
+                    </p>
+
+                    <h4 className="font-semibold mt-4">Sweet Cane (Ntswe)</h4>
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Mongatane (matured in three months)</li>
+                    <li>Nketsane (bent ears, matured in 2–3 months)</li>
+                    <li>A slow-growing unnamed variety</li>
+                    </ul>
+
+                    <p>
+                    The frost- and drought-resistant Klipkuil strains and Rondekop varieties were disliked.
+                    </p>
+
+                    <h4 className="font-semibold mt-4">Beans and Other Crops</h4>
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Moraratshane (identical with nyola)</li>
+                    <li>Mokgalo</li>
+                    <li>Groundnuts</li>
+                    <li>Mung beans (<em>ditlhodi</em>)</li>
+                    <li>Jugo beans (<em>ditloo</em>)</li>
+                    </ul>
+
+                    <p>
+                    Some families produced five to six bags of mung beans per year and four to five bags of jugo beans. Various pumpkins and melons were interplanted with maize.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Agricultural Production (Census Data)
+                    </h3>
+
+                    <p>
+                    According to the agricultural census of 1949, total production amounted to:
+                    </p>
+
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Maize: 208 bags</li>
+                    <li>Sorghum: 439 bags</li>
+                    </ul>
+
+                    <p>
+                    The total production recorded in the 1949 and 1950 agricultural censuses showed fluctuations in maize and sorghum yields, as well as beans and cultivated acreage. Citrus trees were also recorded in limited numbers.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Agricultural Implements (1950 Census)
+                    </h3>
+
+                    <ul className="list-disc pl-6 space-y-1">
+                    <li>Single-furrow ploughs: 223</li>
+                    <li>Double-furrow ploughs: 124</li>
+                    <li>Harrows: 75</li>
+                    <li>Cultivators: 1</li>
+                    <li>Planters: 2</li>
+                    <li>Wagons: 83</li>
+                    <li>Carts: 67</li>
+                    <li>Sledges: 128</li>
+                    </ul>
 
                 </div>
                 </section>
