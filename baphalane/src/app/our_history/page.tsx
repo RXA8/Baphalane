@@ -19,6 +19,8 @@ const sections = [
   { id: "section14", title: "14. Tribal Marks and Dress"},
   { id: "section15", title: "15. Cattle and Pastoralism"},
   { id: "section16", title: "16. Agriculture"},
+  { id: "section17", title: "17. Economics"},
+  { id: "section18", title: "18. Health"},
 ]
 
 import Navbar from "@/components/Navbar";
@@ -1801,6 +1803,72 @@ export default function HistoryPage() {
                     <li>Carts: 67</li>
                     <li>Sledges: 128</li>
                     </ul>
+
+                </div>
+                </section>
+
+                {/* Section 17 */}
+                <section
+                id="section17"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    17. Economics
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    Compared with other tribes of this area and the neighbouring district,
+                    the tribe did not appear to be badly off. The Phalane sections in the
+                    Rustenburg district could even be described as relatively prosperous.
+                    </p>
+
+                    <p>
+                    Some members of the community worked on European-owned farms,
+                    particularly women during the weeding and reaping seasons.
+                    Labour migration occurred on approximately the same scale as among
+                    neighbouring tribes.
+                    </p>
+
+                    <p>
+                    Only a small number of families were in a position to sell a surplus
+                    of sorghum. Most agricultural production was intended for household
+                    consumption rather than for commercial exchange.
+                    </p>
+
+                    <p>
+                    There was one shop within the tribal area, operated by a Native trader,
+                    which served the local population.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 18 */}
+                <section
+                id="section18"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    18. Health
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    Although there was a clinic within the location, no nurse was stationed there.
+                    The nearest hospital was situated at Saulspoort.
+                    </p>
+
+                    <p>
+                    Drinking water was drawn primarily from a borehole, while a second borehole
+                    was under construction at the time. In addition, water was obtained from wells.
+                    </p>
+
+                    <p>
+                    General health conditions are described in paragraphs 110–114 of the original report.
+                    </p>
 
                 </div>
                 </section>
