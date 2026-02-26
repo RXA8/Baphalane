@@ -82,57 +82,57 @@ export default function HistoryPage() {
         <div className="bg-black/60 min-h-screen py-16 px-4">
         <div className="max-w-6xl mx-auto space-y-10">
 
-            {/* MOBILE TOC SIDE BUTTON */}
-            <div className="md:hidden">
-            {/* Floating button when TOC is collapsed */}
+        {/* MOBILE TOC SIDE BUTTON */}
+        <div className="md:hidden">
+        {/* Floating button (toggles TOC open/close) */}
+        <button
+            onClick={() => setCollapsed(!collapsed)} // toggle
+            className="fixed top-24 right-4 z-[999] bg-yellow-500 text-white p-3 rounded-full shadow-lg transition-transform duration-300"
+            aria-label="Toggle Table of Contents"
+        >
+            ☰
+        </button>
+
+        {/* Sliding panel */}
+        <div
+            className={`fixed top-0 right-0 h-full w-64 bg-white/90 backdrop-blur z-[998] shadow-lg transform transition-transform duration-300 ${
+            collapsed ? "translate-x-full" : "translate-x-0"
+            }`}
+        >
+            {/* Close button + Heading */}
+            <div className="flex justify-between items-center p-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-800">Contents</h2>
             <button
-                onClick={() => setCollapsed(false)}
-                className="fixed top-24 right-4 z-[999] bg-yellow-500 text-white p-3 rounded-full shadow-lg transition-transform duration-300"
-                aria-label="Open Table of Contents"
+                onClick={() => setCollapsed(true)}
+                className="text-gray-700 font-bold text-lg"
+                aria-label="Close Table of Contents"
             >
-                ☰
+                ✕
             </button>
+            </div>
 
-            {/* Sliding panel */}
-            <div
-                className={`fixed top-0 right-0 h-full w-64 bg-white/90 backdrop-blur z-[998] shadow-lg transform transition-transform duration-300 ${
-                collapsed ? "translate-x-full" : "translate-x-0"
-                }`}
-            >
-                {/* Close button + Heading */}
-                <div className="flex justify-between items-center p-4 border-b border-gray-200">
-                <h2 className="text-lg font-semibold text-gray-800">Contents</h2>
-                <button
-                    onClick={() => setCollapsed(true)}
-                    className="text-gray-700 font-bold text-lg"
-                    aria-label="Close Table of Contents"
-                >
-                    ✕
-                </button>
-                </div>
-
-                {/* TOC content */}
-                <ul className="px-4 py-6 space-y-3 text-sm">
+            {/* TOC content (scrollable) */}
+            <div className="overflow-y-auto h-[calc(100%-64px)] px-4 py-6">
+            <ul className="space-y-3 text-sm">
                 {sections.map((s) => (
-                    <li key={s.id}>
+                <li key={s.id}>
                     <a
-                        href={`#${s.id}`}
-                        className={`block px-2 py-2 rounded transition ${
+                    href={`#${s.id}`}
+                    className={`block px-2 py-2 rounded transition ${
                         active === s.id
-                            ? "bg-yellow-100 text-yellow-700 font-semibold"
-                            : "hover:bg-gray-100"
-                        }`}
-                        onClick={() => setCollapsed(true)} // close after selecting
+                        ? "bg-yellow-100 text-yellow-700 font-semibold"
+                        : "hover:bg-gray-100"
+                    }`}
+                    onClick={() => setCollapsed(true)} // close after selecting
                     >
-                        {s.title}
+                    {s.title}
                     </a>
-                    </li>
+                </li>
                 ))}
-                </ul>
+            </ul>
             </div>
-            </div>
-
-
+        </div>
+        </div>
 
           {/* Page Title */}
           <div className="text-center text-white mb-12">
@@ -148,35 +148,30 @@ export default function HistoryPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
             {/* TABLE OF CONTENTS */}
-            <aside className="md:col-span-1 md:sticky md:top-24 h-fit">
+            <aside className="md:col-span-1 md:sticky md:top-4 h-fit">
+            <div className="hidden md:block bg-white/90 backdrop-blur border rounded-xl shadow-sm z-[998]">
+                <h3 className="font-semibold mb-4 text-gray-800 px-5 pt-5">Contents</h3>
 
-
-
-                
-
-
-
-                {/* DESKTOP */}
-                <div className="hidden md:block bg-white/90 backdrop-blur border rounded-xl p-5 shadow-sm z-[998]">
-                    <h3 className="font-semibold mb-4 text-gray-800">Contents</h3>
-
-                    <ul className="space-y-2 text-sm">
+                {/* Scrollable TOC */}
+                <div className="overflow-y-auto max-h-[calc(100vh-6rem)] px-5 pb-5">
+                <ul className="space-y-2 text-sm">
                     {sections.map((s) => (
-                        <li key={s.id}>
+                    <li key={s.id}>
                         <a
-                            href={`#${s.id}`}
-                            className={`block px-3 py-2 rounded transition ${
+                        href={`#${s.id}`}
+                        className={`block px-3 py-2 rounded transition ${
                             active === s.id
-                                ? "bg-yellow-100 text-yellow-700 font-semibold border-l-4 border-yellow-500"
-                                : "hover:bg-gray-100"
-                            }`}
+                            ? "bg-yellow-100 text-yellow-700 font-semibold border-l-4 border-yellow-500"
+                            : "hover:bg-gray-100"
+                        }`}
                         >
-                            {s.title}
+                        {s.title}
                         </a>
-                        </li>
+                    </li>
                     ))}
-                    </ul>
+                </ul>
                 </div>
+            </div>
             </aside>
 
             {/* MAIN CONTENT */}
