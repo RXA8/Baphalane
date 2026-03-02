@@ -8,13 +8,22 @@ export default function MediaSlideshow() {
 
   const images: string[] = [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/472620237_1197900345027420_8230794675843353623_n.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Eskom%20event/IMG-20260223-WA0005.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0035.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Heritage/Heritage%20event.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0000.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_121034.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Eskom%20event/IMG-20260223-WA0011.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0023.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/food%20parcels/IMG-20251217-WA0059.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0024.jpg",
-    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0026.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0012.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0027.jpg",
-    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0044.jpg",
-    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0047.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/SANDF/this2.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0050.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_112822.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20Foundation%20speech/IMG-20260223-WA0039.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

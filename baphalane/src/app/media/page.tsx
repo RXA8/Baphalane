@@ -146,7 +146,17 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/World%20AIDS%20day/IMG-20251205-WA0117.jpg",
   ],
 
-
+  "Matric Awards 2026": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_111931.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_120402.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_120838.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_121034.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/IMG-20260206-WA0029.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/IMG-20260206-WA0052(1).jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/IMG-20260206-WA0022(1).jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/IMG-20260206-WA0033(1).jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_115122.jpg"
+  ]
 };
 
 // Flatten all images
@@ -182,31 +192,24 @@ export default function Media() {
         </div>
 
         {/* FILTER BUTTONS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            onClick={() => setFilter("All")}
-            className={`px-5 py-2 rounded-lg font-semibold transition ${
-              filter === "All"
-                ? "bg-green-700 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
-            }`}
-          >
-            All
-          </button>
+        <div className="mb-12 flex flex-wrap justify-center gap-3">
+          {["All", ...Object.keys(imageCollections)].map((category) => {
+            const isActive = filter === category;
 
-          {Object.keys(imageCollections).map((category) => (
-            <button
-              key={category}
-              onClick={() => setFilter(category)}
-              className={`px-5 py-2 rounded-lg font-semibold transition ${
-                filter === category
-                  ? "bg-green-700 text-white"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+            return (
+              <button
+                key={category}
+                onClick={() => setFilter(category)}
+                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-300 ${
+                  isActive
+                    ? "bg-green-700 text-white border-green-700 shadow-md"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
 
         {/* EMPTY STATE */}
