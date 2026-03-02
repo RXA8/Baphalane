@@ -26,7 +26,7 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/WhatsApp%20Image%202025-10-31%20at%2020.00.26_1764866e.jpg",
   ],
   
-  "Kgosi Ramokoka Radio Interview": [
+  "Kgosi JEM Ramokoka Madibeng Radio Interview": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0003.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0005.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0006.jpg",
@@ -167,7 +167,8 @@ export default function Media() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const imagesToShow =
-    filter === "All" ? allImages : imageCollections[filter] || [];
+  filter === "All" ? allImages : imageCollections[filter] || [];
+  const [isOpen, setIsOpen] = useState(false);
 
     return (
     <>
@@ -191,26 +192,56 @@ export default function Media() {
           </p>
         </div>
 
-        {/* FILTER BUTTONS */}
-        <div className="mb-12 flex flex-wrap justify-center gap-3">
-          {["All", ...Object.keys(imageCollections)].map((category) => {
-            const isActive = filter === category;
+{/* FILTER DROPDOWN */}
+<div className="mb-12 flex justify-center relative">
+  <div className="w-full max-w-xl relative">
 
-            return (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-300 ${
-                  isActive
-                    ? "bg-green-700 text-white border-green-700 shadow-md"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
-                }`}
-              >
-                {category}
-              </button>
-            );
-          })}
-        </div>
+    {/* Dropdown Button */}
+    <button
+      onClick={() => setIsOpen(!isOpen)}
+      className="w-full bg-white border border-gray-300 rounded-xl px-5 py-3 text-left shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between"
+    >
+      <span className="font-medium text-gray-800 truncate">
+        {filter}
+      </span>
+
+      <svg
+        className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+          isOpen ? "rotate-180" : ""
+        }`}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    {/* Dropdown Menu */}
+    {isOpen && (
+      <div className="absolute mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-80 overflow-y-auto z-30 animate-in fade-in duration-200">
+        {["All", ...Object.keys(imageCollections)].map((category) => (
+          <button
+            key={category}
+            onClick={() => {
+              setFilter(category);
+              setIsOpen(false);
+            }}
+            className={`w-full text-left px-5 py-3 text-sm transition-colors ${
+              filter === category
+                ? "bg-green-50 text-green-700 font-semibold"
+                : "hover:bg-gray-50 text-gray-700"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    )}
+
+  </div>
+</div>
 
         {/* EMPTY STATE */}
         {imagesToShow.length === 0 && (
