@@ -15,7 +15,7 @@ export async function GET(request: Request) {
     );
   }
 
-  //console.log(`Search query received: "${query}"`);
+  console.log(`Search query received: "${query}"`);
   try {
     console.log("Starting database query...");
 
@@ -32,12 +32,12 @@ export async function GET(request: Request) {
       [`%${query}%`, `%${query}%`]
     );
 
-    //console.log(`Database query finished, retrieved ${rows.length} rows`);
+    console.log(`Database query finished, retrieved ${rows.length} rows`);
 
     // Cast rows to Grave[] safely
     const graves: Grave[] = rows as Grave[];
 
-    //console.log("Returning results to client");
+    console.log("Returning results to client");
     return NextResponse.json(graves);
   } catch (err) {
     console.error("Database query failed:", err);
