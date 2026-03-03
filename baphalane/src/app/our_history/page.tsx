@@ -21,6 +21,7 @@ const sections = [
   { id: "section16", title: "16. Agriculture"},
   { id: "section17", title: "17. Economics"},
   { id: "section18", title: "18. Health"},
+  { id: "section19", title: "19. Comunity protests and Legal History"},
 ]
 
 import Navbar from "@/components/Navbar";
@@ -1868,6 +1869,149 @@ export default function HistoryPage() {
 
                     <p>
                     General health conditions are described in paragraphs 110–114 of the original report.
+                    </p>
+
+                </div>
+                </section>
+
+                {/* Section 19 */}
+                <section
+                id="section19"
+                className="bg-white/95 backdrop-blur rounded-2xl shadow-xl p-8 scroll-mt-24 mt-12"
+                >
+                <h2 className="text-2xl font-bold text-yellow-700 mb-6">
+                    19. Community protests and Legal History
+                </h2>
+
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+
+                    <p>
+                    In the late twentieth and early twenty-first centuries, the traditional governance of the
+                    baPhalane experienced significant internal disputes and legal challenges regarding
+                    chieftainship, leadership recognition, and customary authority.
+                    </p>
+
+                    <p>
+                    A notable matter concerned the dispute over the rightful chieftaincy. In the case:  
+                    <a
+                        href="https://www.saflii.org/za/cases/ZANWHC/2013/38.html"
+                        className="text-yellow-700 underline"
+                        target="_blank"
+                    >
+                        Ramokoka and Another v Ramokoka and Others (2013)
+                    </a>, Kgosi J. J. E. M. Ramokoka and the Baphalane Traditional Council sought an interdict
+                    to stop the Commission on Traditional Leadership Disputes and Claims from investigating
+                    a called dispute over leadership succession. The High Court dismissed the application,
+                    leaving the statutory commission free to continue its inquiry into a claim originally
+                    lodged in 2008 by a former chief.
+                    </p>
+
+                    <p>
+                    Another major legal matter was: 
+                    <a
+                        href="https://www.saflii.org/za/cases/ZACC/2011/15.html"
+                        className="text-yellow-700 underline"
+                        target="_blank"
+                    >
+                        Baphalane ba Ramokoka Community v Mphela Family and Others (2011)
+                    </a>, which reached the Constitutional Court. The community sought rescission of an earlier
+                    land rights judgment in which the Mphela family’s claim was upheld. The Constitutional Court
+                    refused to rescind or expunge the earlier order and refused relief, affirming that access
+                    to courts must be respected even in complex restitution disputes.
+                    </p>
+
+                    <p>
+                    These disputes illustrate how historical leadership structures intersected with South Africa’s
+                    constitutional and statutory framework after 1994, leading to complex legal processes
+                    involving customary law, governance structures, and property rights.
+                    </p>
+
+                    <h3 className="text-xl font-semibold text-yellow-700 mt-8">
+                    Documentary Sources
+                    </h3>
+
+                    <p>
+                    The following videos provide recent documentary material reflecting community responses,
+                    protests, and local engagement with political and traditional authority issues.
+                    </p>
+
+                    {/* Embedded YouTube videos with summaries */}
+                    <div className="space-y-8 mt-6">
+
+                    {/* Video 1 */}
+                    <div>
+                        <div className="aspect-w-16 aspect-h-9">
+                        <iframe
+                            src="https://www.youtube.com/embed/lEWDgC9laYU"
+                            title="Video – Traditional Council Office Fire"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="rounded-lg"
+                        ></iframe>
+                        </div>
+                        <p className="mt-2 text-gray-600">
+                        <strong>Video 1:</strong> Disputes over mining royalties.
+                        </p>
+                    </div>
+
+                    {/* Video 2 */}
+                    <div>
+                        <div className="aspect-w-16 aspect-h-9">
+                        <iframe
+                            src="https://www.youtube.com/embed/fTSGbeppCfg"
+                            title="Video – Community Protest Footage"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="rounded-lg"
+                        ></iframe>
+                        </div>
+                        <p className="mt-2 text-gray-600">
+                        <strong>Video 2:</strong> Schools failing to open because of protests that lead to the burning of Baphalane Primary, as well as other buildings.
+                        </p>
+                    </div>
+
+                    {/* Video 3 */}
+                    <div>
+                        <div className="aspect-w-16 aspect-h-9">
+                        <iframe
+                            src="https://www.youtube.com/embed/JON0TOhdWCc"
+                            title="Video – Public Discussion with Traditional Leaders"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="rounded-lg"
+                        ></iframe>
+                        </div>
+                        <p className="mt-2 text-gray-600">
+                        <strong>Video 3: </strong>Disputes over chieftaincy.
+                        </p>
+                    </div>
+
+                    {/* Video 4 */}
+                    <div>
+                        <div className="aspect-w-16 aspect-h-9">
+                        <iframe
+                            src="https://www.youtube.com/embed/kW5FJ9fjGwQ"
+                            title="Video – Community Engagement on Tribal Governance"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="rounded-lg"
+                        ></iframe>
+                        </div>
+                        <p className="mt-2 text-gray-600">
+                        <strong>Video 4: </strong> Pupils not being able to write exams due to protests.
+                        </p>
+                    </div>
+
+                    </div>
+
+                    <p>
+                    Together, the legal disputes and recorded community responses illustrate recent historical
+                    tensions within the tribe regarding leadership succession, legitimacy, and the interface
+                    between customary authority and formal constitutional legal processes.
                     </p>
 
                 </div>
