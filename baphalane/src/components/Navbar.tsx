@@ -48,6 +48,9 @@ export default function Navbar() {
           <Link href="/our_history" className="hover:text-green-700">
             Our History
           </Link>
+          <Link href="/ecemetery" className="hover:text-green-700">
+            E-Cemetery
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -108,6 +111,13 @@ export default function Navbar() {
           className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
         >
           Our History
+        </Link>
+
+        <Link
+          href="/ecemetery"
+          className="block px-4 py-3 odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition"
+        >
+          E-Cemetery
         </Link>
       </div>
 
