@@ -74,7 +74,7 @@ export default function Navbar() {
           shadow-md
           transform transition-all duration-300 ease-in-out
           ${menuOpen
-            ? "max-h-64 opacity-100 translate-y-0"
+            ? "max-h-80 opacity-100 translate-y-0"
             : "max-h-0 opacity-0 -translate-y-2"}
         `}
       >
