@@ -11,7 +11,7 @@ import {
   Hash,
   Navigation,
   FileText,
-  User
+  User,
 } from "lucide-react";
 
 export default function ECemeteryPage() {
@@ -58,8 +58,17 @@ export default function ECemeteryPage() {
       >
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+        <div className="relative z-10 max-w-10xl mx-auto px-6 py-7 text-white">
+          {/* 3-dot loader */}
+          {loading && (
+            <div className="absolute top-5 right-5 flex space-x-1">
+              <span className="w-3 h-3 bg-green-400 rounded-full animate-bounce delay-75"></span>
+              <span className="w-3 h-3 bg-green-400 rounded-full animate-bounce delay-150"></span>
+              <span className="w-3 h-3 bg-green-400 rounded-full animate-bounce delay-300"></span>
+            </div>
+          )}
+
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">
             Baphalane E-Cemetery
           </h1>
 
