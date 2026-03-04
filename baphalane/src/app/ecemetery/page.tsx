@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import type { Grave } from "../../../lib/types";
 
@@ -18,6 +19,7 @@ export default function ECemeteryPage() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Grave[]>([]);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const formatDate = (dateString: string | null) => {
     if (!dateString) return "N/A";
@@ -93,6 +95,7 @@ export default function ECemeteryPage() {
             {results.map((grave) => (
               <div
                 key={grave.id}
+                onClick={() => router.push(`/graves/${grave.id}`)}
                 className="bg-white/10 border border-white/20 rounded-2xl p-6
                           backdrop-blur-md shadow-lg
                           transform transition-all duration-500
