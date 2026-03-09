@@ -2,13 +2,17 @@ import { NextResponse } from "next/server";
 import pool from "../../../../../lib/db";
 import { RowDataPacket } from "mysql2";
 
+// Convert full name to initials
 function getInitials(fullName: string): string {
+
   if (!fullName) return '';
+
   return fullName
     .trim()
     .split(/\s+/)
     .map(name => name[0].toUpperCase())
-    .join('.') + '.';
+    .join('.');
+
 }
 
 export async function GET(request: Request) {
