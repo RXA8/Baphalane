@@ -31,14 +31,22 @@ export async function GET(request: Request) {
       .join(" ");
 
     const [rows] = await pool.query<RowDataPacket[]>(`
-      SELECT 
+      SELECT
           public_id,
           first_name,
           surname,
           date_of_burial
-      FROM cemetery_graves
-      WHERE MATCH(first_name, surname) AGAINST (? IN BOOLEAN MODE)
-      ORDER BY MATCH(first_name, surname) AGAINST (? IN BOOLEAN MODE) DESC
+      FROM (
+          SELECT
+              public_id,
+              first_name,
+              surname,
+              date_of_burial,
+              MATCH(first_name, surname) AGAINST (? IN BOOLEAN MODE) AS score
+          FROM cemetery_graves
+          WHERE MATCH(first_name, surname) AGAINST (? IN BOOLEAN MODE)
+      ) ranked
+      ORDER BY score DESC
       LIMIT 50
     `, [formattedQuery, formattedQuery]);
 
