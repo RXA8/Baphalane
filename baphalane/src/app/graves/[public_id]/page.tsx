@@ -49,14 +49,16 @@ async function getGrave(public_id: string) {
   }
 }
 
-// Server-side page component
 export default async function GravePage({
   params,
 }: {
-  params: { public_id: string };
+  params: Promise<{ public_id: string }>; // 1. Wrap in Promise
 }) {
-  // Await server-side fetch
-  const grave = await getGrave(params.public_id);
+  // 2. Await the params before accessing public_id
+  const { public_id } = await params;
+  
+  // Now pass the unwrapped string to your fetcher
+  const grave = await getGrave(public_id);
 
   return (
     <div className="flex flex-col min-h-screen">
