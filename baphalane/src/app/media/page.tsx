@@ -25,6 +25,21 @@ const imageCollections: Record<string, string[]> = {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0035.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/WhatsApp%20Image%202025-10-31%20at%2020.00.26_1764866e.jpg",
   ],
+
+  "Women in Prayer event": [
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092526_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092508_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092455_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092337_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092306_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092256_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092105_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092040_Video%20Player.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/IMG-20260305-WA0038.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/IMG-20260305-WA0008.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/IMG-20260305-WA0007.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/20260305_111510.jpg",
+  ],
   
   "Kgosi JEM Ramokoka Madibeng Radio Interview": [
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/kgosi%20radio/IMG-20251107-WA0003.jpg",

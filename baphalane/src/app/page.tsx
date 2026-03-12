@@ -28,16 +28,16 @@ export default function HomePage() {
 
   const events = [
     {
-      title: "🌱LIMA Small, Medium, and Micro Enterprises meeting.",
-      date: "October 29, 2025",
-      description: "A meeting was held with LIMA for SMME mentoring in terms of training and support that can be provided to our local SMME's within Baphalane community.📈",
-      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/smme%20meeting/IMG-20251029-WA0014.jpg", // Replace with your image path
+      title: "🙏 Women in Prayer: Strength and Unity",
+      date: "March 5, 2026",
+      description: "A powerful gathering of women from across the community to seek spiritual guidance, share collective wisdom, and pray for the continued prosperity and protection of our families and the Baphalane nation. ✨",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092040_Video%20Player.jpg",
     },
     {
-      title: "📖Kwena-Tlase and Ramoroko Secondary School study packages distribution🖊️",
-      date: "October 31, 2025",
-      description: "Kgosi along with Mr Lentsoe Selloe from Zizwe visited Kwena-Tlase Secondary School and Ramoroko Secondary School to distribute study packages to Matric learners and also offer words of encouragement from Kgosi himself. ",
-      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20message/Study%20pack%20event/IMG-20251103-WA0037.jpg", // Replace with your image path
+      title: "🎓 Class of 2025 Matric Excellence Awards",
+      date: "January 31, 2026",
+      description: "Celebrating the hard work and academic brilliance of our top-performing learners! This prestigious ceremony honored the resilience of our youth and their commitment to building a brighter future through education. 🌟🏆",
+      imageUrl: "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/IMG-20260206-WA0033.jpg",
     },
     {
       title: "🔵Heritage day competition⚪",

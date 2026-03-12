@@ -11,6 +11,7 @@ export default function MediaSlideshow() {
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Eskom%20event/IMG-20260223-WA0005.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric/IMG-20251103-WA0035.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Heritage/Heritage%20event.jpg",
+    "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Women%20in%20prayer%20event/Screenshot_20260307_092306_Video%20Player.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Kgosi%20slideshow%20images/IMG-20260223-WA0000.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/matric%20awards%202/20260131_121034.jpg",
     "https://tqnkaadrdfkhxxbaympr.supabase.co/storage/v1/object/public/Eskom%20event/IMG-20260223-WA0011.jpg",
