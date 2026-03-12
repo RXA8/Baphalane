@@ -1899,11 +1899,7 @@ export default function HistoryPage() {
                         target="_blank"
                     >
                         Ramokoka and Another v Ramokoka and Others (2013)
-                    </a>, Kgosi J. J. E. M. Ramokoka and the Baphalane Traditional Council sought an interdict
-                    to stop the Commission on Traditional Leadership Disputes and Claims from investigating
-                    a called dispute over leadership succession. The High Court dismissed the application,
-                    leaving the statutory commission free to continue its inquiry into a claim originally
-                    lodged in 2008 by a former chief.
+                    </a>.
                     </p>
 
                     <p>
